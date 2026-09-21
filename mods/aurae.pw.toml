@@ -1,16 +1,16 @@
-name = "Aurae!"
+name = ""
 filename = "ambiance-fabric-1.21-1.1.0.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "103585ced81d54ad35fca092aa689c515a6e34a2"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/hCdWhw9o/versions/5cwGeY3P/ambiance-fabric-1.21-1.1.0.jar"
+hash-format = "sha512"
+hash = "952661dbffdb16cc97eb70354c8cf8a71ab20e13342e3a45de02c85cb4ee087107e6cb493f16f19483fb5825e455aba5d1e5108d6896123954f83ffa89f6c283"
 
 [update]
-[update.curseforge]
-file-id = 5867821
-project-id = 1035699
+[update.modrinth]
+mod-id = "hCdWhw9o"
+version = "5cwGeY3P"
 
 [option]
 optional = true

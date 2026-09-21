@@ -1,13 +1,13 @@
-name = "Power damage fix"
+name = ""
 filename = "powerfix-1.0.0+1.21.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "7edcc5355eb7af445befc1e6107466f9a112a776"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/YkoU7Ywh/versions/HrQauBIu/powerfix-1.0.0%2B1.21.jar"
+hash-format = "sha512"
+hash = "8738da0b3b07599c139a43e77611cf27652d8d78537d86e8f6f0fdbbd4f75e1b664cf4bc77364335844daa20ece610afdc9eb6fbdf8be4bc4270bd529cc7606a"
 
 [update]
-[update.curseforge]
-file-id = 5860703
-project-id = 1131385
+[update.modrinth]
+mod-id = "YkoU7Ywh"
+version = "HrQauBIu"

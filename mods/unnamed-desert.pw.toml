@@ -1,13 +1,13 @@
-name = "Unnamed Desert"
+name = ""
 filename = "u_desert-2.0.3+mc1.21-1.21.11.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "be967884956d4d9e9dfc1fade20495571c5a6007"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/ThFWvdF1/versions/Gw6acQkk/u_desert-2.0.3%2Bmc1.21-1.21.11.jar"
+hash-format = "sha512"
+hash = "026e2b85018c5216df62a858de4ece7672152e3d7c6261e1c5831c01504285a417f284cde966903a7b6592a5012e6c837d5be09b9075f9ef2df29bfe036fd21d"
 
 [update]
-[update.curseforge]
-file-id = 7560368
-project-id = 960356
+[update.modrinth]
+mod-id = "ThFWvdF1"
+version = "Gw6acQkk"

@@ -26,7 +26,7 @@ metafile = true
 
 [[files]]
 file = "mods/adorabuild-structures.pw.toml"
-hash = "9e0071e1f2c563ba0bb1a50419c7dac914e06890f4b3add6c4a6fec2f19f2bfe"
+hash = "9808609f2e5f733112cd3551ffa7085a0ead97fdd5900babc6b009f13346f84c"
 metafile = true
 
 [[files]]
@@ -106,7 +106,7 @@ metafile = true
 
 [[files]]
 file = "mods/aurae.pw.toml"
-hash = "1175586b81c2a388b5eacbe584141aa6737e9a96826437206fb3475f294ebd62"
+hash = "1bc89480713370069b0175fb922b0e291a553809f9073fe07221d434619f28ba"
 metafile = true
 
 [[files]]
@@ -316,7 +316,7 @@ metafile = true
 
 [[files]]
 file = "mods/cool-rain.pw.toml"
-hash = "30135cda67608fa653a490b1971644e60db774b1da007c67a86dc213d49a8278"
+hash = "830e3ffed607ab953befb544f076199a3068bdbbb8f339c4014db0ace579ec6b"
 metafile = true
 
 [[files]]
@@ -471,7 +471,7 @@ metafile = true
 
 [[files]]
 file = "mods/enchanted-bookshelves.pw.toml"
-hash = "ac9491ebc5aac6c8200b539fe662cdbb92bbc51ff3b7ea91eec2e52df737ab74"
+hash = "58ebe3635a52ce9b1097604c39a0c2b4a9bcefd66707c2f687ce6f7981138169"
 metafile = true
 
 [[files]]
@@ -506,7 +506,7 @@ metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "a4b4c275e986b49c1aade7a89fa63a23010207746f3f5dc33dea4e91e38347c2"
+hash = "2055903d3972dd208d0c1bde6a9d3d9da285cd9cdbe8164df7db5bd90c708b51"
 metafile = true
 
 [[files]]
@@ -626,7 +626,7 @@ metafile = true
 
 [[files]]
 file = "mods/glowing-emissive-ores-definitive-edition.pw.toml"
-hash = "2b583c4d4535bf14d93c833f98f5797c321e79b77eb8707172cbcba878024ffe"
+hash = "11ce8364fa2cc78a213745b21a03b6f28e005245ce11f979b1c5561d5711948d"
 metafile = true
 
 [[files]]
@@ -775,7 +775,7 @@ metafile = true
 
 [[files]]
 file = "mods/korean-patch-fabric.pw.toml"
-hash = "58d4119b91c8b588d5a760bbc192b7f966e96886f384eedf40a244d7104d8df2"
+hash = "6b01d59e967142add872d72874e95ca909a40836162f8cb2b826b19225647909"
 metafile = true
 
 [[files]]
@@ -1190,7 +1190,7 @@ metafile = true
 
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
-hash = "3a39acefa92c436968fb4cfaa87f1171284793665abf79d088c73cff19c1d5a2"
+hash = "f41ddd6530716a4887c960efcbdd6f347cd255a73c7c56f601e30981e2cab762"
 metafile = true
 
 [[files]]
@@ -1250,7 +1250,7 @@ metafile = true
 
 [[files]]
 file = "mods/plushie-buddies.pw.toml"
-hash = "f518b02a125a9f31cd4f24240bb4af726edd30c29bab0d3ca39607e62c544920"
+hash = "822598b32a0656c3ed201680a0a58942235ee32413790dd1d6a81d0155a08c2b"
 metafile = true
 
 [[files]]
@@ -1265,7 +1265,7 @@ metafile = true
 
 [[files]]
 file = "mods/power-damage-fix.pw.toml"
-hash = "ad5df3ff37a591f6cbf1d4a288f186c74ae574e80b16ba543a436b6539eadecc"
+hash = "39410d06f460d140bf7797ff8e14f68b86a31cbcac0638fd9d7af1dd83e8e866"
 metafile = true
 
 [[files]]
@@ -1480,7 +1480,7 @@ metafile = true
 
 [[files]]
 file = "mods/spawn-animations-compats.pw.toml"
-hash = "2e1e4441c0fe80a532073cf5af7f68f130c909aea1aa250ed55d720c5549a358"
+hash = "0b8401036803ade3cfbb7f0eaae6d4f7bcd07972bb9e4bff0486492b6909c9cb"
 metafile = true
 
 [[files]]
@@ -1525,7 +1525,7 @@ metafile = true
 
 [[files]]
 file = "mods/structory.pw.toml"
-hash = "411be936c8db5e39300bcafaa7707b236d9a6bbaaf2171879b56b19d5ceea6ca"
+hash = "d617d205080d7103d251dbc4f06e3947a49ccba8ecab1b6772036f324904f10c"
 metafile = true
 
 [[files]]
@@ -1535,7 +1535,7 @@ metafile = true
 
 [[files]]
 file = "mods/subtle-effects.pw.toml"
-hash = "0a6d557fc6bf59aed300c4031d0ccc67e0460c6e63b2f3ebc7199da21f9971ae"
+hash = "01024185e293fa4744485e4c464cb3796917e819c4761bb9a637f2257ddda0aa"
 metafile = true
 
 [[files]]
@@ -1615,12 +1615,12 @@ metafile = true
 
 [[files]]
 file = "mods/unnamed-desert.pw.toml"
-hash = "7e1e5acc8ae2f3a540c4c38c5faa92a395f59e359649eefb421ede5881b4eda3"
+hash = "6b860962f7fba0e1f848f119a1bc05c6d31026673610ef5c01c5004a68bee814"
 metafile = true
 
 [[files]]
 file = "mods/unnamed-sea.pw.toml"
-hash = "f1b3a916fb57b904b05536f051d08bc6904cd50d7794630747c48c7fde6bdae3"
+hash = "e23f01a56a20ba84ff92216490e41945c13e06e2512b00c192846339971036ca"
 metafile = true
 
 [[files]]

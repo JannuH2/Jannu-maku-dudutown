@@ -1,13 +1,13 @@
-name = "Plushie Buddies"
+name = ""
 filename = "plushie_buddies-0.1.7-1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "bd43ed82ea87ac55939f4b09c0c140d1b7184fec"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/5hoSWfrw/versions/52abzT9l/plushie_buddies-0.1.7-1.21.1.jar"
+hash-format = "sha512"
+hash = "1c50af36ba6930de24582a5f10042f12d512d6169aca1be298b13eac818d173d3095927dba3df0fec611d994156acb3837a3d37d49f45498146a00e6c5085fc1"
 
 [update]
-[update.curseforge]
-file-id = 7132277
-project-id = 990265
+[update.modrinth]
+mod-id = "5hoSWfrw"
+version = "52abzT9l"

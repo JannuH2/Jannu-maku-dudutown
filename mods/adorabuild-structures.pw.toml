@@ -1,13 +1,13 @@
-name = "AdoraBuild: Structures"
+name = ""
 filename = "adorabuild-structures-2.11.0-fabric-1.21.3.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "ec17732f9c4032732dc86cd46fcdf4270333f94b"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/rYlnn25U/versions/h2dvBPSi/adorabuild-structures-2.11.0-fabric-1.21.3.jar"
+hash-format = "sha512"
+hash = "12c6fb7326f618b6d7a536ff1370c868317fd29a6f35946620dc10a66ac8fdb8d728db3e440fbac636ffb21903de5a162c66fe0bc298c6d169c92323e8560a68"
 
 [update]
-[update.curseforge]
-file-id = 7294426
-project-id = 883352
+[update.modrinth]
+mod-id = "rYlnn25U"
+version = "h2dvBPSi"

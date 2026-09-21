@@ -1,16 +1,16 @@
-name = "Glowing Emissive Ores Definitive Edition"
+name = ""
 filename = "GEO-v0.4.0-mc1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "72f7b6c1280044130d75b5a0e4de746745653adb"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/U8Iw4AfP/versions/RtPUSqxN/GEO-v0.4.0-mc1.21.1.jar"
+hash-format = "sha512"
+hash = "eaffbb928e07522fd9fbb6798c54306b310d951763a30baf095c1f4b487d6cc9da4574b5d87740391e4683f8a09f980cd9a3bd41b4a4b3f6b1c3f56df2d4b5ee"
 
 [update]
-[update.curseforge]
-file-id = 8724957
-project-id = 1588510
+[update.modrinth]
+mod-id = "U8Iw4AfP"
+version = "RtPUSqxN"
 
 [option]
 optional = true

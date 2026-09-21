@@ -37,8 +37,22 @@ echo.
 echo 모드를 확인하고 업데이트합니다. 잠시 창이 나타납니다.
 echo 처음에는 수백 MB를 받아서 5~10분 걸릴 수 있습니다.
 echo.
+set "TRY=0"
+
+:attempt
+set /a TRY+=1
 "%JAVA%" -jar packwiz-installer-bootstrap.jar -s client "%PACK_URL%"
-if errorlevel 1 goto fail
+if not errorlevel 1 goto success
+if %TRY% lss 3 goto retry
+goto fail
+
+:retry
+echo.
+echo 일부 파일을 받지 못해 다시 시도합니다. (%TRY%/3 회 실패, 받은 파일은 건너뜁니다)
+echo.
+goto attempt
+
+:success
 echo.
 echo ==============================================
 echo   완료되었습니다! CurseForge에서 프로필을 실행하세요.
