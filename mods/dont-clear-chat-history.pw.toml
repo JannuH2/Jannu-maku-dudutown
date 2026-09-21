@@ -1,0 +1,13 @@
+name = "Don't Clear Chat History"
+filename = "DontClearChatHistory-Fabric-NeoForge-1.21.x.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2610d14ddb4e02efe2bc07d748f6743f05acda3b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5990144
+project-id = 404400

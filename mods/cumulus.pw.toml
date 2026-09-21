@@ -1,0 +1,13 @@
+name = "Cumulus"
+filename = "cumulus_menus-1.21.1-2.0.8-fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "34b64b277ec5d9e244c437a318e08d2cff6fbce2"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7079155
+project-id = 915473

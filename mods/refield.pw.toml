@@ -1,0 +1,13 @@
+name = "Refield"
+filename = "field-fabric-1.21.1-1.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3368e7090da1bbd0c3d4fd2b223fe1b274f3fc13"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8417021
+project-id = 1598574

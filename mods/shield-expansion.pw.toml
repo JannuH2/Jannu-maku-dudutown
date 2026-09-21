@@ -1,0 +1,13 @@
+name = "Shield Expansion"
+filename = "shieldexp-fabric-1.21.1-1.4.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "aae225859fb76471234e5234b19a7fe283197c9e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8884526
+project-id = 583318

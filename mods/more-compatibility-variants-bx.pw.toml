@@ -1,0 +1,13 @@
+name = "More Compatibility Variants (BetterEnd/BetterNether)"
+filename = "more-compatibility-variants-bx-1.0.3+1.21(.1).jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/DcLhPXwh/versions/ZJlc5kcT/more-compatibility-variants-bx-1.0.3%2B1.21%28.1%29.jar"
+hash-format = "sha512"
+hash = "f6351bba929849a2641915d5487a559d5c560f95c87f0699c28834482bd20227806fb7f0ed1e6d067398fafd2b80b949ec1a5fff5ba1096eafb8a4fd4a69c727"
+
+[update]
+[update.modrinth]
+mod-id = "DcLhPXwh"
+version = "ZJlc5kcT"

@@ -1,0 +1,13 @@
+name = "Bountiful Fares"
+filename = "bountifulfares-fabric-1.21.1-3.0.12.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "fa15835bc534f46ef75999d36bec26cae0af3490"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8681879
+project-id = 972289

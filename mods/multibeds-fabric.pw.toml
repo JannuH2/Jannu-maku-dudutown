@@ -1,0 +1,13 @@
+name = "MultiBeds [Fabric]"
+filename = "multibeds-fabric-1.21.1-1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f97c354afe96f0c33120f8789fc3d2bdac9e76fa"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6913855
+project-id = 536608

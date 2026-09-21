@@ -1,0 +1,18 @@
+name = "Glowing Emissive Ores Definitive Edition"
+filename = "GEO-v0.4.0-mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "72f7b6c1280044130d75b5a0e4de746745653adb"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8724957
+project-id = 1588510
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

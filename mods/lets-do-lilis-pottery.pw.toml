@@ -1,0 +1,13 @@
+name = "[Let's Do] Lili's Pottery"
+filename = "letsdo-lilis_pottery-fabric-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "724d00ee2a2fa5ba9dcb85c441c7cb1cbaa0b834"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7586636
+project-id = 1419242

@@ -1,0 +1,13 @@
+name = "Horse Buff"
+filename = "HorseBuff-1.21-2.1.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d02141aee1c459d0c885fb6c0f34112b8bfc9acd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6080931
+project-id = 594488

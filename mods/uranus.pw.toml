@@ -1,0 +1,13 @@
+name = "Uranus"
+filename = "uranus-2.4.1-bugfix-1.21.1-fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "769d963f8b9f71b6cb0272b22be2e3419af62412"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8587523
+project-id = 1010827

@@ -1,0 +1,13 @@
+name = "Accessories Compatibility Layer"
+filename = "accessories_compat_layer-fabric-0.1.12+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "44acb001881c063aa15fe66a26de5fae88e6564f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7585679
+project-id = 1315611

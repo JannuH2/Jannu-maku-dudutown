@@ -1,0 +1,13 @@
+name = "Beautiful Potions [MOD EDITION] | 2.0 UPDATE! "
+filename = "BTP-Fabric-1.21.1-2.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "6a8eb5e571b83904d9e312d8a08bcb174a95cbd8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8457212
+project-id = 1298070

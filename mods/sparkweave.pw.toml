@@ -1,0 +1,13 @@
+name = "Sparkweave Engine"
+filename = "Sparkweave-Fabric-0.510.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f291914015445b4fcb43ff0f4e947c34b1f0435e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6774233
+project-id = 911456

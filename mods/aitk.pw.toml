@@ -1,0 +1,18 @@
+name = "Arrow In The Knee"
+filename = "aitk-1.2.1-fabric+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "bcaaebbd35014c07012a402b2abaf6a0c9859dbf"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8710526
+project-id = 1499353
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

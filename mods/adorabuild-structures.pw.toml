@@ -1,0 +1,13 @@
+name = "AdoraBuild: Structures"
+filename = "adorabuild-structures-2.11.0-fabric-1.21.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ec17732f9c4032732dc86cd46fcdf4270333f94b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7294426
+project-id = 883352

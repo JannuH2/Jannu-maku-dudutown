@@ -1,0 +1,13 @@
+name = "More Compatibility Variants (Nature's Spirit)"
+filename = "more-compatibility-variants-ns-1.0.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/UtbEENXe/versions/kggLC6Ef/more-compatibility-variants-ns-1.0.4.jar"
+hash-format = "sha512"
+hash = "c6ed4fddad550b256cdb89f83ee3edb299e391c733efb4dbe2808da799db624b2a5409150e1266d71600b427d2b37ad0fec0ea944aef0c73027bd57095abc7f1"
+
+[update]
+[update.modrinth]
+mod-id = "UtbEENXe"
+version = "kggLC6Ef"

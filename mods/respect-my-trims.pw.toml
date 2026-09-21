@@ -1,0 +1,13 @@
+name = "Respect My Trims"
+filename = "respectmytrims-1.0.0+mc1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a281a45ab2ff117be51916d9b166c60fc3f415ca"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6580798
+project-id = 1264714

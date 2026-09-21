@@ -1,0 +1,48 @@
+# ===== 월드, 로그, 백업 =====
+world/
+saves/
+logs/
+crash-reports/
+backups/
+screenshots/
+debug/
+*.log
+.mixin.out/
+.cache/
+.fabric/
+
+# ===== 개인 설정 (절대 올리지 않음) =====
+options.txt
+optionsof.txt
+optionsshaders.txt
+servers.dat
+usercache.json
+ops.json
+whitelist.json
+banned-*.json
+server.properties
+eula.txt
+
+# ===== 비밀번호 / 토큰 =====
+.env
+*.key
+*.pem
+*token*
+*secret*
+*password*
+credentials*
+
+# ===== 지도/캐시 (개인별, 대용량) =====
+journeymap/
+xaero/
+XaeroWaypoints/
+XaeroWorldMap/
+*_cache/
+dynamic-data-pack-cache/
+
+# ===== 안전장치: jar는 기본적으로 커밋하지 않음 =====
+# 아래 3개는 CurseForge/Modrinth에 없어서 파일로 직접 배포
+*.jar
+!mods/IceAndFireCE-2.0-beta.15-1.21.1-fabric.jar
+!mods/kawaii-1.0.3.jar
+!mods/wizards-fabric-3.1.1+1.21.1.jar

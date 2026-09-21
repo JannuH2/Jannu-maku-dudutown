@@ -1,0 +1,13 @@
+name = "Dark Enchanting [NeoForge/Fabric]"
+filename = "darkenchanting-fabric-1.3.0+1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9ce9117272653dab7bdb994d25de280b0b77f928"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5465953
+project-id = 473553

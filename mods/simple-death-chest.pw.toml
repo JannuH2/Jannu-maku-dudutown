@@ -1,0 +1,13 @@
+name = "Simple Death Chest"
+filename = "SimpleDeathChest-1.3.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "43e9b46cdaacc22013d4f6b337be03910ec06bb1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7815070
+project-id = 875944

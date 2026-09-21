@@ -1,0 +1,13 @@
+name = "Shield API"
+filename = "shield_api-fabric-2.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "27b5d2bfbc424b201bae0ecd61266382fe219f98"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7156420
+project-id = 1048720

@@ -1,0 +1,13 @@
+name = "LNE Archers Add-On"
+filename = "lne_archers-fabric-1.2.0+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3db8f622d4dc385f65b0d29f2e3d0a3445b87ba9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8719370
+project-id = 1179595

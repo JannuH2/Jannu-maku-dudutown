@@ -1,0 +1,13 @@
+name = "BetterNether: New Dawn"
+filename = "BetterNether-21.0.18-fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0d6d7ed04b7c7f55024c66b20c784eb5ec45962b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8575673
+project-id = 1422293

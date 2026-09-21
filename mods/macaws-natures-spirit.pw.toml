@@ -1,0 +1,13 @@
+name = "Macaw's Nature's Spirit"
+filename = "mcwnaturesspirit-fabric-1.21.1-1.6.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "14fe78582027937ffbc465e270b5890960969995"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8387981
+project-id = 714367

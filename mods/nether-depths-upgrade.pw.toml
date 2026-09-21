@@ -1,0 +1,13 @@
+name = "Nether Depths Upgrade"
+filename = "netherdepthsupgrade-fabric-3.2+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "6e0f38ccb999016762e530d82c54e0a939b3c762"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8702112
+project-id = 670011

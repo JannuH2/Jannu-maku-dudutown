@@ -1,0 +1,18 @@
+name = "Make Bubbles Pop [Client] [Fabric/Forge]"
+filename = "make_bubbles_pop-0.3.0-fabric-mc1.19.4-1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d59abea779c343b22925ea026d809073aa49ebbc"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5532619
+project-id = 605235
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

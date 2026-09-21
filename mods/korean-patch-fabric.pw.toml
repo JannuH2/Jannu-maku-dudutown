@@ -1,0 +1,13 @@
+name = "Korean Chat Patch"
+filename = "koreanpatch-fabric-1.9.6+mc1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d99b69f4e70282b93ec281ed9b8e3926f38eb22e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8221016
+project-id = 657742

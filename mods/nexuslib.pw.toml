@@ -1,0 +1,13 @@
+name = "NexusLib"
+filename = "nexuslib-fabric-1.21.1-1.1.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e5c96fbafdee682daebd542979da403e7dc5fcbe"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8212472
+project-id = 1279113

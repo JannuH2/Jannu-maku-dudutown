@@ -1,0 +1,18 @@
+name = "Status Effect Timer"
+filename = "statuseffecttimer-2.0.0+1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ea27acdd8d49f0881a7df1e61c95b768eb210ac6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6825167
+project-id = 484738
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

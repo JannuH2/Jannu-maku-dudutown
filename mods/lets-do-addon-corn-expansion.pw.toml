@@ -1,0 +1,13 @@
+name = "[Let's Do Addon] Corn Expansion"
+filename = "cornexpansion-fabric-1.2.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "35697bcc0c2f28007d23a89152594226b89b9d3d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7716153
+project-id = 1038740

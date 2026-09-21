@@ -1,0 +1,13 @@
+name = "BCLib: New Dawn"
+filename = "bclib-21.0.19-fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0cf33be69ada98114deb4516c6d3602ff6e55838"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8617167
+project-id = 1422283

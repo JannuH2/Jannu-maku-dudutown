@@ -1,0 +1,13 @@
+name = "WunderLib: New Dawn"
+filename = "wunderlib-21.0.9-fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "042415a8b1c6927d79cdf210ac4d522a64b69219"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8452358
+project-id = 1422273

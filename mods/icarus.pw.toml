@@ -1,0 +1,13 @@
+name = "Icarus"
+filename = "Icarus-Fabric-4.7.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0f425acd9f3a180d3bba3a6b61ca8ac90f268c1a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8617817
+project-id = 428151

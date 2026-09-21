@@ -1,0 +1,13 @@
+name = "Mebahel's API"
+filename = "mebahels-api-1.1.5-fabric-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3c053e61fa0e03677a338484e84c2dffd35698cc"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8879577
+project-id = 1463166

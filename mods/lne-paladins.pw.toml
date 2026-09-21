@@ -1,0 +1,13 @@
+name = "LNE Paladins & Priests Add-On"
+filename = "lne_paladins-fabric-1.2.0+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2a5da4559c55e6a11916fba52a43e10e0ad426fe"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8719376
+project-id = 1179587

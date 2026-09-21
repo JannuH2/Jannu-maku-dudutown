@@ -1,0 +1,13 @@
+name = "Archers (RPG Series)"
+filename = "archers-fabric-3.1.1+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/QgooUXAJ/versions/iCXv3o0K/archers-fabric-3.1.1%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "e9aa970ff993e5178508914576c58cfa6097fc2612c21625b9f01cb39da52c1c2587c4e681bfa9484a6a2c9b0e1497c2bfe5bcd10a98d127eeae5526da6cb7db"
+
+[update]
+[update.modrinth]
+mod-id = "QgooUXAJ"
+version = "iCXv3o0K"

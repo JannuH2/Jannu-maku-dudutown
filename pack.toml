@@ -1,0 +1,13 @@
+name = "maku-jannu"
+author = "maku-jannu-admin"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "8e81f71310fd6acfd5ae79569a8f9897336d7167ec5db1bb3ecc21b194a25438"
+
+[versions]
+fabric = "0.19.3"
+minecraft = "1.21.1"

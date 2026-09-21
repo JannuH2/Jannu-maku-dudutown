@@ -1,0 +1,13 @@
+name = "Simply Tooltips"
+filename = "SimplyTooltips-fabric-0.1.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2eb686991b9ca32fc9498bc05a9fd3b42f0b60a0"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8715135
+project-id = 1475755

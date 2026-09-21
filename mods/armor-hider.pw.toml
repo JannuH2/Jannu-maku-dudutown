@@ -1,0 +1,18 @@
+name = "Armor Hider"
+filename = "armor-hider-fabric-0.13.0+mc-1.21.0-1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "748ff3b1dd52d0f9c07c0506d5036e312484a6e6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8726420
+project-id = 1475841
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

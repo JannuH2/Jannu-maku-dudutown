@@ -1,0 +1,13 @@
+name = "Lucky's Cozy Home: Stone & Waterworks Update"
+filename = "Luckys-Cozyhome-Refurnished-1.1.20.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e65e20f982be0be2bf5e94101f560049b0463ab3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7273189
+project-id = 825733

@@ -1,0 +1,13 @@
+name = "LNE Wizards Add-On"
+filename = "lne_wizards-fabric-1.2.0+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e1c10ae23f33883bb7f346a05e51c60b8fedf9cd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8719400
+project-id = 1178295

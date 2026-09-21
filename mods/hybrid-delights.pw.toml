@@ -1,0 +1,13 @@
+name = "Hybrid Delights"
+filename = "[1.21.1-Fabric] Hybrid Delights 1.2.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "15395b00411ae463afe47f0fba0624fa56650b71"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8597289
+project-id = 1259032

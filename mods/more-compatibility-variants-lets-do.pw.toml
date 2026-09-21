@@ -1,0 +1,13 @@
+name = "More Compatibility Variants [Let's Do]"
+filename = "more-compatibility-variants-lets-do-1.0.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/YpyD6oK2/versions/FFK20Z1r/more-compatibility-variants-lets-do-1.0.4.jar"
+hash-format = "sha512"
+hash = "82009a6249e56a5a0fc377362a6eb8e3798401708ec93aabd18320e6440f504702cd47dcb3d668209b6f23a40650c5d0b2157956fee05457c726ee4464620882"
+
+[update]
+[update.modrinth]
+mod-id = "YpyD6oK2"
+version = "FFK20Z1r"

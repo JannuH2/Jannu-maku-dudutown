@@ -1,0 +1,13 @@
+name = "Rogues & Warriors (RPG Series)"
+filename = "rogues-fabric-3.1.1+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/3MKqoGuP/versions/JWfPsL1j/rogues-fabric-3.1.1%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "5e027f45581aba3ddbc8ae623c3ccab81308ed10653aa2e1eaf9b0286de3c961d599714ca4c529f2cf8f21074ac939258967b279de5401baea5c548105fe856f"
+
+[update]
+[update.modrinth]
+mod-id = "3MKqoGuP"
+version = "JWfPsL1j"

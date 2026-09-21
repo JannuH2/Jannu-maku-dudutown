@@ -1,0 +1,18 @@
+name = "Faster Iris Shadow Mapper"
+filename = "fism+1.21.1-1.0.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "62af155c1ac9dda45f58d070a054a01a8904da46"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8253568
+project-id = 1571926
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

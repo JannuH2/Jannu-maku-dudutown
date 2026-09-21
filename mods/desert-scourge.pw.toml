@@ -1,0 +1,13 @@
+name = "Desert Scourge"
+filename = "desert-scourge-1.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/wseEf42M/versions/UAk6uPaT/desert-scourge-1.2.jar"
+hash-format = "sha512"
+hash = "c062ba1103da465914fee436cd94d0ad9d06048676f589761438558366aa9861d1a6b108b2bfda7ef93e92af3128d90ceeef6e7bc7816a49b37d82bc241dab57"
+
+[update]
+[update.modrinth]
+mod-id = "wseEf42M"
+version = "UAk6uPaT"

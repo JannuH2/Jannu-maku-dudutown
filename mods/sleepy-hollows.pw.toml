@@ -1,0 +1,13 @@
+name = "Sleepy Hollows"
+filename = "sleepy_hollows-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "963e81b7a48e41469ff01526bcb4b6560c023f74"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7114182
+project-id = 1124163

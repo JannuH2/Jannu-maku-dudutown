@@ -1,0 +1,13 @@
+name = "Critical Strike"
+filename = "critical_strike-fabric-1.0.4+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "dc6aa4eed5d9478b3e33fb0d6ff8a6fcb4a6e997"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7224269
+project-id = 1379562

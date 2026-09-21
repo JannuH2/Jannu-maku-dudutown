@@ -1,0 +1,13 @@
+name = "Galosphere"
+filename = "Galosphere-1.21.1-1.5.4-Fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3ce89d28ecade5839c45a5159367ad4a99de3777"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8242874
+project-id = 631098

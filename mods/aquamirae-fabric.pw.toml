@@ -1,0 +1,13 @@
+name = "Aquamirae [Fabric Edition]"
+filename = "aquamirae-fabric-1.21.1-7.2.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "81ddcb95ced77b018d53063f3096cbff3e7ed683"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8728349
+project-id = 891257

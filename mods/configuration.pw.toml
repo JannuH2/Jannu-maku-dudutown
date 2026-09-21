@@ -1,0 +1,13 @@
+name = "Configuration"
+filename = "configuration-fabric-1.21.1-3.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "33345c2582476e438c31b56f49e1c9f9855a2afb"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6779572
+project-id = 444699

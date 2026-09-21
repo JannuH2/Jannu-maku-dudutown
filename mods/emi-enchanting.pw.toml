@@ -1,0 +1,18 @@
+name = "EMI Enchanting"
+filename = "emi_enchanting-0.1.2+1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a12a5e135cecd73b7dc13a5bf92fc526385a1136"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5733128
+project-id = 936713
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

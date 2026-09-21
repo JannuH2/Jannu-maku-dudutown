@@ -1,0 +1,18 @@
+name = "Glowing Trims Mod"
+filename = "glowing_trims-1.0.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/V1c2WNSt/versions/deTDITCP/glowing_trims-1.0.1.jar"
+hash-format = "sha512"
+hash = "651923797b61e68ef8b48401a73faf1e237149d21a5c8bc1449db9666b550893ea74636c7d411ed70adccd36b7449f8e4b2014a11f6c62531f90ca166ccb13ee"
+
+[update]
+[update.modrinth]
+mod-id = "V1c2WNSt"
+version = "deTDITCP"
+
+[option]
+optional = true
+default = false
+description = "클라이언트 전용 편의 모드 (서버 접속에는 필요 없음)"

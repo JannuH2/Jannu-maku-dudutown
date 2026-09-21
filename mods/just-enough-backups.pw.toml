@@ -1,0 +1,13 @@
+name = "Just Enough Backups (JEB)"
+filename = "justenoughbackups-1.0.1.1+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "eb62fea21f486513d12c14fb3043504f8df4e56d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8085211
+project-id = 1539945

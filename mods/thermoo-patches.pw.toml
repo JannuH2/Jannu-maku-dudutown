@@ -1,0 +1,13 @@
+name = "Thermoo Patches"
+filename = "thermoo-patches-3.7.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "42e2055549fcc95442ae8974e1ffdbeeb5c001df"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7709141
+project-id = 1012677

@@ -1,0 +1,13 @@
+name = "Farmer's Cutting: Nature's Spirit"
+filename = "farmers-cutting-natures-spirit-1.21.1-1.0-fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ae3f5780e2b904837159bbe87111d0c45d638961"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6976629
+project-id = 1343472

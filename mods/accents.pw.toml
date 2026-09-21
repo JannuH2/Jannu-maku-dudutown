@@ -1,0 +1,13 @@
+name = "Accents"
+filename = "accents-fabric-1.21.1-2.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7fe6bdb00d49290d6e46032ac9da3c750fd96004"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7657616
+project-id = 1446887

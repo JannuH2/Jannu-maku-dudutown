@@ -1,0 +1,13 @@
+name = "Lavender API"
+filename = "lavender-0.1.15+1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a1ecb564d1cff65e34a5dd60be893bd1d55d93bf"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6107175
+project-id = 962916

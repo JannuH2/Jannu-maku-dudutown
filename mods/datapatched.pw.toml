@@ -1,0 +1,13 @@
+name = "Datapatched"
+filename = "datapatched-2.2.1-fabric-21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "27fa1750e8ea6add6009d8065afeb58ada201b03"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8366677
+project-id = 1366720

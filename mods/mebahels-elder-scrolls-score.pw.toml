@@ -1,0 +1,13 @@
+name = "Mebahel's Elder Scrolls Core"
+filename = "mebahel-elder-scrolls-core-1.4.0-fabric-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "139fa08c96b1586ae6008035b699ebd8fa471481"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8890700
+project-id = 1665596

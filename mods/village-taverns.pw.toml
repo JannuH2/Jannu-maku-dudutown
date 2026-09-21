@@ -1,0 +1,13 @@
+name = "Village Taverns (RPG Series)"
+filename = "village_taverns-fabric-1.3.0+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "cd81de3e5ec31e4c1685dec8a5f685b41990bdb2"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8727898
+project-id = 1178224

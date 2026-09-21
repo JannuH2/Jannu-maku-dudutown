@@ -1,0 +1,13 @@
+name = "Mythika: Creatures of Greek Myth"
+filename = "mythika-fabric-1.21.1-1.2.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "654fb77565b04720477406d371d92c9cba60cdfa"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8640969
+project-id = 1630456

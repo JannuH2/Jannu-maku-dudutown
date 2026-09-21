@@ -1,0 +1,13 @@
+name = "Macaw's Furniture"
+filename = "mcw-furniture-3.4.1-mc1.21.1fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4c914a4d3bb84103b34346e60c6aa981be8dfa23"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7255687
+project-id = 359540

@@ -1,0 +1,13 @@
+name = "Spider Overhaul"
+filename = "SpiderOverhaul-0.0.6-Fabric-v1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "96e524edb5afdd3688a487c062fbe72adf8d0762"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8741396
+project-id = 1619127
