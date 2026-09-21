@@ -45,11 +45,6 @@ hash = "ba8e2c966caf90b1c590ebb3af177a5e704411598f6cc93be10deecb9797b283"
 metafile = true
 
 [[files]]
-file = "mods/amecs.pw.toml"
-hash = "8c9e087cf04a06c8373782db9ffa613a20e720f0c3e597f9fc6e061ba6d8dab2"
-metafile = true
-
-[[files]]
 file = "mods/amendments.pw.toml"
 hash = "9d0359979f578be47aaf8b37b1086c7b8dd490b9811ecdaf7de03f99ac80402c"
 metafile = true

@@ -27,8 +27,24 @@ if not defined JAVA goto nojava
 rem --- 3. 설치 도구 내려받기 (처음 한 번만) ---
 if exist "packwiz-installer-bootstrap.jar" goto run
 echo 설치 도구를 내려받는 중입니다...
+set "DL=0"
+
+:download
+set /a DL+=1
+if exist "packwiz-installer-bootstrap.jar.tmp" del /q "packwiz-installer-bootstrap.jar.tmp"
 curl.exe -L -f -s -o "packwiz-installer-bootstrap.jar.tmp" "%BOOT_URL%"
-if errorlevel 1 powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%BOOT_URL%' -OutFile 'packwiz-installer-bootstrap.jar.tmp' } catch { exit 1 }"
+if not errorlevel 1 goto dlok
+powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%BOOT_URL%' -OutFile 'packwiz-installer-bootstrap.jar.tmp' } catch { exit 1 }"
+if not errorlevel 1 goto dlok
+if %DL% lss 3 goto dlretry
+goto downloadfail
+
+:dlretry
+echo 다운로드에 실패해 잠시 후 다시 시도합니다. (%DL%/3 회 실패)
+ping -n 4 127.0.0.1 >nul
+goto download
+
+:dlok
 if not exist "packwiz-installer-bootstrap.jar.tmp" goto downloadfail
 move /y "packwiz-installer-bootstrap.jar.tmp" "packwiz-installer-bootstrap.jar" >nul
 
