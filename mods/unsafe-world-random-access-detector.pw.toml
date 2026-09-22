@@ -1,0 +1,8 @@
+name = "Unsafe World Random Access Detector"
+filename = "unsafe-world-random-access-detector-1.1.0.jar"
+side = "both"
+
+[download]
+url = "https://github.com/RelativityMC/unsafe-world-random-access-detector/releases/download/1.1.0/unsafe-world-random-access-detector-1.1.0.jar"
+hash-format = "sha1"
+hash = "c344c801f41b767c99ab7b0139ed72c7f86647f1"
