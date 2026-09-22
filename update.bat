@@ -5,6 +5,7 @@ title Jannu-maku-dudutown 모드 업데이트
 
 set "PACK_URL=https://jannuh2.github.io/Jannu-maku-dudutown/pack.toml"
 set "BOOT_URL=https://github.com/packwiz/packwiz-installer-bootstrap/releases/download/v0.0.3/packwiz-installer-bootstrap.jar"
+set "CHECK_URL=https://raw.githubusercontent.com/JannuH2/Jannu-maku-dudutown/main/check-extra-mods.ps1"
 
 echo.
 echo ==============================================
@@ -69,6 +70,12 @@ echo.
 goto attempt
 
 :success
+echo.
+echo Checking for mods not in the pack...
+if exist "check-extra-mods.ps1" del /q "check-extra-mods.ps1"
+curl.exe -L -f -s -o "check-extra-mods.ps1" "%CHECK_URL%"
+if errorlevel 1 powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%CHECK_URL%' -OutFile 'check-extra-mods.ps1' } catch { exit 1 }"
+if exist "check-extra-mods.ps1" powershell -NoProfile -ExecutionPolicy Bypass -File "check-extra-mods.ps1"
 echo.
 echo ==============================================
 echo   완료되었습니다! CurseForge에서 프로필을 실행하세요.
