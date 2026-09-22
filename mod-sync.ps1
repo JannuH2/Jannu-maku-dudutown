@@ -198,17 +198,28 @@ $form.Height = 680
 $form.StartPosition = "CenterScreen"
 $form.TopMost = $true
 
+$labelHeight = 70
+$buttonHeight = 50
+
 $label = New-Object System.Windows.Forms.Label
 $label.Text = "초록=일치, 빨강=저장소와 불일치(기본적으로 아무것도 안 함), 파랑=개인 설치 모드(팩에 없음, 기본적으로 그대로 둠).`r`n" +
               "빨간 항목을 더블클릭하면 설치 대상으로 활성화됩니다(노란색). 파란 항목을 더블클릭하면 삭제 대상으로 활성화됩니다(주황색).`r`n" +
               "활성화한 항목만 [최종 확인]을 눌러야 실제로 적용됩니다. 그 전까지는 아무 파일도 바뀌지 않습니다."
-$label.Dock = "Top"
-$label.Height = 60
-$label.Padding = New-Object System.Windows.Forms.Padding(10, 10, 10, 0)
+$label.AutoSize = $false
+$label.Location = New-Object System.Drawing.Point(10, 10)
+$label.Size = New-Object System.Drawing.Size(($form.ClientSize.Width - 20), ($labelHeight - 10))
+$label.Anchor = "Top, Left, Right"
 $form.Controls.Add($label)
 
+$buttonPanel = New-Object System.Windows.Forms.Panel
+$buttonPanel.Location = New-Object System.Drawing.Point(0, ($form.ClientSize.Height - $buttonHeight))
+$buttonPanel.Size = New-Object System.Drawing.Size($form.ClientSize.Width, $buttonHeight)
+$buttonPanel.Anchor = "Bottom, Left, Right"
+
 $grid = New-Object System.Windows.Forms.DataGridView
-$grid.Dock = "Fill"
+$grid.Location = New-Object System.Drawing.Point(0, $labelHeight)
+$grid.Size = New-Object System.Drawing.Size($form.ClientSize.Width, ($form.ClientSize.Height - $labelHeight - $buttonHeight))
+$grid.Anchor = "Top, Bottom, Left, Right"
 $grid.ReadOnly = $true
 $grid.AllowUserToAddRows = $false
 $grid.AutoSizeColumnsMode = "Fill"
@@ -254,12 +265,6 @@ $grid.Add_CellDoubleClick({
     $row.DefaultCellStyle.ForeColor = $colors.fore
 })
 
-$form.Controls.Add($grid)
-
-$buttonPanel = New-Object System.Windows.Forms.Panel
-$buttonPanel.Dock = "Bottom"
-$buttonPanel.Height = 50
-
 $installBtn = New-Object System.Windows.Forms.Button
 $installBtn.Text = "최종 확인"
 $installBtn.Width = 160
@@ -279,6 +284,7 @@ $cancelBtn.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
 $buttonPanel.Controls.Add($cancelBtn)
 
 $form.Controls.Add($buttonPanel)
+$form.Controls.Add($grid)
 $form.AcceptButton = $installBtn
 $form.CancelButton = $cancelBtn
 
