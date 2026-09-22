@@ -974,6 +974,11 @@ hash = "eacf94908d2171da8e757139fe85d45e705962b6f0526536e8cc3d750e03a406"
 metafile = true
 
 [[files]]
+file = "mods/magicskin.pw.toml"
+hash = "cb8b8b9b34e37cd2776158d0917ea4e80f9c0c19bfbd8c5470ece36ba509e2fd"
+metafile = true
+
+[[files]]
 file = "mods/make-bubbles-pop.pw.toml"
 hash = "831c56b6feec547023249a60999912adce32f42c6a50f0b3ad3ed00c5926f2b2"
 metafile = true

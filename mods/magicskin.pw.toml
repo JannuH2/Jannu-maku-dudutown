@@ -1,0 +1,13 @@
+name = "Magic Skin"
+filename = "magicskin-0.3h-1.21.1+fabric.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Jk3QrUwG/versions/xT7bEMD6/magicskin-0.3h-1.21.1%2Bfabric.jar"
+hash-format = "sha512"
+hash = "bb954ec2bf4ca8499174e0b61c8ce3ae82eb9ae1431116810cc37e2ba6428355f47b0d47429d49c4dc47ee044a1cee6ae2257b001290078b77c571dfb2c4636f"
+
+[update]
+[update.modrinth]
+mod-id = "Jk3QrUwG"
+version = "xT7bEMD6"
