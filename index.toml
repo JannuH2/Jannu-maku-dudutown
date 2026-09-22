@@ -1200,7 +1200,7 @@ metafile = true
 
 [[files]]
 file = "mods/obscure-tooltips.pw.toml"
-hash = "a6250be08b46da92a0d4ef6b68dd2e180162fb5e06ce952dbad401dc72c2156d"
+hash = "cfa677c26d30fcb9c9a8758047e2fd6263b331bf73883d578a624576d5f87dff"
 metafile = true
 
 [[files]]
