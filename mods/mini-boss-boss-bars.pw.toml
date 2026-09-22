@@ -1,13 +1,13 @@
 name = "Mini-boss Boss Bars"
-filename = "Mini-boss Boss Bars 1.21.1 1.0.37.jar"
+filename = "Mini-boss Boss Bars 1.21.1 1.0.36.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/A8rzsSSb/versions/lbj1cuOl/Mini-boss%20Boss%20Bars%201.21.1%201.0.37.jar"
-hash-format = "sha512"
-hash = "dfeda70c50bf22af9bd9f8adbbf164f57c8240f96595079aea47bf412243a074143e6fdb5d9db9ae203e02bf9e38cf26ea1c93bedc1b7b8de69a755a4743b89f"
+hash-format = "sha1"
+hash = "0c0cd02405185d662e1d845e4469bce7b2faecfe"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "A8rzsSSb"
-version = "lbj1cuOl"
+[update.curseforge]
+file-id = 8727851
+project-id = 1001151

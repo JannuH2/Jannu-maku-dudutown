@@ -1,13 +1,13 @@
 name = "Pufferfish's Skills [Fabric & Forge & NeoForge]"
-filename = "puffish_skills-0.19.1-1.21-fabric.jar"
+filename = "puffish_skills-0.19.0-1.21-fabric.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/hqQqvaa4/versions/I7LARSFg/puffish_skills-0.19.1-1.21-fabric.jar"
-hash-format = "sha512"
-hash = "3f1cc5b0bb789f20d62ea19adc09a101e4fd70e43412e2c56882c39152e6657f62c72cf24cefa93c2da0d3d77bcf6f0e7874625f9a47f9c5c53cb186a979b191"
+hash-format = "sha1"
+hash = "443261758f7bcfacb67a2cbe96d9609cb7ac0b1d"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "hqQqvaa4"
-version = "I7LARSFg"
+[update.curseforge]
+file-id = 8792773
+project-id = 835091

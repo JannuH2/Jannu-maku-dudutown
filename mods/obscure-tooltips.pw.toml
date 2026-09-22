@@ -1,16 +1,16 @@
 name = "Obscure Tooltips"
-filename = "obscure_tooltips-fabric-1.21.1-4.2.5.jar"
+filename = "obscure_tooltips-fabric-1.21.1-4.2.4.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/5vetjDBY/versions/o7tdcAy7/obscure_tooltips-fabric-1.21.1-4.2.5.jar"
-hash-format = "sha512"
-hash = "361fd88ee5af6b60c3e539a81726ed6f54cbe14079b7efac1247f629ed5f264460870aa4828917f2614579e7da090afd90375e49ed03b7471c0270f41fae1cfb"
+hash-format = "sha1"
+hash = "3f5c80e959558ac96e62472ab56d8efc557d38fe"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "5vetjDBY"
-version = "o7tdcAy7"
+[update.curseforge]
+file-id = 8687678
+project-id = 715660
 
 [option]
 optional = true

@@ -1,13 +1,13 @@
 name = "Aquamirae [Fabric Edition]"
-filename = "aquamirae-fabric-1.21.1-7.2.10.jar"
+filename = "aquamirae-fabric-1.21.1-7.2.3.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/k23mNPhZ/versions/uHFhkXPC/aquamirae-fabric-1.21.1-7.2.10.jar"
-hash-format = "sha512"
-hash = "976e61ee0630b04402532bf6a5b44cd770fd5daa245db50bb008410f1e44fe1783ef1127763b828b494eac5d159b68d7213a0c073c6f3a7cbdef676098ed2ad4"
+hash-format = "sha1"
+hash = "81ddcb95ced77b018d53063f3096cbff3e7ed683"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "k23mNPhZ"
-version = "uHFhkXPC"
+[update.curseforge]
+file-id = 8728349
+project-id = 891257

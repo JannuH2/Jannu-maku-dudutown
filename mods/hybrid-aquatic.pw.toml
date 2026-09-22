@@ -1,13 +1,13 @@
 name = "Hybrid Aquatic"
-filename = "hybrid_aquatic-fabric-1.21.1-1.7.2.jar"
+filename = "[1.21.1-Fabric] Hybrid Aquatic 1.6.9.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/HH4FjUqN/versions/rymElPnM/hybrid_aquatic-fabric-1.21.1-1.7.2.jar"
-hash-format = "sha512"
-hash = "464b592a14367285f45b4557a659193984787414e99689761ab8448e1b90aa8cbb4d9f63d498aec93b180d7c90bfe0d191e9ec6838a0f092a74823f401e0c94f"
+hash-format = "sha1"
+hash = "dc35d183dfabfeb104209a44f37c5987f009640e"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "HH4FjUqN"
-version = "rymElPnM"
+[update.curseforge]
+file-id = 8594179
+project-id = 834427

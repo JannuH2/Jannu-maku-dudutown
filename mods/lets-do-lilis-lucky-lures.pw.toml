@@ -1,13 +1,13 @@
 name = "[Let's Do] Lili's Lucky Lures"
-filename = "letsdo-lilis_lucky_lures-fabric-1.1.5.jar"
+filename = "letsdo-lilis_lucky_lures-fabric-1.1.3.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/DMDVFZSF/versions/l2BJormI/letsdo-lilis_lucky_lures-fabric-1.1.5.jar"
-hash-format = "sha512"
-hash = "b115aeec856223c20f8e4d5b8c9cfe972f742b6ed8e6853f6d49d4ea571cbe80b392c38f624b8e475b9e8a57ed1dcd7d506e17e8b23756219af27345929ce42d"
+hash-format = "sha1"
+hash = "c4dd3b88a70dc763be0c5c1302e90dfdcea4f111"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "DMDVFZSF"
-version = "l2BJormI"
+[update.curseforge]
+file-id = 7535966
+project-id = 1197637

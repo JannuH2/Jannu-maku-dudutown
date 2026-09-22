@@ -1,13 +1,13 @@
 name = "Armor Model API"
-filename = "armor_model_api-fabric-1.1.0+1.21.1.jar"
+filename = "armor_model_api-fabric-1.0.0+1.21.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/onz2NN2n/versions/eqjiejBH/armor_model_api-fabric-1.1.0%2B1.21.1.jar"
-hash-format = "sha512"
-hash = "a48eb22e1334a8a09fbf1a8e010c0dcc626e61dd0eeddd81565ba64b63a4a112006890603a5ee2053fab2f3e4b6fa095c455a7789861322e99fb8c1678006d5f"
+hash-format = "sha1"
+hash = "74625141b4664068c7ca620884e492abe62e59ed"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "onz2NN2n"
-version = "eqjiejBH"
+[update.curseforge]
+file-id = 8685729
+project-id = 1659764

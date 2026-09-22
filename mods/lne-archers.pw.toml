@@ -1,13 +1,13 @@
 name = "LNE Archers Add-On"
-filename = "lne_archers-fabric-1.2.2+1.21.1.jar"
+filename = "lne_archers-fabric-1.2.0+1.21.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/Zl6rTul9/versions/SGI8TFYL/lne_archers-fabric-1.2.2%2B1.21.1.jar"
-hash-format = "sha512"
-hash = "a96e49b433b88992b74f28ef5688345c2ac10e285003d291650002b899ea88295e44d282b200d2c03c99bbb3094404b95b18b48de14b9e3c080cba011e6f5827"
+hash-format = "sha1"
+hash = "3db8f622d4dc385f65b0d29f2e3d0a3445b87ba9"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "Zl6rTul9"
-version = "SGI8TFYL"
+[update.curseforge]
+file-id = 8719370
+project-id = 1179595

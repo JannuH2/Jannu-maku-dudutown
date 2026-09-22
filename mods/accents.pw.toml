@@ -1,13 +1,13 @@
 name = "Accents"
-filename = "accents-fabric-1.21.1-2.0.3.jar"
+filename = "accents-fabric-1.21.1-2.0.2.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/fALx4O2Q/versions/z5gMfuE2/accents-fabric-1.21.1-2.0.3.jar"
-hash-format = "sha512"
-hash = "45d26b10cc82b233007eff6658e5ad59002aa42dfb3dfd51483b201b8f56a4755977c76e611c7da0e2ead625e80e4127a8e5c8e5ab38375933854affa8a60a78"
+hash-format = "sha1"
+hash = "7fe6bdb00d49290d6e46032ac9da3c750fd96004"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "fALx4O2Q"
-version = "z5gMfuE2"
+[update.curseforge]
+file-id = 7657616
+project-id = 1446887

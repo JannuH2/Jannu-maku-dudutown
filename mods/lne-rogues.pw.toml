@@ -1,13 +1,13 @@
 name = "LNE Rogues & Warriors Add-On"
-filename = "lne_rogues-fabric-1.2.1+1.21.1.jar"
+filename = "lne_rogues-fabric-1.2.0+1.21.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/JEvQhsp7/versions/74FZYgb7/lne_rogues-fabric-1.2.1%2B1.21.1.jar"
-hash-format = "sha512"
-hash = "16b4f8c5ab65d9be8bd65b5249fdfb1e65780d3b843e3d0f3de4fb389f838116ff01442f8d7a76fca1e3c4278fc069bc2a98fa1bf73269d4c586b7b5b7fbf56b"
+hash-format = "sha1"
+hash = "32873bbee70808bd9ae01f17fbf0603a76827206"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "JEvQhsp7"
-version = "74FZYgb7"
+[update.curseforge]
+file-id = 8719386
+project-id = 1179583

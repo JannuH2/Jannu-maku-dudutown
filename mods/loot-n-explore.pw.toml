@@ -3,11 +3,11 @@ filename = "loot_n_explore-1.0.22-1.21.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/GxOv67AE/versions/vEudD65D/loot_n_explore-1.0.22-1.21.1.jar"
-hash-format = "sha512"
-hash = "618cc50aaca95a627c1e9afbb0f26481949388b03eb1ebff6c5e8146ee746e7ac6e07302222e94aed17db8ca77663e1eea8e6776572218c8c23d3c38b938d9a9"
+hash-format = "sha1"
+hash = "fa26bdd329092ed6ec981872e9d1df2b0b0bc553"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "GxOv67AE"
-version = "vEudD65D"
+[update.curseforge]
+file-id = 8731998
+project-id = 1148917

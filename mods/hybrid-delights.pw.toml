@@ -1,13 +1,13 @@
 name = "Hybrid Delights"
-filename = "hybrid_delights-fabric-1.21.1-1.3.1.jar"
+filename = "[1.21.1-Fabric] Hybrid Delights 1.2.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/WR49BBCu/versions/EWG79mn9/hybrid_delights-fabric-1.21.1-1.3.1.jar"
-hash-format = "sha512"
-hash = "f6d2f2b6ac39adb823a25b9a5df6252778f4fb815994d7ed7c5f0787c8d6477141e0dc9e52f7459ddd2406bf2ea72d074d8446ff08e344e9f633b5cd695a6553"
+hash-format = "sha1"
+hash = "15395b00411ae463afe47f0fba0624fa56650b71"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "WR49BBCu"
-version = "EWG79mn9"
+[update.curseforge]
+file-id = 8597289
+project-id = 1259032

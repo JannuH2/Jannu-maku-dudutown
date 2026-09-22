@@ -1,13 +1,13 @@
 name = "Fragmentum [Fabric Edition]"
-filename = "fragmentum-5.0.0+1.21.1-fabric.jar"
+filename = "fragmentum-fabric-1.21.1-2.4.4.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/49C5QgTK/versions/kvxNubYR/fragmentum-5.0.0%2B1.21.1-fabric.jar"
-hash-format = "sha512"
-hash = "b652b4081dd4c567ae158e05b84aeeadf0df76e84e469aca6acf5ab64cb875ea9901290099845c373bfda1662d048093ed89695ffc6e78c713593949304986e4"
+hash-format = "sha1"
+hash = "b3128d4d502e3e54b61cffaca54b3803fa546a82"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "49C5QgTK"
-version = "kvxNubYR"
+[update.curseforge]
+file-id = 8707552
+project-id = 1123974
