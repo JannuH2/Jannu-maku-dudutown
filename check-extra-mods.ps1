@@ -3,13 +3,13 @@
     [string]$ModsDir = "mods"
 )
 
-if (-not (Test-Path $ManifestPath)) {
+if (-not (Test-Path -LiteralPath $ManifestPath)) {
     Write-Host "[정보] packwiz.json을 찾을 수 없어 개인 설치 모드 검사를 건너뜁니다."
     exit 0
 }
 
 try {
-    $manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
+    $manifest = Get-Content -LiteralPath $ManifestPath -Raw | ConvertFrom-Json
 } catch {
     Write-Host "[경고] packwiz.json을 읽는 중 오류가 발생해 개인 설치 모드 검사를 건너뜁니다."
     exit 0
@@ -26,29 +26,26 @@ if ($manifest.cachedFiles) {
     }
 }
 
-if (-not (Test-Path $ModsDir)) {
+if (-not (Test-Path -LiteralPath $ModsDir)) {
     exit 0
 }
 
-$localJars = Get-ChildItem -Path $ModsDir -Filter "*.jar" -File |
+$localJars = Get-ChildItem -LiteralPath $ModsDir -Filter "*.jar" -File |
     Where-Object { -not $knownNames.ContainsKey($_.Name) }
 
 if (-not $localJars -or $localJars.Count -eq 0) {
-    Write-Host "[정보] 개인적으로 추가하신 모드는 없습니다. 모드팩 구성 그대로입니다."
+    Write-Host "[정보] 저장소와 일치하지 않는 클라이언트 전용 모드는 없습니다."
     exit 0
 }
 
+Add-Type -AssemblyName System.Windows.Forms
+
 Write-Host ""
 Write-Host "======================================================"
-Write-Host "  개인적으로 설치하신 모드 $($localJars.Count)개를 발견했습니다"
+Write-Host "  저장소와 일치하지 않는 클라이언트 전용 모드를 찾았습니다"
 Write-Host "======================================================"
-Write-Host ""
-Write-Host "아래 모드들은 이 모드팩(update.bat)이 관리하는 목록에 없습니다."
-Write-Host "즉, 회원님이 직접 CurseForge 등에서 따로 추가하신 모드일 가능성이 높습니다."
-Write-Host ""
-Write-Host "  * 방금 모드팩 업데이트는 이 모드들을 전혀 건드리지 않았습니다."
-Write-Host "  * 아무것도 선택하지 않고 확인만 누르면 전부 그대로 유지됩니다 (기본값: 보존)."
-Write-Host "  * 잠시 후 뜨는 창에서, 정말 지우고 싶은 모드만 체크하고 확인을 누르세요."
+Write-Host "잠시 후 뜨는 창에서 남기고 싶은 모드를 체크해주세요."
+Write-Host "체크하지 않은 모드는 삭제됩니다. (체크한 것만 남습니다)"
 Write-Host ""
 
 $rows = $localJars | Select-Object Name,
@@ -56,21 +53,39 @@ $rows = $localJars | Select-Object Name,
     LastWriteTime
 
 $selected = $rows | Out-GridView `
-    -Title "개인 설치 모드 목록 - 지울 항목만 체크하세요 (아무것도 체크 안 하면 전부 유지)" `
+    -Title "남기고 싶은 모드를 체크해주세요 (체크 안 한 모드는 삭제됩니다)" `
     -OutputMode Multiple
 
-if ($selected) {
-    Write-Host ""
-    Write-Host "체크하신 $($selected.Count)개 모드를 삭제합니다:"
-    foreach ($item in $selected) {
-        $target = Join-Path $ModsDir $item.Name
+$selectedNames = @()
+if ($selected) { $selectedNames = $selected | ForEach-Object { $_.Name } }
+$toDelete = $localJars | Where-Object { $selectedNames -notcontains $_.Name }
+
+if (-not $toDelete -or $toDelete.Count -eq 0) {
+    Write-Host "전부 체크하셨습니다. 아무것도 삭제하지 않았습니다."
+    exit 0
+}
+
+Write-Host ""
+Write-Host "다음 $($toDelete.Count)개 모드가 삭제될 예정입니다 (체크하지 않으신 것들):"
+foreach ($f in $toDelete) { Write-Host "  - $($f.Name)" }
+Write-Host ""
+
+$confirmResult = [System.Windows.Forms.MessageBox]::Show(
+    "위 $($toDelete.Count)개 모드를 정말 삭제할까요?`r`n(체크한 모드는 그대로 유지됩니다)",
+    "삭제 확인",
+    [System.Windows.Forms.MessageBoxButtons]::YesNo,
+    [System.Windows.Forms.MessageBoxIcon]::Warning
+)
+
+if ($confirmResult -eq [System.Windows.Forms.DialogResult]::Yes) {
+    foreach ($item in $toDelete) {
         try {
-            Remove-Item -LiteralPath $target -Force
-            Write-Host "  삭제됨: $($item.Name)"
+            Remove-Item -LiteralPath $item.FullName -Force
+            Write-Host "삭제됨: $($item.Name)"
         } catch {
-            Write-Host "  삭제 실패: $($item.Name) - $($_.Exception.Message)"
+            Write-Host "삭제 실패: $($item.Name) - $($_.Exception.Message)"
         }
     }
 } else {
-    Write-Host "선택한 항목이 없어 모든 개인 설치 모드를 그대로 두었습니다."
+    Write-Host "취소하셨습니다. 아무것도 삭제하지 않았습니다."
 }

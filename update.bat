@@ -1,116 +1,85 @@
 @echo off
+chcp 65001 >nul
 setlocal
 cd /d "%~dp0"
-title Jannu-maku-dudutown ¸ðµå ¾÷µ¥ÀÌÆ®
+title Jannu-maku-dudutown ëª¨ë“œíŒ© ì—…ë°ì´íŠ¸
 
 set "PACK_URL=https://jannuh2.github.io/Jannu-maku-dudutown/pack.toml"
-set "BOOT_URL=https://github.com/packwiz/packwiz-installer-bootstrap/releases/download/v0.0.3/packwiz-installer-bootstrap.jar"
+set "SYNC_URL=https://raw.githubusercontent.com/JannuH2/Jannu-maku-dudutown/main/mod-sync.ps1"
 set "CHECK_URL=https://raw.githubusercontent.com/JannuH2/Jannu-maku-dudutown/main/check-extra-mods.ps1"
 
 echo.
 echo ==============================================
-echo   Jannu-maku-dudutown ¸ðµå ¾÷µ¥ÀÌÆ®
+echo   Jannu-maku-dudutown ëª¨ë“œíŒ© ì—…ë°ì´íŠ¸
 echo ==============================================
 echo.
 
-rem --- 1. CurseForge ÇÁ·ÎÇÊ Æú´õ°¡ ¸Â´ÂÁö È®ÀÎ ---
+rem --- 1. CurseForge ì¸ìŠ¤í„´ìŠ¤ í´ë”ê°€ ë§žëŠ”ì§€ í™•ì¸ ---
 if not exist "minecraftinstance.json" goto wrongfolder
 
-rem --- 2. Java Ã£±â (CurseForge°¡ ¼³Ä¡ÇÑ Java ¿ì¼±, ¾øÀ¸¸é ½Ã½ºÅÛ Java) ---
-set "JAVA="
-if not defined JAVA if exist "%USERPROFILE%\curseforge\minecraft\Install\java\Jre_21\bin\java.exe" set "JAVA=%USERPROFILE%\curseforge\minecraft\Install\java\Jre_21\bin\java.exe"
-if not defined JAVA if exist "%USERPROFILE%\curseforge\minecraft\Install\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\java.exe" set "JAVA=%USERPROFILE%\curseforge\minecraft\Install\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\java.exe"
-if not defined JAVA if exist "%USERPROFILE%\curseforge\minecraft\Install\java\java-runtime-delta\bin\java.exe" set "JAVA=%USERPROFILE%\curseforge\minecraft\Install\java\java-runtime-delta\bin\java.exe"
-if not defined JAVA if exist "%USERPROFILE%\Documents\curseforge\minecraft\Install\java\Jre_21\bin\java.exe" set "JAVA=%USERPROFILE%\Documents\curseforge\minecraft\Install\java\Jre_21\bin\java.exe"
-if not defined JAVA where java >nul 2>nul && set "JAVA=java"
-if not defined JAVA goto nojava
-
-rem --- 3. ¼³Ä¡ µµ±¸ ³»·Á¹Þ±â (Ã³À½ ÇÑ ¹ø¸¸) ---
-if exist "packwiz-installer-bootstrap.jar" goto run
-echo ¼³Ä¡ µµ±¸¸¦ ³»·Á¹Þ´Â ÁßÀÔ´Ï´Ù...
+rem --- 2. ëª¨ë“œ ë™ê¸°í™” ìŠ¤í¬ë¦½íŠ¸ ë°›ì•„ì˜¤ê¸° ---
+if exist "mod-sync.ps1" del /q "mod-sync.ps1"
 set "DL=0"
 
 :download
 set /a DL+=1
-if exist "packwiz-installer-bootstrap.jar.tmp" del /q "packwiz-installer-bootstrap.jar.tmp"
-curl.exe -L -f -s -o "packwiz-installer-bootstrap.jar.tmp" "%BOOT_URL%"
+if exist "mod-sync.ps1.tmp" del /q "mod-sync.ps1.tmp"
+curl.exe -L -f -s -o "mod-sync.ps1.tmp" "%SYNC_URL%"
 if not errorlevel 1 goto dlok
-powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%BOOT_URL%' -OutFile 'packwiz-installer-bootstrap.jar.tmp' } catch { exit 1 }"
+powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%SYNC_URL%' -OutFile 'mod-sync.ps1.tmp' } catch { exit 1 }"
 if not errorlevel 1 goto dlok
 if %DL% lss 3 goto dlretry
 goto downloadfail
 
 :dlretry
-echo ´Ù¿î·Îµå¿¡ ½ÇÆÐÇØ Àá½Ã ÈÄ ´Ù½Ã ½ÃµµÇÕ´Ï´Ù. (%DL%/3 È¸ ½ÇÆÐ)
+echo ë‹¤ìš´ë¡œë“œì— ë¬¸ì œê°€ ìžˆì–´ ìž ì‹œ í›„ ë‹¤ì‹œ ì‹œë„í•©ë‹ˆë‹¤. (%DL%/3 íšŒ ì‹œë„)
 ping -n 4 127.0.0.1 >nul
 goto download
 
 :dlok
-if not exist "packwiz-installer-bootstrap.jar.tmp" goto downloadfail
-move /y "packwiz-installer-bootstrap.jar.tmp" "packwiz-installer-bootstrap.jar" >nul
+if not exist "mod-sync.ps1.tmp" goto downloadfail
+move /y "mod-sync.ps1.tmp" "mod-sync.ps1" >nul
 
 :run
 echo.
-echo ¸ðµå¸¦ È®ÀÎÇÏ°í ¾÷µ¥ÀÌÆ®ÇÕ´Ï´Ù. Àá½Ã Ã¢ÀÌ ³ªÅ¸³³´Ï´Ù.
-echo Ã³À½¿¡´Â ¼ö¹é MB¸¦ ¹Þ¾Æ¼­ 5~10ºÐ °É¸± ¼ö ÀÖ½À´Ï´Ù.
+echo ì €ìž¥ì†Œì™€ ë¹„êµí•˜ëŠ” ì¤‘ìž…ë‹ˆë‹¤. ìž ì‹œ í›„ ë¹„êµ í™”ë©´(ì´ˆë¡=ì¼ì¹˜, ë¹¨ê°•=ë¶ˆì¼ì¹˜)ì´ ëœ¹ë‹ˆë‹¤.
+echo ê·¸ ì°½ì—ì„œ [ì„¤ì¹˜ ì§„í–‰]ì„ ëˆŒëŸ¬ì•¼ë§Œ ì‹¤ì œë¡œ íŒŒì¼ì´ ë°”ë€ë‹ˆë‹¤.
 echo.
-set "TRY=0"
-
-:attempt
-set /a TRY+=1
-"%JAVA%" -jar packwiz-installer-bootstrap.jar -s client "%PACK_URL%"
-if not errorlevel 1 goto success
-if %TRY% lss 3 goto retry
-goto fail
-
-:retry
-echo.
-echo ÀÏºÎ ÆÄÀÏÀ» ¹ÞÁö ¸øÇØ ´Ù½Ã ½ÃµµÇÕ´Ï´Ù. (%TRY%/3 È¸ ½ÇÆÐ, ¹ÞÀº ÆÄÀÏÀº °Ç³Ê¶Ý´Ï´Ù)
-echo.
-goto attempt
+powershell -NoProfile -ExecutionPolicy Bypass -File "mod-sync.ps1" -PackUrl "%PACK_URL%"
+if errorlevel 1 goto fail
 
 :success
 echo.
-echo Checking for mods not in the pack...
+echo ì €ìž¥ì†Œì™€ ì¼ì¹˜í•˜ì§€ ì•ŠëŠ” ê°œì¸ ì„¤ì¹˜ ëª¨ë“œê°€ ìžˆëŠ”ì§€ í™•ì¸í•©ë‹ˆë‹¤...
 if exist "check-extra-mods.ps1" del /q "check-extra-mods.ps1"
 curl.exe -L -f -s -o "check-extra-mods.ps1" "%CHECK_URL%"
 if errorlevel 1 powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%CHECK_URL%' -OutFile 'check-extra-mods.ps1' } catch { exit 1 }"
 if exist "check-extra-mods.ps1" powershell -NoProfile -ExecutionPolicy Bypass -File "check-extra-mods.ps1"
 echo.
 echo ==============================================
-echo   ¿Ï·áµÇ¾ú½À´Ï´Ù! CurseForge¿¡¼­ ÇÁ·ÎÇÊÀ» ½ÇÇàÇÏ¼¼¿ä.
+echo   ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤! CurseForgeì—ì„œ ê²Œìž„ìœ¼ë¡œ ë“¤ì–´ê°€ì„¸ìš”.
 echo ==============================================
 pause
 exit /b 0
 
 :wrongfolder
-echo [¿À·ù] ¿©±â´Â CurseForge ÇÁ·ÎÇÊ Æú´õ°¡ ¾Æ´Õ´Ï´Ù.
+echo [ì˜¤ë¥˜] ì—¬ê¸°ëŠ” CurseForge ì¸ìŠ¤í„´ìŠ¤ í´ë”ê°€ ì•„ë‹™ë‹ˆë‹¤.
 echo.
-echo  1. CurseForge ¾Û¿¡¼­ ÇÁ·ÎÇÊÀÇ Åé´Ï¹ÙÄû ¸Þ´º - "Æú´õ ¿­±â" ¸¦ ´©¸£¼¼¿ä.
-echo  2. ¿­¸° Æú´õ¿¡ ÀÌ update.bat ÆÄÀÏÀ» ¿Å±ä µÚ ´Ù½Ã ½ÇÇàÇÏ¼¼¿ä.
-echo.
-pause
-exit /b 1
-
-:nojava
-echo [¿À·ù] Java¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.
-echo.
-echo  ¹æ¹ý 1: CurseForge¿¡¼­ ÀÌ ÇÁ·ÎÇÊÀ» ÇÑ ¹ø ½ÇÇàÇØ º¸¼¼¿ä. (Java°¡ ÀÚµ¿ ¼³Ä¡µË´Ï´Ù)
-echo          ½ÇÇà ÈÄ °ÔÀÓÀ» ²ô°í ÀÌ ÆÄÀÏÀ» ´Ù½Ã ½ÇÇàÇÏ¼¼¿ä.
-echo  ¹æ¹ý 2: https://adoptium.net ¿¡¼­ Java 21(Temurin)À» ¼³Ä¡ÇÏ¼¼¿ä.
+echo  1. CurseForge ì•±ì—ì„œ ì¸ìŠ¤í„´ìŠ¤ì˜ ìš°ì¸¡ ë©”ë‰´ - "í´ë” ì—´ê¸°" ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.
+echo  2. ì—´ë¦° í´ë”ì— ì´ update.bat íŒŒì¼ì„ ì˜®ê²¨ ë‘” ë’¤ ë‹¤ì‹œ ì‹¤í–‰í•˜ì„¸ìš”.
 echo.
 pause
 exit /b 1
 
 :downloadfail
-echo [¿À·ù] ¼³Ä¡ µµ±¸¸¦ ³»·Á¹ÞÁö ¸øÇß½À´Ï´Ù. ÀÎÅÍ³Ý ¿¬°áÀ» È®ÀÎÇÏ°í ´Ù½Ã ½ÇÇàÇÏ¼¼¿ä.
+echo [ì˜¤ë¥˜] ë™ê¸°í™” ìŠ¤í¬ë¦½íŠ¸ë¥¼ ë°›ì•„ì˜¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ì¸í„°ë„· ì—°ê²°ì„ í™•ì¸í•˜ê³  ë‹¤ì‹œ ì‹¤í–‰í•˜ì„¸ìš”.
 echo.
 pause
 exit /b 1
 
 :fail
 echo.
-echo [¿À·ù] ¾÷µ¥ÀÌÆ®¿¡ ½ÇÆÐÇß½À´Ï´Ù. À§ÂÊ ¸Þ½ÃÁö¸¦ Ä¸Ã³ÇØ¼­ °ü¸®ÀÚ¿¡°Ô º¸³»ÁÖ¼¼¿ä.
+echo [ì˜¤ë¥˜] ì—…ë°ì´íŠ¸ê°€ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ìœ„ ë©”ì‹œì§€ë¥¼ ìº¡ì²˜í•´ì„œ ê´€ë¦¬ìžì—ê²Œ ë³´ë‚´ì£¼ì„¸ìš”.
 echo.
 pause
 exit /b 1
