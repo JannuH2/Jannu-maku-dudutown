@@ -989,11 +989,6 @@ hash = "e8347f79c7f4532f9b9f0dac4ca5e701007691a6fc086cbde5cb9fd3193f6c96"
 metafile = true
 
 [[files]]
-file = "mods/maplink.pw.toml"
-hash = "5c1a8c2e3b71c2f406fbcbc2a16322197e11e8cd3a82b222785468fd44536f2f"
-metafile = true
-
-[[files]]
 file = "mods/mavapi.pw.toml"
 hash = "e183c9f3e07a0800ac9d577b317b8be3be28934171f9ba2c92fbf8480a1cd911"
 metafile = true
