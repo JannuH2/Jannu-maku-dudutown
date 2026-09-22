@@ -746,7 +746,7 @@ metafile = true
 
 [[files]]
 file = "mods/jei.pw.toml"
-hash = "3aafb1d42252c7f24728dfb1664e7ae45786445c3a84a2c31e26e76f8734c0d2"
+hash = "f9cc0ab8d3d95be57d9d35321562538617c7dd111e809ada1262c6938801feb0"
 metafile = true
 
 [[files]]
@@ -1021,6 +1021,11 @@ metafile = true
 [[files]]
 file = "mods/mebahels-elder-scrolls-score.pw.toml"
 hash = "0e92aabee6569638f50a0b47b8d490d31b6df4c6e99596fa2ea6fea53cd657ab"
+metafile = true
+
+[[files]]
+file = "mods/mezz-config.pw.toml"
+hash = "084b4594cdb55d062683461c93467fb9e54641cf1d9e1e315b559909aa74aeec"
 metafile = true
 
 [[files]]
