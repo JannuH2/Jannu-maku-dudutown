@@ -576,7 +576,7 @@ metafile = true
 
 [[files]]
 file = "mods/fragmentum-fabric.pw.toml"
-hash = "38c441584a92d1199644d5b0a8040b9fbde4ae7d280e85990e65a1c55b07beab"
+hash = "1d756ab0368b7896a465e8a330261eb90b3234b70d37c42e57a6d3f084a953bd"
 metafile = true
 
 [[files]]
@@ -637,6 +637,11 @@ metafile = true
 [[files]]
 file = "mods/goblin-traders.pw.toml"
 hash = "f272388b6a0b00e9ce7ddc5fbb029e9ad77afb5eb3925c020de42707e495ffe8"
+metafile = true
+
+[[files]]
+file = "mods/hapi.pw.toml"
+hash = "1445a7f99eae7802caff1dd94da8a9edc9530597c6e082c00224293883ec879c"
 metafile = true
 
 [[files]]
@@ -905,7 +910,7 @@ metafile = true
 
 [[files]]
 file = "mods/loot-n-explore.pw.toml"
-hash = "089e05deac808b8cf6ed2648d3309ca0442c8c55dd0e5cde082a499e8fdc4a79"
+hash = "34a9e3eb1dceb579623ac2a2244bc38c2360804950da69679ab159b603223b25"
 metafile = true
 
 [[files]]
@@ -1075,7 +1080,7 @@ metafile = true
 
 [[files]]
 file = "mods/moogs-structure-lib.pw.toml"
-hash = "bc77de270dce0ca275f8d23031d4518908fffe77f8d5fa59410c524c164509ed"
+hash = "efd494b7f5537c402721242079ac66fe49f0b45ed0f9877faa16d754c1ae49bc"
 metafile = true
 
 [[files]]
