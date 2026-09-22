@@ -50,7 +50,7 @@ try {
     exit 1
 }
 
-# Parse index.toml into a list of {file, metafile}
+# Parse index.toml into a list of {file, metafile, hash} - mods/ only
 $entries = @()
 $blocks = $indexText -split '\[\[files\]\]'
 foreach ($b in $blocks) {
@@ -64,18 +64,18 @@ foreach ($b in $blocks) {
 
 Write-Host "$($entries.Count)개 항목을 찾았습니다. 각 모드 정보를 불러오는 중..."
 
-# Load existing manifest (previous install state)
+# Load existing manifest (previous install state) - used only to recognize stale
+# (already-tracked-but-outdated) local files by their old filename.
 $cachedFiles = @{}
-$manifest = $null
 if (Test-Path -LiteralPath $ManifestPath) {
     try {
-        $manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
+        $manifest = Get-Content -LiteralPath $ManifestPath -Raw | ConvertFrom-Json
         if ($manifest.cachedFiles) {
             foreach ($prop in $manifest.cachedFiles.PSObject.Properties) {
                 $cachedFiles[$prop.Name] = $prop.Value
             }
         }
-    } catch { $manifest = $null }
+    } catch { }
 }
 
 $mods = @()
@@ -95,7 +95,6 @@ foreach ($e in $entries) {
         $url = Get-TomlValue $pwText "url"
         $hashFormat = Get-TomlValue $pwText "hash-format"
         $hash = Get-TomlValue $pwText "hash"
-        $mode = Get-TomlValue $pwText "mode"
         $fileId = Get-TomlValue $pwText "file-id"
         $projectId = Get-TomlValue $pwText "project-id"
         $optional = (Get-TomlValue $pwText "optional") -eq "true"
@@ -117,7 +116,6 @@ foreach ($e in $entries) {
             default    = $default
         }
     } else {
-        # direct binary entry (jar committed straight into the repo)
         $filename = Split-Path $e.file -Leaf
         $mods += [PSCustomObject]@{
             pwPath     = $e.file
@@ -133,60 +131,79 @@ foreach ($e in $entries) {
     }
 }
 
-# Only client-relevant mods
-$mods = $mods | Where-Object { $_.side -eq "both" -or $_.side -eq "client" }
+# All filenames the pack currently expects, regardless of side (used to tell
+# "personal mod" apart from "mod this pack tracks under a different side").
+$allExpectedNames = @{}
+foreach ($m in $mods) { $allExpectedNames[$m.filename] = $true }
 
-# Compute status vs local mods folder / manifest
-foreach ($m in $mods) {
+# Names previously installed by this tool, by pwPath (for detecting a stale
+# version of a tracked mod vs. a genuinely untracked personal mod).
+$allCachedNames = @{}
+foreach ($k in $cachedFiles.Keys) {
+    $loc = $cachedFiles[$k].cachedLocation
+    if ($loc) { $allCachedNames[(Split-Path $loc -Leaf)] = $true }
+}
+
+$clientMods = $mods | Where-Object { $_.side -eq "both" -or $_.side -eq "client" }
+
+# ---- Row model ----
+# kind: "pack" (tracked by the pack) or "personal" (local-only, not tracked)
+# state (pack rows): "match" | "included" | "excluded"
+# state (personal rows): "keep" | "delete"
+$rows = @()
+
+foreach ($m in $clientMods) {
     $prevLoc = $null
-    if ($cachedFiles.ContainsKey($m.pwPath)) {
-        $prevLoc = $cachedFiles[$m.pwPath].cachedLocation
-    }
+    if ($cachedFiles.ContainsKey($m.pwPath)) { $prevLoc = $cachedFiles[$m.pwPath].cachedLocation }
     $prevName = if ($prevLoc) { Split-Path $prevLoc -Leaf } else { $null }
     $existsAsExpected = Test-Path -LiteralPath (Join-Path $ModsDir $m.filename)
 
     if ($existsAsExpected) {
-        $m | Add-Member -NotePropertyName status -NotePropertyValue "일치" -Force
-        $m | Add-Member -NotePropertyName localName -NotePropertyValue $m.filename -Force
-        $m | Add-Member -NotePropertyName needsAction -NotePropertyValue $false -Force
-    } elseif ($prevName) {
-        $m | Add-Member -NotePropertyName status -NotePropertyValue "버전 다름" -Force
-        $m | Add-Member -NotePropertyName localName -NotePropertyValue $prevName -Force
-        $m | Add-Member -NotePropertyName needsAction -NotePropertyValue $true -Force
+        $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="일치"; localName=$m.filename; state="match" }
+    } elseif ($prevName -and (Test-Path -LiteralPath (Join-Path $ModsDir $prevName))) {
+        $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="버전 다름"; localName=$prevName; state="off" }
     } else {
         if ($m.optional -and -not $m.default) {
-            # never opted in - leave alone, don't show as an error
-            $m | Add-Member -NotePropertyName status -NotePropertyValue "미설치(선택)" -Force
-            $m | Add-Member -NotePropertyName localName -NotePropertyValue "(없음)" -Force
-            $m | Add-Member -NotePropertyName needsAction -NotePropertyValue $false -Force
+            $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="설치안됨(선택)"; localName="(없음)"; state="off" }
         } else {
-            $m | Add-Member -NotePropertyName status -NotePropertyValue "없음" -Force
-            $m | Add-Member -NotePropertyName localName -NotePropertyValue "(없음)" -Force
-            $m | Add-Member -NotePropertyName needsAction -NotePropertyValue $true -Force
+            $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="설치안됨"; localName="(없음)"; state="off" }
         }
     }
 }
 
-$actionable = $mods | Where-Object { $_.needsAction }
+if (Test-Path -LiteralPath $ModsDir) {
+    $localJars = Get-ChildItem -LiteralPath $ModsDir -Filter "*.jar" -File
+    foreach ($j in $localJars) {
+        if ($allExpectedNames.ContainsKey($j.Name)) { continue }
+        if ($allCachedNames.ContainsKey($j.Name)) { continue }
+        $rows += [PSCustomObject]@{
+            kind="personal"; mod=$null; status="내pc에만 있음"; localName=$j.Name; state="off"
+        }
+    }
+}
 
-if ($actionable.Count -eq 0) {
+$mismatchCount = ($rows | Where-Object { $_.kind -eq "pack" -and $_.state -eq "off" }).Count
+$personalCount = ($rows | Where-Object { $_.kind -eq "personal" }).Count
+if ($mismatchCount -eq 0 -and $personalCount -eq 0) {
     Write-Host ""
-    Write-Host "모든 필수 모드가 저장소 버전과 일치합니다. 업데이트할 항목이 없습니다."
+    Write-Host "모든 필수 모드가 저장소 버전과 일치하고, 개인 설치 모드도 없습니다. 할 일이 없습니다."
     exit 0
 }
 
-# ---- Build the colored diff window ----
+# ---- Build the unified window ----
 $form = New-Object System.Windows.Forms.Form
-$form.Text = "모드 동기화 - 일치(초록) / 불일치(빨강) 확인"
-$form.Width = 900
-$form.Height = 650
+$form.Text = "모드 동기화"
+$form.Width = 950
+$form.Height = 680
 $form.StartPosition = "CenterScreen"
 $form.TopMost = $true
 
 $label = New-Object System.Windows.Forms.Label
-$label.Text = "저장소 기준으로 로컬 모드 상태를 비교했습니다. 초록색은 이미 일치, 빨간색은 저장소와 다르거나 없는 모드입니다.`r`n아래 [설치 진행] 버튼을 눌러야 실제로 파일이 변경됩니다. 누르기 전까지는 아무것도 바뀌지 않습니다."
+$label.Text = "초록=일치, 빨강=저장소와 불일치(기본적으로 아무것도 안 함), 파랑=개인 설치 모드(팩에 없음, 기본적으로 그대로 둠).`r`n" +
+              "빨간 항목을 더블클릭하면 설치 대상으로 활성화됩니다(노란색). 파란 항목을 더블클릭하면 삭제 대상으로 활성화됩니다(주황색).`r`n" +
+              "활성화한 항목만 [최종 확인]을 눌러야 실제로 적용됩니다. 그 전까지는 아무 파일도 바뀌지 않습니다."
 $label.Dock = "Top"
-$label.Height = 50
+$label.Height = 60
 $label.Padding = New-Object System.Windows.Forms.Padding(10, 10, 10, 0)
 $form.Controls.Add($label)
 
@@ -196,22 +213,47 @@ $grid.ReadOnly = $true
 $grid.AllowUserToAddRows = $false
 $grid.AutoSizeColumnsMode = "Fill"
 $grid.SelectionMode = "FullRowSelect"
-$grid.Columns.Add("status", "상태") | Out-Null
+$grid.MultiSelect = $false
+$grid.Columns.Add("action", "동작") | Out-Null
 $grid.Columns.Add("name", "모드명") | Out-Null
-$grid.Columns.Add("local", "로컬 버전") | Out-Null
-$grid.Columns.Add("expected", "저장소 버전") | Out-Null
+$grid.Columns.Add("local", "로컬 파일") | Out-Null
+$grid.Columns.Add("expected", "저장소 파일") | Out-Null
 
-foreach ($m in ($mods | Sort-Object { $_.needsAction } -Descending)) {
-    $rowIdx = $grid.Rows.Add($m.status, $m.name, $m.localName, $m.filename)
-    $row = $grid.Rows[$rowIdx]
-    if ($m.needsAction) {
-        $row.DefaultCellStyle.BackColor = [System.Drawing.Color]::MistyRose
-        $row.DefaultCellStyle.ForeColor = [System.Drawing.Color]::DarkRed
-    } else {
-        $row.DefaultCellStyle.BackColor = [System.Drawing.Color]::Honeydew
-        $row.DefaultCellStyle.ForeColor = [System.Drawing.Color]::DarkGreen
+function Get-RowColors($row) {
+    switch ("$($row.kind)|$($row.state)") {
+        "pack|match" { return @{ back=[System.Drawing.Color]::Honeydew;            fore=[System.Drawing.Color]::DarkGreen;      text="일치" } }
+        "pack|off"   { return @{ back=[System.Drawing.Color]::MistyRose;           fore=[System.Drawing.Color]::DarkRed;        text="$($row.status) (더블클릭하면 설치)" } }
+        "pack|on"    { return @{ back=[System.Drawing.Color]::LightGoldenrodYellow; fore=[System.Drawing.Color]::DarkGoldenrod; text="설치 예정 (활성화됨)" } }
+        "personal|off" { return @{ back=[System.Drawing.Color]::AliceBlue; fore=[System.Drawing.Color]::DarkBlue;   text="$($row.status) (더블클릭하면 삭제)" } }
+        "personal|on"  { return @{ back=[System.Drawing.Color]::Bisque;    fore=[System.Drawing.Color]::DarkOrange; text="삭제 예정 (활성화됨)" } }
     }
 }
+
+$sorted = $rows | Sort-Object { if ($_.state -eq "match") { 1 } else { 0 } }, { $_.kind }
+foreach ($r in $sorted) {
+    $expected = if ($r.kind -eq "pack") { $r.mod.filename } else { "(팩에 없음)" }
+    $name = if ($r.kind -eq "pack") { $r.mod.name } else { $r.localName }
+    $colors = Get-RowColors $r
+    $rowIdx = $grid.Rows.Add($colors.text, $name, $r.localName, $expected)
+    $row = $grid.Rows[$rowIdx]
+    $row.DefaultCellStyle.BackColor = $colors.back
+    $row.DefaultCellStyle.ForeColor = $colors.fore
+    $row.Tag = $r
+}
+
+$grid.Add_CellDoubleClick({
+    param($s, $e)
+    if ($e.RowIndex -lt 0) { return }
+    $row = $grid.Rows[$e.RowIndex]
+    $r = $row.Tag
+    if ($r.kind -eq "pack" -and $r.state -eq "match") { return } # not toggleable
+    if ($r.state -eq "off") { $r.state = "on" } else { $r.state = "off" }
+    $colors = Get-RowColors $r
+    $row.Cells["action"].Value = $colors.text
+    $row.DefaultCellStyle.BackColor = $colors.back
+    $row.DefaultCellStyle.ForeColor = $colors.fore
+})
+
 $form.Controls.Add($grid)
 
 $buttonPanel = New-Object System.Windows.Forms.Panel
@@ -219,7 +261,7 @@ $buttonPanel.Dock = "Bottom"
 $buttonPanel.Height = 50
 
 $installBtn = New-Object System.Windows.Forms.Button
-$installBtn.Text = "설치 진행 ($($actionable.Count)개)"
+$installBtn.Text = "최종 확인"
 $installBtn.Width = 160
 $installBtn.Height = 34
 $installBtn.Left = 620
@@ -243,19 +285,39 @@ $form.CancelButton = $cancelBtn
 $result = $form.ShowDialog()
 
 if ($result -ne [System.Windows.Forms.DialogResult]::OK) {
-    Write-Host "설치가 취소되었습니다. 아무 파일도 변경되지 않았습니다."
+    Write-Host "취소되었습니다. 아무 파일도 변경되지 않았습니다."
     exit 0
 }
 
+$toInstall = $rows | Where-Object { $_.kind -eq "pack" -and $_.state -eq "on" }
+$toDelete  = $rows | Where-Object { $_.kind -eq "personal" -and $_.state -eq "on" }
+
+if ($toDelete.Count -gt 0) {
+    Write-Host ""
+    Write-Host "다음 $($toDelete.Count)개 개인 모드가 삭제됩니다:"
+    foreach ($d in $toDelete) { Write-Host "  - $($d.localName)" }
+    $confirm = [System.Windows.Forms.MessageBox]::Show(
+        "개인 설치 모드 $($toDelete.Count)개를 정말 삭제할까요?`r`n(이 목록에 없는 나머지 개인 모드는 그대로 유지됩니다)",
+        "삭제 확인",
+        [System.Windows.Forms.MessageBoxButtons]::YesNo,
+        [System.Windows.Forms.MessageBoxIcon]::Warning
+    )
+    if ($confirm -ne [System.Windows.Forms.DialogResult]::Yes) {
+        Write-Host "삭제를 취소했습니다."
+        $toDelete = @()
+    }
+}
+
 Write-Host ""
-Write-Host "$($actionable.Count)개 모드를 설치/업데이트합니다..."
+Write-Host "$($toInstall.Count)개 모드를 설치/업데이트하고, $($toDelete.Count)개 개인 모드를 삭제합니다..."
 
 if (-not (Test-Path -LiteralPath $ModsDir)) { New-Item -ItemType Directory -Path $ModsDir | Out-Null }
 
 $okCount = 0
 $failCount = 0
 
-foreach ($m in $actionable) {
+foreach ($r in $toInstall) {
+    $m = $r.mod
     Write-Host "  받는 중: $($m.name) ($($m.filename))"
     $target = Join-Path $ModsDir $m.filename
     $tmp = "$target.tmp"
@@ -280,8 +342,8 @@ foreach ($m in $actionable) {
     }
 
     if ($ok) {
-        if ($m.localName -ne "(없음)" -and $m.localName -ne $m.filename) {
-            $oldPath = Join-Path $ModsDir $m.localName
+        if ($r.localName -ne "(없음)" -and $r.localName -ne $m.filename) {
+            $oldPath = Join-Path $ModsDir $r.localName
             if (Test-Path -LiteralPath $oldPath) { Remove-Item -LiteralPath $oldPath -Force -ErrorAction SilentlyContinue }
         }
         Move-Item -LiteralPath $tmp -Destination $target -Force
@@ -301,6 +363,16 @@ foreach ($m in $actionable) {
     }
 }
 
+foreach ($d in $toDelete) {
+    $target = Join-Path $ModsDir $d.localName
+    try {
+        Remove-Item -LiteralPath $target -Force
+        Write-Host "  삭제됨: $($d.localName)"
+    } catch {
+        Write-Host "  [실패] $($d.localName) 삭제 실패 - $($_.Exception.Message)"
+    }
+}
+
 $newManifest = [PSCustomObject]@{
     packFileHash  = $null
     indexFileHash = $null
@@ -311,5 +383,5 @@ $newManifest | ConvertTo-Json -Depth 6 | Set-Content -Path $ManifestPath -Encodi
 
 Write-Host ""
 Write-Host "======================================================"
-Write-Host "  완료: 성공 $okCount 개, 실패 $failCount 개"
+Write-Host "  완료: 설치/업데이트 성공 $okCount 개, 실패 $failCount 개, 개인 모드 삭제 $($toDelete.Count) 개"
 Write-Host "======================================================"

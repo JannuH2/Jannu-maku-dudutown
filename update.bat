@@ -6,7 +6,6 @@ title Jannu-maku-dudutown 모드팩 업데이트
 
 set "PACK_URL=https://jannuh2.github.io/Jannu-maku-dudutown/pack.toml"
 set "SYNC_URL=https://raw.githubusercontent.com/JannuH2/Jannu-maku-dudutown/main/mod-sync.ps1"
-set "CHECK_URL=https://raw.githubusercontent.com/JannuH2/Jannu-maku-dudutown/main/check-extra-mods.ps1"
 
 echo.
 echo ==============================================
@@ -49,12 +48,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "mod-sync.ps1" -PackUrl "%PA
 if errorlevel 1 goto fail
 
 :success
-echo.
-echo 저장소와 일치하지 않는 개인 설치 모드가 있는지 확인합니다...
-if exist "check-extra-mods.ps1" del /q "check-extra-mods.ps1"
-curl.exe -L -f -s -o "check-extra-mods.ps1" "%CHECK_URL%"
-if errorlevel 1 powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%CHECK_URL%' -OutFile 'check-extra-mods.ps1' } catch { exit 1 }"
-if exist "check-extra-mods.ps1" powershell -NoProfile -ExecutionPolicy Bypass -File "check-extra-mods.ps1"
 echo.
 echo ==============================================
 echo   완료되었습니다! CurseForge에서 게임으로 들어가세요.
