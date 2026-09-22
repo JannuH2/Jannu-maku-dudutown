@@ -1,13 +1,13 @@
 name = "[Let's Do] Beachparty"
-filename = "letsdo-beachparty-fabric-2.1.4.jar"
+filename = "letsdo-beachparty-fabric-2.1.5.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "5a1313a9e05994ff463c8ec853e76eca1bd5f16e"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/GyKzAh3l/versions/jeZE0Qav/letsdo-beachparty-fabric-2.1.5.jar"
+hash-format = "sha512"
+hash = "c8548e036590ff418a25b323f582a647add1a3bb1f14ea6a3600259a6ff472744bc73c8a9aa7081742edda4cc55b63ba84705537314671c690383be50e9f48ac"
 
 [update]
-[update.curseforge]
-file-id = 7672880
-project-id = 858691
+[update.modrinth]
+mod-id = "GyKzAh3l"
+version = "jeZE0Qav"

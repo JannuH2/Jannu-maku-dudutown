@@ -1,13 +1,13 @@
 name = "[Let's Do] Lili's Pottery"
-filename = "letsdo-lilis_pottery-fabric-1.0.2.jar"
+filename = "letsdo-lilis_pottery-fabric-1.0.3.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "724d00ee2a2fa5ba9dcb85c441c7cb1cbaa0b834"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/sHiqiJIU/versions/rVL93Byz/letsdo-lilis_pottery-fabric-1.0.3.jar"
+hash-format = "sha512"
+hash = "4bf8613fc26c88f4a5c60cf30f7af3aa88f68195e55d031ee2c154d4af40be127dd9296d8fb21a9e9db6eec42eaac3cf912ecab37542215a9a34c2252b929090"
 
 [update]
-[update.curseforge]
-file-id = 7586636
-project-id = 1419242
+[update.modrinth]
+mod-id = "sHiqiJIU"
+version = "rVL93Byz"

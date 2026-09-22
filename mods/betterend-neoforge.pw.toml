@@ -1,13 +1,13 @@
 name = "BetterEnd: New Dawn"
-filename = "BetterEnd-21.0.19-fabric.jar"
+filename = "better-end-21.0.20-fabric.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "503cdcf2ca4181ece1db474015b1962a96ce214e"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/IcERKldh/versions/A5VW5HsU/better-end-21.0.20-fabric.jar"
+hash-format = "sha512"
+hash = "d99abf325410c91326c71b3228e269c15bad0d9aea6dfd1665739bdaed7903f99aa33eacd1bb2abe33c73967713a16aa7de8503a179b1af867f6e94ec2da5db7"
 
 [update]
-[update.curseforge]
-file-id = 8610408
-project-id = 1422294
+[update.modrinth]
+mod-id = "IcERKldh"
+version = "A5VW5HsU"

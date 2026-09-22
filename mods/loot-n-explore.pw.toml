@@ -1,13 +1,13 @@
 name = "Loot & Explore"
-filename = "loot_n_explore-1.0.22-1.21.1.jar"
+filename = "loot_n_explore-1.0.23-1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "fa26bdd329092ed6ec981872e9d1df2b0b0bc553"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/GxOv67AE/versions/XuIdkkJL/loot_n_explore-1.0.23-1.21.1.jar"
+hash-format = "sha512"
+hash = "99a15c17b147ac122f7ba9f22d323fcfb68e96781fdd369386931bcb65f20e84670118d9befc4feaa6d4e053e2d9fc606c7ca776ba21b165ce0245255b5c07df"
 
 [update]
-[update.curseforge]
-file-id = 8731998
-project-id = 1148917
+[update.modrinth]
+mod-id = "GxOv67AE"
+version = "XuIdkkJL"

@@ -1,13 +1,13 @@
 name = "Durability Tooltip"
-filename = "durabilitytooltip-1.1.6-fabric-mc1.21.jar"
+filename = "durabilitytooltip-1.2.0-fabric-mc1.21.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "c7a5028c90993934b0604c69fe63d33c951e8640"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/smUP7V3r/versions/E78U13HV/durabilitytooltip-1.2.0-fabric-mc1.21.jar"
+hash-format = "sha512"
+hash = "fc3f9934cced8f07e9f4b1a307698329ec2f811ebc0ffda20498231ea28008b41c1b27b900fd420eeac6c17c6abfc20494b94d14b21bb00ca508e207fbdbf26b"
 
 [update]
-[update.curseforge]
-file-id = 6833277
-project-id = 511040
+[update.modrinth]
+mod-id = "smUP7V3r"
+version = "E78U13HV"

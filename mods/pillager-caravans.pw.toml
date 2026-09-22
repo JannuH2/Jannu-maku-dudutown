@@ -1,13 +1,13 @@
 name = "Pillager Caravans"
-filename = "caravans-fabric-1.21.1-3.0.0.jar"
+filename = "caravans-fabric-1.21.1-3.0.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "66a66e8d856a0de15a5eb4c0b6464398bbfdde1e"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/8jJHxtdz/versions/sNGp6Yvf/caravans-fabric-1.21.1-3.0.1.jar"
+hash-format = "sha512"
+hash = "be46262ce0d781ed728232b4657ba027b4b4196d90e2014d7c5e73733a5982a2eab1fa51e3917cb65edf6da8edeea029b87805b1ec9fc46d2f65a7ba4852fa0c"
 
 [update]
-[update.curseforge]
-file-id = 8241459
-project-id = 1356772
+[update.modrinth]
+mod-id = "8jJHxtdz"
+version = "sNGp6Yvf"
