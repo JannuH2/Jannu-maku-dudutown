@@ -9,14 +9,12 @@
 
 ## 처음 설치 (한 번만, 약 10~15분)
 
-**1. 프로필 만들기**
-CurseForge 앱 → Minecraft → **프로필 만들기(Create Custom Profile)**
-- 이름: 아무거나 (예: `Dudutown`)
-- 게임 버전: **1.21.1**
-- 모드 로더: **Fabric** (버전은 `0.19.3` 권장)
+**서버 프로필 들어가기**
+CurseForge 앱 → Minecraft → **잔누테스트 정식서버**
+- 게임 버전: **1.21.1** 에 들어감
 
 **2. 프로필 폴더 열기**
-만든 프로필의 **톱니바퀴(⚙) 메뉴 → 폴더 열기**를 누릅니다. 탐색기 창이 열립니다.
+프로필의 **톱니바퀴(⚙) 메뉴 → 폴더 열기**를 누릅니다. 탐색기 창이 열립니다.
 
 **3. update.bat 받기**
 [여기를 **우클릭 → 다른 이름으로 링크 저장**](https://raw.githubusercontent.com/JannuH2/Jannu-maku-dudutown/main/update.bat)해서
