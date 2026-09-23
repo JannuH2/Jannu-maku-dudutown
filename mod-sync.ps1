@@ -8,6 +8,10 @@ Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
 $ErrorActionPreference = "Stop"
+# Invoke-WebRequest's default progress-bar rendering is extremely slow for
+# larger files in Windows PowerShell 5.1 and can make big mods time out or
+# fail entirely; this is a well-known fix with no downside.
+$ProgressPreference = "SilentlyContinue"
 $BaseUrl = $PackUrl.Substring(0, $PackUrl.LastIndexOf("/") + 1)
 
 function Get-UrlText {
@@ -383,7 +387,7 @@ foreach ($r in $toInstall) {
     $ok = $false
     for ($try = 1; $try -le 3; $try++) {
         try {
-            Invoke-WebRequest -UseBasicParsing -Uri $m.url -OutFile $tmp -MaximumRedirection 5
+            Invoke-WebRequest -UseBasicParsing -Uri $m.url -OutFile $tmp -MaximumRedirection 5 -TimeoutSec 180
             if ($m.hash -and $m.hashFormat) {
                 $algo = if ($m.hashFormat -eq "sha1") { "SHA1" } elseif ($m.hashFormat -eq "sha512") { "SHA512" } else { "SHA256" }
                 $actualHash = (Get-FileHash -LiteralPath $tmp -Algorithm $algo).Hash.ToLower()
