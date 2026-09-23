@@ -161,12 +161,14 @@ foreach ($m in $clientMods) {
     if ($existsAsExpected) {
         $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="일치"; localName=$m.filename; state="match" }
     } elseif ($prevName -and (Test-Path -LiteralPath (Join-Path $ModsDir $prevName))) {
-        $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="버전 다름"; localName=$prevName; state="off" }
+        # Missing/outdated tracked mod: default to installing it. User double-clicks to exclude.
+        $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="버전 다름"; localName=$prevName; state="on" }
     } else {
         if ($m.optional -and -not $m.default) {
+            # Pack-level opt-in mod the maintainer marked off-by-default: respect that, stay off.
             $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="설치안됨(선택)"; localName="(없음)"; state="off" }
         } else {
-            $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="설치안됨"; localName="(없음)"; state="off" }
+            $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="설치안됨"; localName="(없음)"; state="on" }
         }
     }
 }
@@ -182,7 +184,7 @@ if (Test-Path -LiteralPath $ModsDir) {
     }
 }
 
-$mismatchCount = ($rows | Where-Object { $_.kind -eq "pack" -and $_.state -eq "off" }).Count
+$mismatchCount = ($rows | Where-Object { $_.kind -eq "pack" -and $_.state -ne "match" }).Count
 $personalCount = ($rows | Where-Object { $_.kind -eq "personal" }).Count
 if ($mismatchCount -eq 0 -and $personalCount -eq 0) {
     Write-Host ""
@@ -202,9 +204,9 @@ $labelHeight = 70
 $buttonHeight = 50
 
 $label = New-Object System.Windows.Forms.Label
-$label.Text = "초록=일치, 빨강=저장소와 불일치(기본적으로 아무것도 안 함), 파랑=개인 설치 모드(팩에 없음, 기본적으로 그대로 둠).`r`n" +
-              "빨간 항목을 더블클릭하면 설치 대상으로 활성화됩니다(노란색). 파란 항목을 더블클릭하면 삭제 대상으로 활성화됩니다(주황색).`r`n" +
-              "활성화한 항목만 [최종 확인]을 눌러야 실제로 적용됩니다. 그 전까지는 아무 파일도 바뀌지 않습니다."
+$label.Text = "초록=이미 일치(그대로 둠). 빨강=미설치된 필수 모드(기본적으로 자동 설치됨). 회색=미설치된 선택/클라이언트 전용 모드(기본적으로 자동 설치되지만, 꺼도 무방).`r`n" +
+              "파랑=개인 설치 모드(팩에 없음, 기본적으로 그대로 둠). 빨강/회색 항목을 더블클릭하면 설치에서 제외됩니다(다시 더블클릭하면 복귀). 파란 항목을 더블클릭하면 삭제 대상으로 활성화됩니다(주황색).`r`n" +
+              "[최종 확인]을 눌러야 실제로 적용됩니다. 그 전까지는 아무 파일도 바뀌지 않습니다."
 $label.AutoSize = $false
 $label.Location = New-Object System.Drawing.Point(10, 10)
 $label.Size = New-Object System.Drawing.Size(($form.ClientSize.Width - 20), ($labelHeight - 10))
@@ -231,12 +233,29 @@ $grid.Columns.Add("local", "로컬 파일") | Out-Null
 $grid.Columns.Add("expected", "저장소 파일") | Out-Null
 
 function Get-RowColors($row) {
-    switch ("$($row.kind)|$($row.state)") {
-        "pack|match" { return @{ back=[System.Drawing.Color]::Honeydew;            fore=[System.Drawing.Color]::DarkGreen;      text="일치" } }
-        "pack|off"   { return @{ back=[System.Drawing.Color]::MistyRose;           fore=[System.Drawing.Color]::DarkRed;        text="$($row.status) (더블클릭하면 설치)" } }
-        "pack|on"    { return @{ back=[System.Drawing.Color]::LightGoldenrodYellow; fore=[System.Drawing.Color]::DarkGoldenrod; text="설치 예정 (활성화됨)" } }
-        "personal|off" { return @{ back=[System.Drawing.Color]::AliceBlue; fore=[System.Drawing.Color]::DarkBlue;   text="$($row.status) (더블클릭하면 삭제)" } }
-        "personal|on"  { return @{ back=[System.Drawing.Color]::Bisque;    fore=[System.Drawing.Color]::DarkOrange; text="삭제 예정 (활성화됨)" } }
+    if ($row.kind -eq "pack") {
+        if ($row.state -eq "match") {
+            return @{ back=[System.Drawing.Color]::Honeydew; fore=[System.Drawing.Color]::DarkGreen; text="일치" }
+        }
+        $isClient = ($row.mod.side -eq "client")
+        if ($row.state -eq "on") {
+            # Default state for anything missing/outdated: will be auto-installed on confirm.
+            if ($isClient) {
+                return @{ back=[System.Drawing.Color]::WhiteSmoke; fore=[System.Drawing.Color]::Gray; text="$($row.status) - 선택 모드, 자동 설치됨 (더블클릭하면 제외)" }
+            } else {
+                return @{ back=[System.Drawing.Color]::MistyRose; fore=[System.Drawing.Color]::DarkRed; text="$($row.status) - 자동 설치됨 (더블클릭하면 제외)" }
+            }
+        } else {
+            # User double-clicked to exclude it from this run.
+            if ($isClient) {
+                return @{ back=[System.Drawing.Color]::Gainsboro; fore=[System.Drawing.Color]::DimGray; text="$($row.status) - 설치 제외됨 (더블클릭하면 다시 설치)" }
+            } else {
+                return @{ back=[System.Drawing.Color]::LightCoral; fore=[System.Drawing.Color]::Maroon; text="$($row.status) - 설치 제외됨! (더블클릭하면 다시 설치)" }
+            }
+        }
+    } else {
+        if ($row.state -eq "off") { return @{ back=[System.Drawing.Color]::AliceBlue; fore=[System.Drawing.Color]::DarkBlue;   text="$($row.status) (더블클릭하면 삭제)" } }
+        else { return @{ back=[System.Drawing.Color]::Bisque; fore=[System.Drawing.Color]::DarkOrange; text="삭제 예정 (활성화됨)" } }
     }
 }
 

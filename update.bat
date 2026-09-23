@@ -41,8 +41,8 @@ move /y "mod-sync.ps1.tmp" "mod-sync.ps1" >nul
 
 :run
 echo.
-echo 저장소와 비교하는 중입니다. 잠시 후 비교 화면(초록=일치, 빨강=불일치)이 뜹니다.
-echo 그 창에서 [설치 진행]을 눌러야만 실제로 파일이 바뀝니다.
+echo 저장소와 비교하는 중입니다. 잠시 후 비교 화면(초록=일치, 빨강/회색=미설치)이 뜹니다.
+echo 미설치 항목은 기본적으로 자동 설치되며, 그 창에서 [최종 확인]을 눌러야만 실제로 파일이 바뀝니다.
 echo.
 powershell -NoProfile -ExecutionPolicy Bypass -File "mod-sync.ps1" -PackUrl "%PACK_URL%"
 if errorlevel 1 goto fail
