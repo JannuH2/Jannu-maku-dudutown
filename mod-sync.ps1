@@ -200,12 +200,13 @@ $form.Height = 680
 $form.StartPosition = "CenterScreen"
 $form.TopMost = $true
 
-$labelHeight = 70
+$labelHeight = 112
 $buttonHeight = 50
 
 $label = New-Object System.Windows.Forms.Label
-$label.Text = "초록=이미 일치(그대로 둠). 빨강=미설치된 필수 모드(기본적으로 자동 설치됨). 회색=미설치된 선택/클라이언트 전용 모드(기본적으로 자동 설치되지만, 꺼도 무방).`r`n" +
-              "파랑=개인 설치 모드(팩에 없음, 기본적으로 그대로 둠). 빨강/회색 항목을 더블클릭하면 설치에서 제외됩니다(다시 더블클릭하면 복귀). 파란 항목을 더블클릭하면 삭제 대상으로 활성화됩니다(주황색).`r`n" +
+$label.Text = "초록=이미 설치됨(그대로 둠). 빨강=일반(기본) 모드 중 미설치 - 기본적으로 자동 설치되며, 더블클릭하면 설치에서 제외됩니다.`r`n" +
+              "회색=클라이언트 전용 선택 모드 중 미설치 - 서버 접속엔 필요 없는 선택 모드라 보통 기본이 '설치 안 함'이며, 더블클릭하면 반대로 설치가 켜집니다(빨강과 동작이 반대이니 주의).`r`n" +
+              "파랑=개인 설치 모드(팩에 없음, 기본적으로 그대로 둠, 더블클릭하면 삭제 대상으로 전환). 아래 [구분/설치 여부/동작 여부] 컬럼에서 각 항목의 실제 상태를 확인하세요.`r`n" +
               "[최종 확인]을 눌러야 실제로 적용됩니다. 그 전까지는 아무 파일도 바뀌지 않습니다."
 $label.AutoSize = $false
 $label.Location = New-Object System.Drawing.Point(10, 10)
@@ -227,44 +228,67 @@ $grid.AllowUserToAddRows = $false
 $grid.AutoSizeColumnsMode = "Fill"
 $grid.SelectionMode = "FullRowSelect"
 $grid.MultiSelect = $false
-$grid.Columns.Add("action", "동작") | Out-Null
+$grid.Columns.Add("category", "구분") | Out-Null
+$grid.Columns.Add("installed", "설치 여부") | Out-Null
+$grid.Columns.Add("action", "동작 여부") | Out-Null
 $grid.Columns.Add("name", "모드명") | Out-Null
 $grid.Columns.Add("local", "로컬 파일") | Out-Null
 $grid.Columns.Add("expected", "저장소 파일") | Out-Null
 
-function Get-RowColors($row) {
+function Get-Category($row) {
+    if ($row.kind -eq "personal") { return "개인" }
+    if ($row.mod.side -eq "client") { return "클라이언트" }
+    return "기본"
+}
+
+function Get-InstalledText($row) {
+    if ($row.kind -eq "personal") { return "설치됨" }
+    if ($row.state -eq "match") { return "설치됨" }
+    return "설치안됨"
+}
+
+function Get-ActionText($row) {
     if ($row.kind -eq "pack") {
-        if ($row.state -eq "match") {
-            return @{ back=[System.Drawing.Color]::Honeydew; fore=[System.Drawing.Color]::DarkGreen; text="일치" }
-        }
-        $isClient = ($row.mod.side -eq "client")
-        if ($row.state -eq "on") {
-            # Default state for anything missing/outdated: will be auto-installed on confirm.
-            if ($isClient) {
-                return @{ back=[System.Drawing.Color]::WhiteSmoke; fore=[System.Drawing.Color]::Gray; text="$($row.status) - 선택 모드, 자동 설치됨 (더블클릭하면 제외)" }
-            } else {
-                return @{ back=[System.Drawing.Color]::MistyRose; fore=[System.Drawing.Color]::DarkRed; text="$($row.status) - 자동 설치됨 (더블클릭하면 제외)" }
-            }
-        } else {
-            # User double-clicked to exclude it from this run.
-            if ($isClient) {
-                return @{ back=[System.Drawing.Color]::Gainsboro; fore=[System.Drawing.Color]::DimGray; text="$($row.status) - 설치 제외됨 (더블클릭하면 다시 설치)" }
-            } else {
-                return @{ back=[System.Drawing.Color]::LightCoral; fore=[System.Drawing.Color]::Maroon; text="$($row.status) - 설치 제외됨! (더블클릭하면 다시 설치)" }
-            }
+        switch ($row.state) {
+            "match" { return "-" }
+            "on"    { return "설치예정" }
+            "off"   { return "제외예정" }
         }
     } else {
-        if ($row.state -eq "off") { return @{ back=[System.Drawing.Color]::AliceBlue; fore=[System.Drawing.Color]::DarkBlue;   text="$($row.status) (더블클릭하면 삭제)" } }
-        else { return @{ back=[System.Drawing.Color]::Bisque; fore=[System.Drawing.Color]::DarkOrange; text="삭제 예정 (활성화됨)" } }
+        if ($row.state -eq "off") { return "유지" } else { return "삭제예정" }
     }
 }
 
-$sorted = $rows | Sort-Object { if ($_.state -eq "match") { 1 } else { 0 } }, { $_.kind }
+function Get-RowColors($row) {
+    if ($row.kind -eq "pack") {
+        if ($row.state -eq "match") {
+            return @{ back=[System.Drawing.Color]::Honeydew; fore=[System.Drawing.Color]::DarkGreen }
+        }
+        $isClient = ($row.mod.side -eq "client")
+        if ($row.state -eq "on") {
+            # Will be installed/re-installed on confirm.
+            if ($isClient) { return @{ back=[System.Drawing.Color]::WhiteSmoke; fore=[System.Drawing.Color]::Gray } }
+            else { return @{ back=[System.Drawing.Color]::MistyRose; fore=[System.Drawing.Color]::DarkRed } }
+        } else {
+            # Excluded - will stay missing after confirm.
+            if ($isClient) { return @{ back=[System.Drawing.Color]::Gainsboro; fore=[System.Drawing.Color]::DimGray } }
+            else { return @{ back=[System.Drawing.Color]::LightCoral; fore=[System.Drawing.Color]::Maroon } }
+        }
+    } else {
+        if ($row.state -eq "off") { return @{ back=[System.Drawing.Color]::AliceBlue; fore=[System.Drawing.Color]::DarkBlue } }
+        else { return @{ back=[System.Drawing.Color]::Bisque; fore=[System.Drawing.Color]::DarkOrange } }
+    }
+}
+
+$sorted = $rows | Sort-Object `
+    { if ($_.kind -eq "pack" -and $_.mod.side -eq "client") { 0 } else { 1 } }, `
+    { if ($_.state -eq "match") { 1 } else { 0 } }, `
+    { $_.kind }
 foreach ($r in $sorted) {
     $expected = if ($r.kind -eq "pack") { $r.mod.filename } else { "(팩에 없음)" }
     $name = if ($r.kind -eq "pack") { $r.mod.name } else { $r.localName }
     $colors = Get-RowColors $r
-    $rowIdx = $grid.Rows.Add($colors.text, $name, $r.localName, $expected)
+    $rowIdx = $grid.Rows.Add((Get-Category $r), (Get-InstalledText $r), (Get-ActionText $r), $name, $r.localName, $expected)
     $row = $grid.Rows[$rowIdx]
     $row.DefaultCellStyle.BackColor = $colors.back
     $row.DefaultCellStyle.ForeColor = $colors.fore
@@ -279,7 +303,8 @@ $grid.Add_CellDoubleClick({
     if ($r.kind -eq "pack" -and $r.state -eq "match") { return } # not toggleable
     if ($r.state -eq "off") { $r.state = "on" } else { $r.state = "off" }
     $colors = Get-RowColors $r
-    $row.Cells["action"].Value = $colors.text
+    $row.Cells["action"].Value = Get-ActionText $r
+    $row.Cells["installed"].Value = Get-InstalledText $r
     $row.DefaultCellStyle.BackColor = $colors.back
     $row.DefaultCellStyle.ForeColor = $colors.fore
 })
