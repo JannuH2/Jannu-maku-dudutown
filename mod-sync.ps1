@@ -383,7 +383,12 @@ foreach ($r in $toInstall) {
     $m = $r.mod
     Write-Host "  받는 중: $($m.name) ($($m.filename))"
     $target = Join-Path $ModsDir $m.filename
-    $tmp = "$target.tmp"
+    # Invoke-WebRequest -OutFile resolves its path through PowerShell's wildcard
+    # provider, so a filename containing literal [ ] (several mod jars have this)
+    # throws "Unable to find the specified file." even though nothing is actually
+    # missing. Download to a bracket-free GUID temp name instead, then move it to
+    # the real (bracketed) name with -LiteralPath, which does not wildcard-expand.
+    $tmp = Join-Path $ModsDir ((New-Guid).Guid + ".tmp")
     $ok = $false
     for ($try = 1; $try -le 3; $try++) {
         try {
