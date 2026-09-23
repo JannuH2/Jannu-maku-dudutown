@@ -1619,6 +1619,11 @@ hash = "e23f01a56a20ba84ff92216490e41945c13e06e2512b00c192846339971036ca"
 metafile = true
 
 [[files]]
+file = "mods/unsafe-world-random-access-detector.pw.toml"
+hash = "5da08c24276524e1165452bcec2414ce8417dcd76459ddbc31949d3bffe41f75"
+metafile = true
+
+[[files]]
 file = "mods/uranus.pw.toml"
 hash = "1c3d0ac44ad8a734a6041d5d857d6ec447ad40d766cdd64edf165fc013d90cc4"
 metafile = true
