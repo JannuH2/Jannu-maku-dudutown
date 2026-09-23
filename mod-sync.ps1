@@ -188,7 +188,7 @@ $mismatchCount = ($rows | Where-Object { $_.kind -eq "pack" -and $_.state -ne "m
 $personalCount = ($rows | Where-Object { $_.kind -eq "personal" }).Count
 if ($mismatchCount -eq 0 -and $personalCount -eq 0) {
     Write-Host ""
-    Write-Host "모든 필수 모드가 저장소 버전과 일치하고, 개인 설치 모드도 없습니다. 할 일이 없습니다."
+    Write-Host "모든 필수 모드가 저장소 버전과 일치하고, 내pc모드도 없습니다. 할 일이 없습니다."
     exit 0
 }
 
@@ -204,9 +204,9 @@ $labelHeight = 112
 $buttonHeight = 50
 
 $label = New-Object System.Windows.Forms.Label
-$label.Text = "초록=이미 설치됨(그대로 둠). 빨강=일반(기본) 모드 중 미설치 - 기본적으로 자동 설치되며, 더블클릭하면 설치에서 제외됩니다.`r`n" +
-              "회색=클라이언트 전용 선택 모드 중 미설치 - 서버 접속엔 필요 없는 선택 모드라 보통 기본이 '설치 안 함'이며, 더블클릭하면 반대로 설치가 켜집니다(빨강과 동작이 반대이니 주의).`r`n" +
-              "파랑=개인 설치 모드(팩에 없음, 기본적으로 그대로 둠, 더블클릭하면 삭제 대상으로 전환). 아래 [구분/설치 여부/동작 여부] 컬럼에서 각 항목의 실제 상태를 확인하세요.`r`n" +
+$label.Text = "초록=이미 설치됨(그대로 둠). 빨강=기본모드 중 미설치 - 서버 접속에 반드시 필요, 기본적으로 자동 설치되며 더블클릭하면 설치에서 제외됩니다.`r`n" +
+              "회색=클라이언트 모드 중 미설치 - 없어도 서버 접속엔 문제없는 선택 모드라 기본이 '설치 안 함'이며, 더블클릭하면 반대로 설치가 켜집니다(빨강과 동작이 반대이니 주의).`r`n" +
+              "파랑=내pc모드(팩에 없음, 이 PC에만 있는 모드, 기본적으로 그대로 둠, 더블클릭하면 삭제 대상으로 전환). 아래 [구분/설치 여부/동작 여부] 컬럼에서 각 항목의 실제 상태를 확인하세요.`r`n" +
               "[최종 확인]을 눌러야 실제로 적용됩니다. 그 전까지는 아무 파일도 바뀌지 않습니다."
 $label.AutoSize = $false
 $label.Location = New-Object System.Drawing.Point(10, 10)
@@ -234,11 +234,20 @@ $grid.Columns.Add("action", "동작 여부") | Out-Null
 $grid.Columns.Add("name", "모드명") | Out-Null
 $grid.Columns.Add("local", "로컬 파일") | Out-Null
 $grid.Columns.Add("expected", "저장소 파일") | Out-Null
+# Header-click sorting would silently undo the client-mods-first ordering below, so disable it.
+foreach ($col in $grid.Columns) { $col.SortMode = [System.Windows.Forms.DataGridViewColumnSortMode]::NotSortable }
 
 function Get-Category($row) {
-    if ($row.kind -eq "personal") { return "개인" }
-    if ($row.mod.side -eq "client") { return "클라이언트" }
-    return "기본"
+    if ($row.kind -eq "personal") { return "내pc모드" }
+    if ($row.mod.side -eq "client") { return "클라이언트 모드" }
+    return "기본모드"
+}
+
+# Sort tier: client pack mods first, then my-PC-only mods, then everything else (기본모드).
+function Get-SortTier($row) {
+    if ($row.kind -eq "pack" -and $row.mod.side -eq "client") { return 0 }
+    if ($row.kind -eq "personal") { return 1 }
+    return 2
 }
 
 function Get-InstalledText($row) {
@@ -281,7 +290,7 @@ function Get-RowColors($row) {
 }
 
 $sorted = $rows | Sort-Object `
-    { if ($_.kind -eq "pack" -and $_.mod.side -eq "client") { 0 } else { 1 } }, `
+    { Get-SortTier $_ }, `
     { if ($_.state -eq "match") { 1 } else { 0 } }, `
     { $_.kind }
 foreach ($r in $sorted) {
@@ -344,10 +353,10 @@ $toDelete  = $rows | Where-Object { $_.kind -eq "personal" -and $_.state -eq "on
 
 if ($toDelete.Count -gt 0) {
     Write-Host ""
-    Write-Host "다음 $($toDelete.Count)개 개인 모드가 삭제됩니다:"
+    Write-Host "다음 $($toDelete.Count)개 내pc모드가 삭제됩니다:"
     foreach ($d in $toDelete) { Write-Host "  - $($d.localName)" }
     $confirm = [System.Windows.Forms.MessageBox]::Show(
-        "개인 설치 모드 $($toDelete.Count)개를 정말 삭제할까요?`r`n(이 목록에 없는 나머지 개인 모드는 그대로 유지됩니다)",
+        "내pc모드 $($toDelete.Count)개를 정말 삭제할까요?`r`n(이 목록에 없는 나머지 내pc모드는 그대로 유지됩니다)",
         "삭제 확인",
         [System.Windows.Forms.MessageBoxButtons]::YesNo,
         [System.Windows.Forms.MessageBoxIcon]::Warning
@@ -359,7 +368,7 @@ if ($toDelete.Count -gt 0) {
 }
 
 Write-Host ""
-Write-Host "$($toInstall.Count)개 모드를 설치/업데이트하고, $($toDelete.Count)개 개인 모드를 삭제합니다..."
+Write-Host "$($toInstall.Count)개 모드를 설치/업데이트하고, $($toDelete.Count)개 내pc모드를 삭제합니다..."
 
 if (-not (Test-Path -LiteralPath $ModsDir)) { New-Item -ItemType Directory -Path $ModsDir | Out-Null }
 
@@ -433,5 +442,5 @@ $newManifest | ConvertTo-Json -Depth 6 | Set-Content -Path $ManifestPath -Encodi
 
 Write-Host ""
 Write-Host "======================================================"
-Write-Host "  완료: 설치/업데이트 성공 $okCount 개, 실패 $failCount 개, 개인 모드 삭제 $($toDelete.Count) 개"
+Write-Host "  완료: 설치/업데이트 성공 $okCount 개, 실패 $failCount 개, 내pc모드 삭제 $($toDelete.Count) 개"
 Write-Host "======================================================"

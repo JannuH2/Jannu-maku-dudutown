@@ -1,6 +1,6 @@
 name = "BetterGrassify"
 filename = "BetterGrassify-1.8.7+fabric.1.21.1.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

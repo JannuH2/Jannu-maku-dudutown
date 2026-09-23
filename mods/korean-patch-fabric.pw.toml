@@ -1,6 +1,6 @@
 name = ""
 filename = "koreanpatch-fabric-1.9.6+mc1.21.jar"
-side = "both"
+side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/qyulnpBL/versions/IMX0mIHl/koreanpatch-fabric-1.9.6%2Bmc1.21.jar"

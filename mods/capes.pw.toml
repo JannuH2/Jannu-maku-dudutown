@@ -1,6 +1,6 @@
 name = "Fabric Capes"
 filename = "capes-1.5.4+1.21-fabric.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

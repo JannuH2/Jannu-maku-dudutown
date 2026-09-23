@@ -1,6 +1,6 @@
 name = "CIT Resewn"
 filename = "citresewn-1.2.2+1.21.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
