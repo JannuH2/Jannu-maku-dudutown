@@ -1459,10 +1459,6 @@ file = "mods/sleepy-hollows.pw.toml"
 hash = "87bfc8326fe5e0ce8b4eefa4801fa77cfc06bc76ec38725aab78d28ca8d3dd41"
 metafile = true
 
-[[files]]
-file = "mods/smart-tooltip-scroll.pw.toml"
-hash = "cec84c6ea957b3bf71f95dbd82d99ca36e871a0d5827d7aa8092e021bd8171d7"
-metafile = true
 
 [[files]]
 file = "mods/smarter-farmers-farmers-replant.pw.toml"
