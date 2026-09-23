@@ -45,11 +45,6 @@ hash = "38fd0628637b425c46d1d3c65735d341deef3208563af347b3387571c1d78a52"
 metafile = true
 
 [[files]]
-file = "mods/alexs-mobs-music-mod.pw.toml"
-hash = "a3d7ac04e26a53ff35d8346b799e526bf38e9c3d7814a33599e2b7b861acaee4"
-metafile = true
-
-[[files]]
 file = "mods/alexsmobs-fabric.pw.toml"
 hash = "372b96ac6c4ff5fe2cf3a055069aa74647e4c926aca188a44f63da99d942e500"
 metafile = true
@@ -222,11 +217,6 @@ metafile = true
 [[files]]
 file = "mods/bosses-of-mass-destruction.pw.toml"
 hash = "fad01ec8fe750cdb84c278965b12132c24111ef40bd99824c00216c409f0526e"
-metafile = true
-
-[[files]]
-file = "mods/boss-music-mod.pw.toml"
-hash = "2641fafce0db39da74fe1454f3ccd70875ac9b597d2d7dec25a472154a996fe2"
 metafile = true
 
 [[files]]
@@ -444,10 +434,6 @@ file = "mods/dungeon-and-taverns.pw.toml"
 hash = "3f259730ce95008c662b26684429ef9bfc56a4209ed0ed57eefac673a1453f80"
 metafile = true
 
-[[files]]
-file = "mods/dungeon-difficulty.pw.toml"
-hash = "a1b05cbe520c52ed22ad77d23d0c01fd40813805e8a477c1247ca1a4d8eee45a"
-metafile = true
 
 [[files]]
 file = "mods/durability-tooltip.pw.toml"
