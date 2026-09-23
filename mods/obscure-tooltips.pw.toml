@@ -1,6 +1,6 @@
 name = "Obscure Tooltips"
 filename = "obscure_tooltips-fabric-1.21.1-4.2.4.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

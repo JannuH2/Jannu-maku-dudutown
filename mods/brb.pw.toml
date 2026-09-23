@@ -1,6 +1,6 @@
 name = "Better Recipe Books (+ Smithing Tables, Brewing Stands)"
 filename = "brb-1.10.0-rc5+1.21.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

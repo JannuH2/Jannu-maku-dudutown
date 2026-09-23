@@ -1,6 +1,6 @@
 name = "Armor Hider"
 filename = "armor-hider-fabric-0.13.0+mc-1.21.0-1.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

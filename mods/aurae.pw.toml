@@ -1,6 +1,6 @@
 name = ""
 filename = "ambiance-fabric-1.21-1.1.0.jar"
-side = "both"
+side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/hCdWhw9o/versions/5cwGeY3P/ambiance-fabric-1.21-1.1.0.jar"

@@ -36,7 +36,7 @@ metafile = true
 
 [[files]]
 file = "mods/aitk.pw.toml"
-hash = "bf7738672d1bda9a58faf69e3f5f1635cae62dfb788a1f866ae1a3252d2d70bd"
+hash = "43bd11ace219dc9f85f3d4cc3adb059ea609365744121fa74beaa5f79ee39097"
 metafile = true
 
 [[files]]
@@ -76,12 +76,12 @@ metafile = true
 
 [[files]]
 file = "mods/armor-hider.pw.toml"
-hash = "11cd7445f8e8b03659ece0daf744bd2139f87c76513dbb8569b89104340adcdb"
+hash = "0cd9ee652fc085819d78617082a2800885e64ed416b666d7fcc973a7bef25714"
 metafile = true
 
 [[files]]
 file = "mods/armor-model-api.pw.toml"
-hash = "dc15bb2387323bcd9fec2be2f7d492bf4e2422a1be6a00793029d3ea08b02061"
+hash = "c826d580186c9c20a5d16ee427496db0820f394b564d3ec5cad0a7d7f8cf3631"
 metafile = true
 
 [[files]]
@@ -101,7 +101,7 @@ metafile = true
 
 [[files]]
 file = "mods/aurae.pw.toml"
-hash = "1bc89480713370069b0175fb922b0e291a553809f9073fe07221d434619f28ba"
+hash = "ac8a807552060c0aa7e6acda0df887fb073a50752d65a57001dc840fc31c2b04"
 metafile = true
 
 [[files]]
@@ -171,7 +171,7 @@ metafile = true
 
 [[files]]
 file = "mods/betterf3.pw.toml"
-hash = "424d028cb46df2901387c1d90ea8a5665b203b33154a4f39ee5687cbd42229e9"
+hash = "6f6a3ee615051b66f002bd544a5c63023ad79532bdf620cec8bf7678f8e93fd6"
 metafile = true
 
 [[files]]
@@ -216,7 +216,7 @@ metafile = true
 
 [[files]]
 file = "mods/brb.pw.toml"
-hash = "51fa6ee79718bd219c0b2647b3a07194b16224dee26152e437e8a3caf0d81495"
+hash = "8073b0d6c2a09626be823024b70dec457de99a08f8f8d94f80f453d59887573e"
 metafile = true
 
 [[files]]
@@ -451,7 +451,7 @@ metafile = true
 
 [[files]]
 file = "mods/emi-enchanting.pw.toml"
-hash = "37bbd63852058e380489960bc41347ea3766a84e5f66dc40f4ff7e9ffbbba0ea"
+hash = "1534ee67aa3b14ffe9e39e624554e972838cb6ac46c2fe032eec756149b93467"
 metafile = true
 
 [[files]]
@@ -556,7 +556,7 @@ metafile = true
 
 [[files]]
 file = "mods/faster-iris-shadow-mapper.pw.toml"
-hash = "0378d2e447476deff3e92ef376f2257409346aa7ee7d470a534faf37082df3e7"
+hash = "18917b9ba19bcbf153f972f93c6f323c0c73737c89734b2ad85b4b5ad3405c95"
 metafile = true
 
 [[files]]
@@ -621,7 +621,7 @@ metafile = true
 
 [[files]]
 file = "mods/glowing-emissive-ores-definitive-edition.pw.toml"
-hash = "11ce8364fa2cc78a213745b21a03b6f28e005245ce11f979b1c5561d5711948d"
+hash = "2f9e9e7b73c9f0f407d3f1c5df6fc63aa2436db09af76c651eafe30deaa58fbc"
 metafile = true
 
 [[files]]
@@ -641,7 +641,7 @@ metafile = true
 
 [[files]]
 file = "mods/horse-buff.pw.toml"
-hash = "0bf0ffa0871ae59e5c771b861b5333aa1098e3066e144e1277591a792cc2eb5a"
+hash = "8e380cf36fbc47843330009c395dc8992baa0da8a79c5d7edbf227d1947377f0"
 metafile = true
 
 [[files]]
@@ -980,7 +980,7 @@ metafile = true
 
 [[files]]
 file = "mods/make-bubbles-pop.pw.toml"
-hash = "831c56b6feec547023249a60999912adce32f42c6a50f0b3ad3ed00c5926f2b2"
+hash = "b75f1bc38c976df7036feb3b08039694fc88615b26a8ffb10af42188f9e6a51e"
 metafile = true
 
 [[files]]
@@ -1035,7 +1035,7 @@ metafile = true
 
 [[files]]
 file = "mods/mining-speed-tooltips.pw.toml"
-hash = "6f2dfae3be5bb8c507ec5f6433b1d6098f79eec6671a217dfe677b20586e287a"
+hash = "2f9caacbd4efa2c7ba6faf2a807316ce5961ec73b425f3622afd90e89f8c967e"
 metafile = true
 
 [[files]]
@@ -1195,7 +1195,7 @@ metafile = true
 
 [[files]]
 file = "mods/obscure-tooltips.pw.toml"
-hash = "a6250be08b46da92a0d4ef6b68dd2e180162fb5e06ce952dbad401dc72c2156d"
+hash = "367648e7ce36828be358ccc1e665e6f2b3d328fe66f9c12a146ef092444b7769"
 metafile = true
 
 [[files]]
@@ -1420,7 +1420,7 @@ metafile = true
 
 [[files]]
 file = "mods/sleepy-hollows.pw.toml"
-hash = "12b0e36c1294a7bbd08f8dc080a88ab460714d710861477aced3f6eb4258823a"
+hash = "87bfc8326fe5e0ce8b4eefa4801fa77cfc06bc76ec38725aab78d28ca8d3dd41"
 metafile = true
 
 [[files]]
@@ -1505,12 +1505,12 @@ metafile = true
 
 [[files]]
 file = "mods/status-effect-bars.pw.toml"
-hash = "ca047276898a459020ff0836a58f8bcc58553786a682e1a82d701a28a3f4bb85"
+hash = "524b86ed7f9d7f631aec063dae6eea12b831b7a7886bbd6bb076132994415a2f"
 metafile = true
 
 [[files]]
 file = "mods/status-effect-timer.pw.toml"
-hash = "16eec90f9bbc4212c3a350e096e9845ce7c0089da0496c27bcda538a92a31b13"
+hash = "2d996e87f0c9bb2bef4fc277c287adb4265e129b93294c348c1eca9a7dababde"
 metafile = true
 
 [[files]]
@@ -1530,7 +1530,7 @@ metafile = true
 
 [[files]]
 file = "mods/subtle-effects.pw.toml"
-hash = "01024185e293fa4744485e4c464cb3796917e819c4761bb9a637f2257ddda0aa"
+hash = "39b0c31561fba4814a23e0c398888652d5f610920b4e33681c194bc1668f9e75"
 metafile = true
 
 [[files]]

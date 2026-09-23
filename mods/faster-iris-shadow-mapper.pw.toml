@@ -1,6 +1,6 @@
 name = "Faster Iris Shadow Mapper"
 filename = "fism+1.21.1-1.0.5.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

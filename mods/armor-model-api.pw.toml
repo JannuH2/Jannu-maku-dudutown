@@ -3,11 +3,11 @@ filename = "armor_model_api-fabric-1.0.0+1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "74625141b4664068c7ca620884e492abe62e59ed"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/onz2NN2n/versions/gIb3aWKR/armor_model_api-fabric-1.0.0%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "a4c95d83213f8023ff8a6eb91ad0686def9e2351b4611754c4e851f1b3b83dc71fb2b4ec7cd710f9264541f8db700fce13cc3cf02e9fb52455755e2f17b89933"
 
 [update]
-[update.curseforge]
-file-id = 8685729
-project-id = 1659764
+[update.modrinth]
+mod-id = "onz2NN2n"
+version = "gIb3aWKR"
