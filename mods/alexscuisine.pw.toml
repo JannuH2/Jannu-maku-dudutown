@@ -1,0 +1,13 @@
+name = "Alex's Cuisine"
+filename = "alexscuisine-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "02c5de2eec4c89f32850f2c5e1e1e759a8e96d0a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8656570
+project-id = 1645221

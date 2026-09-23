@@ -1,0 +1,13 @@
+name = "Alex's Mobs Music Mod"
+filename = "Alex's Mobs Music Mod 1.20-26.1.2 v1.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ynxotL0Y/versions/hdWRNCLk/Alex%27s%20Mobs%20Music%20Mod%201.20-26.1.2%20v1.1.0.jar"
+hash-format = "sha512"
+hash = "aaddddfa366e13039b12b0f4c732f4ad628b21c8746951342006db028f353c979ebe153f9f2f00974f03070f0d08f69fc5a1436ffde5f0391d273ebd2750f9f9"
+
+[update]
+[update.modrinth]
+mod-id = "ynxotL0Y"
+version = "hdWRNCLk"

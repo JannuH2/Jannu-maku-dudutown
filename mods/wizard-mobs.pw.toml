@@ -1,0 +1,13 @@
+name = "Wizard Mobs"
+filename = "wizard_mobs-fabric-1.1.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "393f1a31bcb0ee29fe154e29a56f3bf5911d2b1a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8924744
+project-id = 1630969

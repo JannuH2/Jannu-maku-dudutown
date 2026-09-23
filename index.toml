@@ -40,6 +40,26 @@ hash = "43bd11ace219dc9f85f3d4cc3adb059ea609365744121fa74beaa5f79ee39097"
 metafile = true
 
 [[files]]
+file = "mods/alex-mobs-tweaks-omni.pw.toml"
+hash = "38fd0628637b425c46d1d3c65735d341deef3208563af347b3387571c1d78a52"
+metafile = true
+
+[[files]]
+file = "mods/alexs-mobs-music-mod.pw.toml"
+hash = "a3d7ac04e26a53ff35d8346b799e526bf38e9c3d7814a33599e2b7b861acaee4"
+metafile = true
+
+[[files]]
+file = "mods/alexsmobs-fabric.pw.toml"
+hash = "372b96ac6c4ff5fe2cf3a055069aa74647e4c926aca188a44f63da99d942e500"
+metafile = true
+
+[[files]]
+file = "mods/alexscuisine.pw.toml"
+hash = "b874bd1f608089f76b37b3809bcc9b6a546290d4d3ef8133ceb71ac67cd65c20"
+metafile = true
+
+[[files]]
 file = "mods/alloy-forgery.pw.toml"
 hash = "ba8e2c966caf90b1c590ebb3af177a5e704411598f6cc93be10deecb9797b283"
 metafile = true
@@ -205,6 +225,11 @@ hash = "fad01ec8fe750cdb84c278965b12132c24111ef40bd99824c00216c409f0526e"
 metafile = true
 
 [[files]]
+file = "mods/boss-music-mod.pw.toml"
+hash = "2641fafce0db39da74fe1454f3ccd70875ac9b597d2d7dec25a472154a996fe2"
+metafile = true
+
+[[files]]
 file = "mods/bountiful-fares.pw.toml"
 hash = "dcc6355ab5eadc459b1a4107f68433cc5f646df1598cb84cb979156315e1e4d9"
 metafile = true
@@ -252,6 +277,11 @@ metafile = true
 [[files]]
 file = "mods/chefs-delight-fabric.pw.toml"
 hash = "d80b34e04dcc8126d717563343ba73d7e15bde616cd6f71ee7723eef33a543bf"
+metafile = true
+
+[[files]]
+file = "mods/citadel-fabric.pw.toml"
+hash = "bf7f54fd91540c22660b9da623df21cf2d283c8b4e33bc2f1886d8bb0d27c261"
 metafile = true
 
 [[files]]
@@ -415,6 +445,11 @@ hash = "3f259730ce95008c662b26684429ef9bfc56a4209ed0ed57eefac673a1453f80"
 metafile = true
 
 [[files]]
+file = "mods/dungeon-difficulty.pw.toml"
+hash = "a1b05cbe520c52ed22ad77d23d0c01fd40813805e8a477c1247ca1a4d8eee45a"
+metafile = true
+
+[[files]]
 file = "mods/durability-tooltip.pw.toml"
 hash = "5e431f16eaafb12bdc79ccbaef717ee433d142beb4cf4dc2770d1517dcd4086a"
 metafile = true
@@ -482,6 +517,11 @@ metafile = true
 [[files]]
 file = "mods/ends-delight.pw.toml"
 hash = "a11761162b1b0da860ab33af561b464674ef51577dcaac512ecd5d906918383b"
+metafile = true
+
+[[files]]
+file = "mods/endermanoverhaul.pw.toml"
+hash = "e77d59527cc43da3a3e6e88194e6d7b1ecb6b4892dc21184af3cd2efcb923aef"
 metafile = true
 
 [[files]]
@@ -1204,8 +1244,18 @@ hash = "a2f266a512bbfb43222095d86d54144438cb24a181e1317f87477bf1e42349bc"
 metafile = true
 
 [[files]]
+file = "mods/open-parties-and-claims.pw.toml"
+hash = "7273fdb27bffd096608539b8d6356e1203273d96b6996c71c7c5f019ab5cdbc2"
+metafile = true
+
+[[files]]
 file = "mods/optigui.pw.toml"
 hash = "0878899bb8c3c64abd59d73559503deb9379eaa04d32b06c1e1b7d2fb6eb3974"
+metafile = true
+
+[[files]]
+file = "mods/overflowing-bars.pw.toml"
+hash = "88c410db35e0f78c6c699dbd801215407d590b49fb3bbfd0d2094b5def538b4d"
 metafile = true
 
 [[files]]
@@ -1421,6 +1471,11 @@ metafile = true
 [[files]]
 file = "mods/sleepy-hollows.pw.toml"
 hash = "87bfc8326fe5e0ce8b4eefa4801fa77cfc06bc76ec38725aab78d28ca8d3dd41"
+metafile = true
+
+[[files]]
+file = "mods/smart-tooltip-scroll.pw.toml"
+hash = "cec84c6ea957b3bf71f95dbd82d99ca36e871a0d5827d7aa8092e021bd8171d7"
 metafile = true
 
 [[files]]
@@ -1666,6 +1721,16 @@ metafile = true
 [[files]]
 file = "mods/when-dungeons-arise-fabric.pw.toml"
 hash = "93f058360c92bb1d85afed003eae9a81b109089b0eaf9dfc88e4f1c3118ce513"
+metafile = true
+
+[[files]]
+file = "mods/whenchat.pw.toml"
+hash = "c628d9899f402ccbe76ccb9eb7ba1f649b922ec5d78e25bfd83f5b7ee58329cb"
+metafile = true
+
+[[files]]
+file = "mods/wizard-mobs.pw.toml"
+hash = "b6fdf7fddee7e3c1d16010f14f101c2bd15dda36f73b6e687fe3ae050daaa666"
 metafile = true
 
 [[files]]

@@ -1,0 +1,13 @@
+name = "WhenChat"
+filename = "whenchat-fabric-mc1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/B4wjIHmm/versions/fSWpKSGb/whenchat-fabric-mc1.21.1.jar"
+hash-format = "sha512"
+hash = "6ba461d5b35c839c5696f8cb106c01cfefbd3a64438025cea123158f06580c3c5ff2030d1c672b3b653401b58216ba69e1cc6d380f2e538140bc0d4ec25cfb4e"
+
+[update]
+[update.modrinth]
+mod-id = "B4wjIHmm"
+version = "fSWpKSGb"
