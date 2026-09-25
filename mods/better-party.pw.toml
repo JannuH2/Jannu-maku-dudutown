@@ -1,0 +1,13 @@
+name = "Better Party"
+filename = "better-party-fabric-1.21.1-1.1.7.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/qHdVMcp2/versions/PDZe9VpN/better-party-fabric-1.21.1-1.1.7.jar"
+hash-format = "sha512"
+hash = "fff02bc42cfcbb3fc25ae14945811d46aed5da56c6b83ed8027779239065825296f33f460b317fb9ff2e92452b839bb9a5f475883e3852f36d41a61372335157"
+
+[update]
+[update.modrinth]
+mod-id = "qHdVMcp2"
+version = "PDZe9VpN"

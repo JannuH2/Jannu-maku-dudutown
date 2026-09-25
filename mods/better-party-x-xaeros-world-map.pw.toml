@@ -1,0 +1,13 @@
+name = "Better Party X Xaero's World Map"
+filename = "better-party-x-xaeros-world-map-fabric-1.21.1-1.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/WAx48Pun/versions/ia0F8tD0/better-party-x-xaeros-world-map-fabric-1.21.1-1.0.2.jar"
+hash-format = "sha512"
+hash = "f3c4f9de7ebe30d58ca0b0101d6703e60f16c03674a2b068cb60a2b63cd50ddd3837c65e14f9a8d697883e0a1d8dfa537e17aa0e820dc737174646e0da3b1ceb"
+
+[update]
+[update.modrinth]
+mod-id = "WAx48Pun"
+version = "ia0F8tD0"
