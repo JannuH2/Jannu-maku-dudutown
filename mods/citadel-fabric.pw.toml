@@ -1,13 +1,12 @@
+# Locally patched: the CurseForge release's citadel.mixins.json references a
+# citadel.refmap.json that isn't actually bundled in the jar, which crashes the
+# game on init (client.LevelRendererMixin injection fails with no refmap loaded).
+# Removed that one mixin entry (team-color render redirect) and repackaged;
+# everything else in the jar is untouched. No newer CurseForge release fixes this.
 name = "Citadel (Fabric)"
 filename = "citadelfabric-1.21.1-1.2.0.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "76e9c00a50040a39c47f06b4cf5febd508b84a1d"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 8704274
-project-id = 1472150
+hash-format = "sha256"
+hash = "66ea1f8f17b254ea484a4a3ecf469f6062af662854450ca038ea55c43b76dd2e"
