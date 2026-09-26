@@ -54,13 +54,17 @@ try {
     exit 1
 }
 
-# Parse index.toml into a list of {file, metafile, hash} - mods/ only
+# Parse index.toml into a list of {file, metafile, hash} - mods/ and config/ only.
+# config/ entries are always plain (non-metafile) files, e.g. a config a custom
+# mod needs to work the same for everyone; they're synced like mods but never
+# scanned for stray/personal files (that folder holds many unrelated per-mod
+# configs nobody wants this tool touching).
 $entries = @()
 $blocks = $indexText -split '\[\[files\]\]'
 foreach ($b in $blocks) {
     $f = Get-TomlValue $b "file"
     if (-not $f) { continue }
-    if (-not $f.StartsWith("mods/")) { continue }
+    if (-not ($f.StartsWith("mods/") -or $f.StartsWith("config/"))) { continue }
     $isMeta = $b -match '(?m)^metafile\s*=\s*true\s*$'
     $entryHash = Get-TomlValue $b "hash"
     $entries += [PSCustomObject]@{ file = $f; metafile = $isMeta; hash = $entryHash }
@@ -174,6 +178,12 @@ $clientMods = $mods | Where-Object { $_.side -eq "both" -or $_.side -eq "client"
 # state (personal rows): "keep" | "delete"
 $rows = @()
 
+function Get-LocalDir($Mod) {
+    $dir = Split-Path $Mod.pwPath -Parent
+    if (-not $dir) { return $ModsDir }
+    return $dir
+}
+
 function Test-ModHashMatches {
     param($Mod, [string]$Path)
     if (-not $Mod.hash -or -not $Mod.hashFormat) { return $true }
@@ -191,7 +201,7 @@ foreach ($m in $clientMods) {
     $prevLoc = $null
     if ($cachedFiles.ContainsKey($m.pwPath)) { $prevLoc = $cachedFiles[$m.pwPath].cachedLocation }
     $prevName = if ($prevLoc) { Split-Path $prevLoc -Leaf } else { $null }
-    $expectedPath = Join-Path $ModsDir $m.filename
+    $expectedPath = Join-Path (Get-LocalDir $m) $m.filename
     # Existence alone isn't enough: a fix that patches a jar's *contents* while
     # keeping the same filename (e.g. a locally-repackaged jar) must still be
     # picked up for already-installed players, or the buggy file just sits there
@@ -203,7 +213,7 @@ foreach ($m in $clientMods) {
     } elseif (Test-Path -LiteralPath $expectedPath) {
         # Same filename, wrong content: overwrite in place, no separate delete needed.
         $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="내용 오래됨(자동 교체)"; localName=$m.filename; state="on" }
-    } elseif ($prevName -and (Test-Path -LiteralPath (Join-Path $ModsDir $prevName))) {
+    } elseif ($prevName -and (Test-Path -LiteralPath (Join-Path (Get-LocalDir $m) $prevName))) {
         # Missing/outdated tracked mod: default to installing it. User double-clicks to exclude.
         $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="버전 다름"; localName=$prevName; state="on" }
     } else {
@@ -432,14 +442,16 @@ $failCount = 0
 
 foreach ($r in $toInstall) {
     $m = $r.mod
+    $localDir = Get-LocalDir $m
+    if (-not (Test-Path -LiteralPath $localDir)) { New-Item -ItemType Directory -Path $localDir | Out-Null }
     Write-Host "  받는 중: $($m.name) ($($m.filename))"
-    $target = Join-Path $ModsDir $m.filename
+    $target = Join-Path $localDir $m.filename
     # Invoke-WebRequest -OutFile resolves its path through PowerShell's wildcard
     # provider, so a filename containing literal [ ] (several mod jars have this)
     # throws "Unable to find the specified file." even though nothing is actually
     # missing. Download to a bracket-free GUID temp name instead, then move it to
     # the real (bracketed) name with -LiteralPath, which does not wildcard-expand.
-    $tmp = Join-Path $ModsDir ((New-Guid).Guid + ".tmp")
+    $tmp = Join-Path $localDir ((New-Guid).Guid + ".tmp")
     $ok = $false
     for ($try = 1; $try -le 3; $try++) {
         try {
@@ -462,14 +474,14 @@ foreach ($r in $toInstall) {
 
     if ($ok) {
         if ($r.localName -ne "(없음)" -and $r.localName -ne $m.filename) {
-            $oldPath = Join-Path $ModsDir $r.localName
+            $oldPath = Join-Path $localDir $r.localName
             if (Test-Path -LiteralPath $oldPath) { Remove-Item -LiteralPath $oldPath -Force -ErrorAction SilentlyContinue }
         }
         Move-Item -LiteralPath $tmp -Destination $target -Force
         $cachedFiles[$m.pwPath] = [PSCustomObject]@{
             hash            = $m.hash
             linkedFileHash  = $null
-            cachedLocation  = "$ModsDir/$($m.filename)"
+            cachedLocation  = "$localDir/$($m.filename)"
             isOptional      = $m.optional
             optionValue     = $true
             onlyOtherSide   = $false

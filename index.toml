@@ -2,7 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = "mod-sync.ps1"
-hash = "da495afb70e83e0a5b4eabbba48c576cd1803a44da59ea91cf0dd81a48da3ae1"
+hash = "df829d50063d1a993433dbf551efb09e8015c6c5e321abf299d677f9273548fc"
+
+[[files]]
+file = "config/makujannu_statoverride.json"
+hash = "c2c9b2f2acf7aa5b5a09917747ed2e92ed32fd5a46798566bc98213c05d8085d"
 
 [[files]]
 file = "mods/IceAndFireCE-2.0-beta.15-1.21.1-fabric.jar"

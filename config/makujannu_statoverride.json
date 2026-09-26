@@ -1,0 +1,6 @@
+{
+  "items": {
+    "betterend:aeternium_sword": { "attack": {"mode": "absolute", "value": 9.5} },
+    "minecraft:mace": { "attack": {"mode": "absolute", "value": 8} }
+  }
+}
