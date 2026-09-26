@@ -48,11 +48,6 @@ hash = "43bd11ace219dc9f85f3d4cc3adb059ea609365744121fa74beaa5f79ee39097"
 metafile = true
 
 [[files]]
-file = "mods/alex-mobs-tweaks-omni.pw.toml"
-hash = "38fd0628637b425c46d1d3c65735d341deef3208563af347b3387571c1d78a52"
-metafile = true
-
-[[files]]
 file = "mods/alexscuisine.pw.toml"
 hash = "b874bd1f608089f76b37b3809bcc9b6a546290d4d3ef8133ceb71ac67cd65c20"
 metafile = true
