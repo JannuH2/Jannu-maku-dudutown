@@ -452,6 +452,15 @@ hash = "3f259730ce95008c662b26684429ef9bfc56a4209ed0ed57eefac673a1453f80"
 metafile = true
 
 [[files]]
+file = "mods/dungeon-difficulty.pw.toml"
+hash = "22d047772a461a64cdaf410c86ad59d512908e4a07d83f74d3a0424e5b9e04cd"
+metafile = true
+
+[[files]]
+file = "mods/dungeon_difficulty-fabric-3.8.0+1.21.1.jar"
+hash = "0563de67e5e5916c96620fdaf39b21683854487e686864b439e4e67457b1dfd3"
+
+[[files]]
 file = "mods/durability-tooltip.pw.toml"
 hash = "e34418c4bd311cb6ea3b370602091410852a3e5d152610dba7f360ec9e2ab29e"
 metafile = true
@@ -1029,6 +1038,15 @@ metafile = true
 file = "mods/make-bubbles-pop.pw.toml"
 hash = "b75f1bc38c976df7036feb3b08039694fc88615b26a8ffb10af42188f9e6a51e"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-hud.pw.toml"
+hash = "b9b3cf9ed4d9d73bdc627995c5e959fb0c2b3ec6951270738716c6d8b6adc536"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-hud-1.0.0.jar"
+hash = "bc4e9f1fc00cdc4640fe440373d6533e12867e18a900c00785b0bb866786dbd2"
 
 [[files]]
 file = "mods/makujannu-statoverride.pw.toml"

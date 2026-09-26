@@ -1,0 +1,10 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): dungeon-level HUD
+# display. Requires dungeon_difficulty (any version) on both sides.
+name = "Maku Jannu Dungeon Level HUD"
+filename = "makujannu-hud-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-hud-1.0.0.jar"
+hash-format = "sha256"
+hash = "bc4e9f1fc00cdc4640fe440373d6533e12867e18a900c00785b0bb866786dbd2"

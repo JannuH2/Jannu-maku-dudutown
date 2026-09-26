@@ -1,0 +1,8 @@
+name = "Dungeon Difficulty"
+filename = "dungeon_difficulty-fabric-3.8.0+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/dungeon_difficulty-fabric-3.8.0+1.21.1.jar"
+hash-format = "sha256"
+hash = "0563de67e5e5916c96620fdaf39b21683854487e686864b439e4e67457b1dfd3"
