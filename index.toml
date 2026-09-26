@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "mod-sync.ps1"
-hash = "df829d50063d1a993433dbf551efb09e8015c6c5e321abf299d677f9273548fc"
+hash = "132befe06d7617139ef4a1784f868bf318f5964f2c939366707b2b9e50de87ce"
 
 [[files]]
 file = "config/makujannu_statoverride.json"

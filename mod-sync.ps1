@@ -233,13 +233,22 @@ if (Test-Path -LiteralPath $ModsDir) {
         # Known-stale: either this tool's own manifest previously installed this
         # exact filename (now superseded), or its name-minus-version matches a
         # mod the pack still tracks under a newer filename. Either way it's a
-        # leftover old build of a mod we still ship, not a genuine personal mod,
-        # so default it to deletion instead of silently ignoring or requiring a
-        # manual double-click.
-        $isKnownStale = $allCachedNames.ContainsKey($j.Name) -or $expectedStems.ContainsKey((Get-NameStem $j.Name))
-        if ($isKnownStale) {
+        # leftover old build of a mod we still ship, not a genuine personal mod.
+        # Only the exact-filename case is auto-deleted: this tool's own manifest
+        # says for certain that filename was a stale version of a pwPath we
+        # still track. The stem match (name minus version numbers) is much
+        # weaker evidence - short/generic stems can collide between unrelated
+        # mods across a few hundred entries - so it's surfaced but left off by
+        # default, same as a genuine personal mod, requiring a manual double-click.
+        $isCertainStale = $allCachedNames.ContainsKey($j.Name)
+        $stemMatches = $expectedStems.ContainsKey((Get-NameStem $j.Name))
+        if ($isCertainStale) {
             $rows += [PSCustomObject]@{
                 kind="personal"; mod=$null; status="구버전(자동 삭제 예정)"; localName=$j.Name; state="on"
+            }
+        } elseif ($stemMatches) {
+            $rows += [PSCustomObject]@{
+                kind="personal"; mod=$null; status="구버전으로 추정(확인 후 삭제)"; localName=$j.Name; state="off"
             }
         } else {
             $rows += [PSCustomObject]@{
