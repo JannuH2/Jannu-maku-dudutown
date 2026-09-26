@@ -148,6 +148,24 @@ foreach ($k in $cachedFiles.Keys) {
     if ($loc) { $allCachedNames[(Split-Path $loc -Leaf)] = $true }
 }
 
+# A filename's "stem" strips version numbers/separators so that e.g.
+# "alexsmobsfabric-1.21.1-1.4.0.jar" and "...-1.4.1.jar" compare equal. Used to
+# recognize a leftover old-version jar of a mod the pack still tracks (just
+# under a newer filename) even when the local cachedFiles manifest has no
+# record of it at all - e.g. a fresh CurseForge modpack import, or a manual
+# jar fix distributed straight to players before it was ever synced by this
+# tool - so it defaults to deletion instead of silently sitting there forever.
+function Get-NameStem([string]$Name) {
+    $base = [System.IO.Path]::GetFileNameWithoutExtension($Name)
+    $stem = $base -replace '[0-9]+(\.[0-9]+)*', '' -replace '[-_+.\s]+', ''
+    return $stem.ToLower()
+}
+$expectedStems = @{}
+foreach ($m in $mods) {
+    $stem = Get-NameStem $m.filename
+    if ($stem) { $expectedStems[$stem] = $true }
+}
+
 $clientMods = $mods | Where-Object { $_.side -eq "both" -or $_.side -eq "client" }
 
 # ---- Row model ----
@@ -156,14 +174,35 @@ $clientMods = $mods | Where-Object { $_.side -eq "both" -or $_.side -eq "client"
 # state (personal rows): "keep" | "delete"
 $rows = @()
 
+function Test-ModHashMatches {
+    param($Mod, [string]$Path)
+    if (-not $Mod.hash -or -not $Mod.hashFormat) { return $true }
+    $algo = if ($Mod.hashFormat -eq "sha1") { "SHA1" } elseif ($Mod.hashFormat -eq "sha512") { "SHA512" } else { "SHA256" }
+    try {
+        $actual = (Get-FileHash -LiteralPath $Path -Algorithm $algo).Hash.ToLower()
+        return $actual -eq $Mod.hash.ToLower()
+    } catch {
+        # Can't verify (unreadable/locked file) - don't block on it, assume OK.
+        return $true
+    }
+}
+
 foreach ($m in $clientMods) {
     $prevLoc = $null
     if ($cachedFiles.ContainsKey($m.pwPath)) { $prevLoc = $cachedFiles[$m.pwPath].cachedLocation }
     $prevName = if ($prevLoc) { Split-Path $prevLoc -Leaf } else { $null }
-    $existsAsExpected = Test-Path -LiteralPath (Join-Path $ModsDir $m.filename)
+    $expectedPath = Join-Path $ModsDir $m.filename
+    # Existence alone isn't enough: a fix that patches a jar's *contents* while
+    # keeping the same filename (e.g. a locally-repackaged jar) must still be
+    # picked up for already-installed players, or the buggy file just sits there
+    # forever looking "matched" and nobody ever gets the fix automatically.
+    $existsAsExpected = (Test-Path -LiteralPath $expectedPath) -and (Test-ModHashMatches $m $expectedPath)
 
     if ($existsAsExpected) {
         $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="일치"; localName=$m.filename; state="match" }
+    } elseif (Test-Path -LiteralPath $expectedPath) {
+        # Same filename, wrong content: overwrite in place, no separate delete needed.
+        $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="내용 오래됨(자동 교체)"; localName=$m.filename; state="on" }
     } elseif ($prevName -and (Test-Path -LiteralPath (Join-Path $ModsDir $prevName))) {
         # Missing/outdated tracked mod: default to installing it. User double-clicks to exclude.
         $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="버전 다름"; localName=$prevName; state="on" }
@@ -181,9 +220,21 @@ if (Test-Path -LiteralPath $ModsDir) {
     $localJars = Get-ChildItem -LiteralPath $ModsDir -Filter "*.jar" -File
     foreach ($j in $localJars) {
         if ($allExpectedNames.ContainsKey($j.Name)) { continue }
-        if ($allCachedNames.ContainsKey($j.Name)) { continue }
-        $rows += [PSCustomObject]@{
-            kind="personal"; mod=$null; status="내pc에만 있음"; localName=$j.Name; state="off"
+        # Known-stale: either this tool's own manifest previously installed this
+        # exact filename (now superseded), or its name-minus-version matches a
+        # mod the pack still tracks under a newer filename. Either way it's a
+        # leftover old build of a mod we still ship, not a genuine personal mod,
+        # so default it to deletion instead of silently ignoring or requiring a
+        # manual double-click.
+        $isKnownStale = $allCachedNames.ContainsKey($j.Name) -or $expectedStems.ContainsKey((Get-NameStem $j.Name))
+        if ($isKnownStale) {
+            $rows += [PSCustomObject]@{
+                kind="personal"; mod=$null; status="구버전(자동 삭제 예정)"; localName=$j.Name; state="on"
+            }
+        } else {
+            $rows += [PSCustomObject]@{
+                kind="personal"; mod=$null; status="내pc에만 있음"; localName=$j.Name; state="off"
+            }
         }
     }
 }
