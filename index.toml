@@ -447,6 +447,11 @@ hash = "a73ac5444eb25c53ab83de0cd5f4d8019ac1ba6c2f5ea02c9e391569e2439e69"
 metafile = true
 
 [[files]]
+file = "mods/dummmmmmy.pw.toml"
+hash = "efe4a608ea985d51931b83c02216f7f1770e6c270646ed9f621f8cdb9af0e77a"
+metafile = true
+
+[[files]]
 file = "mods/dungeon-and-taverns.pw.toml"
 hash = "3f259730ce95008c662b26684429ef9bfc56a4209ed0ed57eefac673a1453f80"
 metafile = true
@@ -1150,6 +1155,11 @@ metafile = true
 [[files]]
 file = "mods/moogs-structure-lib.pw.toml"
 hash = "83df110cb67a5e4e7209aa21de374d4fbf48929b2818cec2919516bdef9edeb8"
+metafile = true
+
+[[files]]
+file = "mods/moonlight.pw.toml"
+hash = "4b4ff43259f546640ef907be444ef7b5ec45ac97b5fc2b8694cffc140991751e"
 metafile = true
 
 [[files]]
