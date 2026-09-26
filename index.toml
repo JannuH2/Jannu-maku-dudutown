@@ -1032,6 +1032,15 @@ hash = "b75f1bc38c976df7036feb3b08039694fc88615b26a8ffb10af42188f9e6a51e"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-statoverride.pw.toml"
+hash = "5b80fd20d029011f51e84c56c85d04d10c28c69b0f2f0ea9327bd7f3f503056f"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-statoverride-1.0.0.jar"
+hash = "39e7d9ec83161f37013e268b78227b195f6415a0fd6cfa517c1624e1bf86a16d"
+
+[[files]]
 file = "mods/map-tooltip.pw.toml"
 hash = "e8347f79c7f4532f9b9f0dac4ca5e701007691a6fc086cbde5cb9fd3193f6c96"
 metafile = true

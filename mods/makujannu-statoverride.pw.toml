@@ -1,0 +1,12 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): overrides attack
+# damage / armor / armor toughness / max health for specific items across any
+# mod via config/makujannu_statoverride.json, at the vanilla attribute_modifiers
+# component level. Needed on both sides so tooltips render the same values
+# combat actually uses.
+name = "Maku Jannu Stat Override"
+filename = "makujannu-statoverride-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha256"
+hash = "39e7d9ec83161f37013e268b78227b195f6415a0fd6cfa517c1624e1bf86a16d"
