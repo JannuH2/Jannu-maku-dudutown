@@ -6,6 +6,7 @@
 
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
+Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 $ErrorActionPreference = "Stop"
 # Invoke-WebRequest's default progress-bar rendering is extremely slow for
@@ -159,6 +160,24 @@ foreach ($k in $cachedFiles.Keys) {
 # record of it at all - e.g. a fresh CurseForge modpack import, or a manual
 # jar fix distributed straight to players before it was ever synced by this
 # tool - so it defaults to deletion instead of silently sitting there forever.
+function Get-JarModId([string]$Path) {
+    try {
+        $zip = [System.IO.Compression.ZipFile]::OpenRead($Path)
+        try {
+            $entry = $zip.GetEntry("fabric.mod.json")
+            $isQuilt = $false
+            if (-not $entry) { $entry = $zip.GetEntry("quilt.mod.json"); $isQuilt = $true }
+            if (-not $entry) { return $null }
+            $reader = New-Object System.IO.StreamReader($entry.Open())
+            try { $text = $reader.ReadToEnd() } finally { $reader.Dispose() }
+            $json = $text | ConvertFrom-Json
+            if ($isQuilt) { return $json.quilt_loader.id } else { return $json.id }
+        } finally { $zip.Dispose() }
+    } catch {
+        return $null
+    }
+}
+
 function Get-NameStem([string]$Name) {
     $base = [System.IO.Path]::GetFileNameWithoutExtension($Name)
     $stem = $base -replace '[0-9]+(\.[0-9]+)*', '' -replace '[-_+.\s]+', ''
@@ -510,6 +529,42 @@ foreach ($d in $toDelete) {
         Write-Host "  삭제됨: $($d.localName)"
     } catch {
         Write-Host "  [실패] $($d.localName) 삭제 실패 - $($_.Exception.Message)"
+    }
+}
+
+# Final safety net: a rename/version-bump can leave the truly-old jar behind
+# under a filename that matches neither this tool's own cache history nor a
+# name-stem guess (a brand-new client with no manifest history, for example).
+# Filename heuristics can't be trusted to catch every case without risking
+# false positives across unrelated mods, so instead read each remaining jar's
+# real Fabric/Quilt mod id and group by that - the one identity Fabric itself
+# treats as canonical. Any id with more than one jar keeps only the file the
+# pack currently expects and removes the rest, but only when exactly one
+# candidate in the group matches the pack; if that's not the case (e.g. the
+# pack's own expected file isn't present in this group at all), nothing in
+# that group is touched, since there is nothing safe to conclude.
+if (Test-Path -LiteralPath $ModsDir) {
+    $byId = @{}
+    foreach ($j in (Get-ChildItem -LiteralPath $ModsDir -Filter "*.jar" -File)) {
+        $id = Get-JarModId $j.FullName
+        if (-not $id) { continue }
+        if (-not $byId.ContainsKey($id)) { $byId[$id] = @() }
+        $byId[$id] += $j
+    }
+    foreach ($id in $byId.Keys) {
+        $group = $byId[$id]
+        if ($group.Count -le 1) { continue }
+        $expected = $group | Where-Object { $allExpectedNames.ContainsKey($_.Name) }
+        if (@($expected).Count -ne 1) { continue }
+        foreach ($j in $group) {
+            if ($j.Name -eq $expected[0].Name) { continue }
+            try {
+                Remove-Item -LiteralPath $j.FullName -Force
+                Write-Host "  같은 모드($id)의 다른 버전 삭제됨: $($j.Name)"
+            } catch {
+                Write-Host "  [실패] $($j.Name) 삭제 실패 - $($_.Exception.Message)"
+            }
+        }
     }
 }
 
