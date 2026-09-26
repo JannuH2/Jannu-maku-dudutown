@@ -8,5 +8,6 @@ filename = "citadelfabric-1.21.1-1.2.0.jar"
 side = "both"
 
 [download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/citadelfabric-1.21.1-1.2.0.jar"
 hash-format = "sha256"
 hash = "66ea1f8f17b254ea484a4a3ecf469f6062af662854450ca038ea55c43b76dd2e"

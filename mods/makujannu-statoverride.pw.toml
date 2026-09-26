@@ -8,5 +8,6 @@ filename = "makujannu-statoverride-1.0.0.jar"
 side = "both"
 
 [download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-statoverride-1.0.0.jar"
 hash-format = "sha256"
 hash = "39e7d9ec83161f37013e268b78227b195f6415a0fd6cfa517c1624e1bf86a16d"

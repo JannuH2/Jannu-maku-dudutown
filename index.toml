@@ -289,7 +289,7 @@ metafile = true
 
 [[files]]
 file = "mods/citadel-fabric.pw.toml"
-hash = "1e272c72cbe74c4aabb7530f96e32e9b68274b0b153942eb2e7fb376ecf54e85"
+hash = "33da1770f24993fc9a20159af781c19fb9d929312f952c9b13fb2b5d76539118"
 metafile = true
 
 [[files]]
@@ -1032,7 +1032,7 @@ metafile = true
 
 [[files]]
 file = "mods/makujannu-statoverride.pw.toml"
-hash = "5b80fd20d029011f51e84c56c85d04d10c28c69b0f2f0ea9327bd7f3f503056f"
+hash = "2d7b0823f12ba0634841b12d1ac207cca9873164439d4080eb26abb0dec49c81"
 metafile = true
 
 [[files]]
