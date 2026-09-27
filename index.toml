@@ -6,7 +6,7 @@ hash = "776691ee850bee73d0a8889bd3d6ebe17309c932f844337462b2dd5cc4d100c2"
 
 [[files]]
 file = "config/makujannu_statoverride.json"
-hash = "c2c9b2f2acf7aa5b5a09917747ed2e92ed32fd5a46798566bc98213c05d8085d"
+hash = "4251bf2c113182a7a7bb28a68b7d05fcb169aeaa43ad5a87298dba08924c7cb5"
 
 [[files]]
 file = "mods/IceAndFireCE-2.0-beta.15-1.21.1-fabric.jar"
@@ -1057,12 +1057,12 @@ hash = "bc4e9f1fc00cdc4640fe440373d6533e12867e18a900c00785b0bb866786dbd2"
 
 [[files]]
 file = "mods/makujannu-statoverride.pw.toml"
-hash = "2d7b0823f12ba0634841b12d1ac207cca9873164439d4080eb26abb0dec49c81"
+hash = "8bb0146ce8d6dc81d5e1dc0615f2ca3cdd420fd26e45765c13f21b144fdb4b26"
 metafile = true
 
 [[files]]
 file = "mods/makujannu-statoverride-1.0.0.jar"
-hash = "39e7d9ec83161f37013e268b78227b195f6415a0fd6cfa517c1624e1bf86a16d"
+hash = "6a659aaabf5b0c8d511150549a34b6c6cfa161e32afed8ff383dc99acb243f45"
 
 [[files]]
 file = "mods/makujannu-stoutheart-fix.pw.toml"

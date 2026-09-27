@@ -1,6 +1,833 @@
 {
   "items": {
-    "betterend:aeternium_sword": { "attack": {"mode": "absolute", "value": 9.5} },
-    "minecraft:mace": { "attack": {"mode": "absolute", "value": 8} }
+    "betterend:aeternium_sword": {
+      "attack": {
+        "mode": "absolute",
+        "value": 9.5
+      }
+    },
+    "minecraft:mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 8
+      }
+    },
+    "deeperdarker:warden_sword": {
+      "attack": {
+        "mode": "absolute",
+        "value": 11
+      }
+    },
+    "deeperdarker:warden_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "deeperdarker:warden_chestplate": {
+      "armor": {
+        "mode": "absolute",
+        "value": 10
+      },
+      "attack": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "deeperdarker:warden_leggings": {
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 2
+      },
+      "armor": {
+        "mode": "absolute",
+        "value": 8
+      }
+    },
+    "betterend:aeternium_helmet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "betterend:aeternium_chestplate": {
+      "armor": {
+        "mode": "absolute",
+        "value": 11
+      }
+    },
+    "betterend:aeternium_leggings": {
+      "armor": {
+        "mode": "absolute",
+        "value": 9
+      }
+    },
+    "betterend:aeternium_boots": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "mebahelcreaturesdraugr:weapon/ebony/ebony_greatsword": {
+      "attack": {
+        "mode": "absolute",
+        "value": 12.5
+      }
+    },
+    "mebahelcreaturesdraugr:weapon/ebony/infernal_ebony_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 12
+      }
+    },
+    "mebahelcreaturesdraugr:weapon/ebony/ebony_mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 11
+      }
+    },
+    "armory_rpgs:lightbringer_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "armory_rpgs:lightbringer_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 10
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 6
+      },
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:lightbringer_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 8
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 6
+      }
+    },
+    "armory_rpgs:lightbringer_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:justicar_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "armory_rpgs:justicar_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 10
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 6
+      },
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:justicar_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 8
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 6
+      }
+    },
+    "armory_rpgs:justicar_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:onslaught_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:onslaught_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 9
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 4
+      },
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:onslaught_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 7
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:onslaught_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:destroyer_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:destroyer_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 9
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 4
+      },
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:destroyer_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 7
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:destroyer_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:deathmantle_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:deathmantle_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "armory_rpgs:deathmantle_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:deathmantle_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:slayer_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:slayer_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "armory_rpgs:slayer_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:slayer_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:strider_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:strider_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "armory_rpgs:strider_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:strider_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:riftstalker_armor_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:riftstalker_armor_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 5
+      }
+    },
+    "armory_rpgs:riftstalker_armor_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:riftstalker_armor_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "armory_rpgs:astral_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:astral_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:astral_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:astral_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:scarlet_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:scarlet_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:scarlet_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:scarlet_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:glacier_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:glacier_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:glacier_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:glacier_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:avatar_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:avatar_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:avatar_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:avatar_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:tempest_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:tempest_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:tempest_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:tempest_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:smouldering_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:smouldering_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:smouldering_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:smouldering_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:rimeweave_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:rimeweave_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:rimeweave_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:rimeweave_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:absolution_robe_head": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "armory_rpgs:absolution_robe_chest": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:absolution_robe_legs": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "armory_rpgs:absolution_robe_feet": {
+      "armor": {
+        "mode": "absolute",
+        "value": 2
+      }
+    },
+    "lne_paladins:elder_guardian_great_hammer": {
+      "attack": {
+        "mode": "absolute",
+        "value": 16
+      }
+    },
+    "lne_paladins:elder_guardian_mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 11
+      }
+    },
+    "lne_paladins:elder_guardian_claymore": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "lne_rogues:glacial_double_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 15
+      }
+    },
+    "lne_rogues:wither_double_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 15
+      }
+    },
+    "lne_rogues:ender_dragon_double_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 17
+      }
+    },
+    "lne_paladins:ender_dragon_great_hammer": {
+      "attack": {
+        "mode": "delta",
+        "value": 1
+      }
+    },
+    "lne_paladins:ender_dragon_claymore": {
+      "attack": {
+        "mode": "absolute",
+        "value": 15
+      }
+    },
+    "lne_paladins:ender_dragon_mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "lne_rogues:ender_dragon_dagger": {
+      "attack": {
+        "mode": "absolute",
+        "value": 7.5
+      }
+    },
+    "lne_rogues:ender_dragon_glaive": {
+      "attack": {
+        "mode": "absolute",
+        "value": 11.3
+      }
+    },
+    "lne_rogues:ender_dragon_sickle": {
+      "attack": {
+        "mode": "absolute",
+        "value": 8.8
+      }
+    },
+    "lne_archers:ender_dragon_spear": {
+      "attack": {
+        "mode": "absolute",
+        "value": 10
+      }
+    },
+    "lne_wizards:ender_dragon_staff_arcane": {
+      "attack": {
+        "mode": "delta",
+        "value": 1
+      }
+    },
+    "lne_wizards:ender_dragon_staff_wind": {
+      "attack": {
+        "mode": "delta",
+        "value": 1
+      }
+    },
+    "sleepy_hollows:spectral_waraxe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 14
+      }
+    },
+    "aquamirae:abyssal_tiara": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "aquamirae:abyssal_heaume": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "aquamirae:abyssal_boots": {
+      "armor": {
+        "mode": "absolute",
+        "value": 4
+      }
+    },
+    "aquamirae:abyssal_leggings": {
+      "armor": {
+        "mode": "absolute",
+        "value": 7
+      }
+    },
+    "aquamirae:abyssal_brigandine": {
+      "armor": {
+        "mode": "absolute",
+        "value": 9
+      }
+    },
+    "betterend:aeternium_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 12
+      }
+    },
+    "betterend:aeternium_hammer": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "paladins:aeternium_mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "paladins:aeternium_kite_shield": {
+      "toughness": {
+        "mode": "absolute",
+        "value": 3
+      }
+    },
+    "rogues:aeternium_double_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 14
+      }
+    },
+    "rogues:aeternium_glaive": {
+      "attack": {
+        "mode": "absolute",
+        "value": 11
+      }
+    },
+    "mebahelcreaturesdraugr:stalhrim_sword": {
+      "attack": {
+        "mode": "absolute",
+        "value": 10
+      }
+    },
+    "mebahelcreaturesdwarven:weapon/dwemer/dwemer_war_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 12
+      }
+    },
+    "mebahelcreaturesdwarven:weapon/dwemer/dwemer_warhammer": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "lne_rogues:elder_guardian_double_axe": {
+      "attack": {
+        "mode": "absolute",
+        "value": 14
+      }
+    },
+    "lne_paladins:ender_dragon_shield": {
+      "attackSpeed": {
+        "mode": "absolute",
+        "value": 0.1,
+        "operation": "add_multiplied_base"
+      },
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 8
+      }
+    },
+    "lne_paladins:glacial_shield": {
+      "toughness": {
+        "mode": "absolute",
+        "value": 2
+      },
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 10
+      }
+    },
+    "lne_paladins:wither_mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 14
+      }
+    },
+    "lne_paladins:glacial_great_hammer": {
+      "attack": {
+        "mode": "absolute",
+        "value": 20
+      }
+    },
+    "arsenal:unique_hammer_1": {
+      "attack": {
+        "mode": "absolute",
+        "value": 18
+      }
+    },
+    "arsenal:unique_mace_1": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13.5
+      }
+    },
+    "arsenal:unique_double_axe_1": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "arsenal:unique_hammer_2": {
+      "attack": {
+        "mode": "absolute",
+        "value": 18
+      }
+    },
+    "arsenal:unique_mace_2": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13.5
+      }
+    },
+    "arsenal:unique_double_axe_2": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "arsenal:unique_hammer_sw": {
+      "attack": {
+        "mode": "absolute",
+        "value": 18
+      }
+    },
+    "arsenal:unique_mace_sw": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13.5
+      }
+    },
+    "arsenal:unique_double_axe_sw": {
+      "attack": {
+        "mode": "absolute",
+        "value": 13
+      }
+    },
+    "arsenal:unique_shield_2": {
+      "maxHealth": {
+        "mode": "absolute",
+        "value": 10
+      }
+    }
   }
 }
