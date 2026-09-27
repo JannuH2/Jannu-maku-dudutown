@@ -142,10 +142,6 @@ file = "mods/beautiful-potions.pw.toml"
 hash = "9d62b6483d84e1e5bcafed6f576b5d4946e082405aedf4148d8c84c7889eb8c0"
 metafile = true
 
-[[files]]
-file = "mods/bossultimatum.pw.toml"
-hash = "a859d0dcbf3f315ea485ca18deb999e340a716c4110f9a92bf74ed93b0883dae"
-metafile = true
 
 [[files]]
 file = "mods/better-advancements.pw.toml"
@@ -580,10 +576,6 @@ file = "mods/fabric-language-kotlin.pw.toml"
 hash = "e218143b81d8cb9573208282c40063ebde3e2ce02384271d5a379687271deff8"
 metafile = true
 
-[[files]]
-file = "mods/faux-custom-entity-data.pw.toml"
-hash = "d297b34ff049f09d89d7d5a750b33e328d037cd0a978b03de458775ebeead628"
-metafile = true
 
 [[files]]
 file = "mods/fabric-waystones.pw.toml"
@@ -1225,11 +1217,6 @@ metafile = true
 [[files]]
 file = "mods/mythicmetals.pw.toml"
 hash = "bb18b36cd9a49ee63639d98e011f766b84de862f198191cc11fb182f7d01084e"
-metafile = true
-
-[[files]]
-file = "mods/necronomicon.pw.toml"
-hash = "fbd3c6d3edc0c3c31580676f3b2a8e47648585263b72c21a01a099e33b67d965"
 metafile = true
 
 [[files]]
