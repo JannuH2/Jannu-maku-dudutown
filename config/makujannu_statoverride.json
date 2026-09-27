@@ -588,8 +588,8 @@
     },
     "lne_paladins:ender_dragon_great_hammer": {
       "attack": {
-        "mode": "delta",
-        "value": 1
+        "mode": "absolute",
+        "value": 18
       }
     },
     "lne_paladins:ender_dragon_claymore": {

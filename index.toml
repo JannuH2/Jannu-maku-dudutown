@@ -6,7 +6,7 @@ hash = "776691ee850bee73d0a8889bd3d6ebe17309c932f844337462b2dd5cc4d100c2"
 
 [[files]]
 file = "config/makujannu_statoverride.json"
-hash = "4251bf2c113182a7a7bb28a68b7d05fcb169aeaa43ad5a87298dba08924c7cb5"
+hash = "a75a4bafa5b6a996cecb313c68ce1f8428fea91308b5a82ba521e127ddb21274"
 
 [[files]]
 file = "mods/IceAndFireCE-2.0-beta.15-1.21.1-fabric.jar"
