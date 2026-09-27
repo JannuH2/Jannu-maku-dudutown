@@ -1065,6 +1065,15 @@ file = "mods/makujannu-statoverride-1.0.0.jar"
 hash = "39e7d9ec83161f37013e268b78227b195f6415a0fd6cfa517c1624e1bf86a16d"
 
 [[files]]
+file = "mods/makujannu-stoutheart-fix.pw.toml"
+hash = "3a46a65eb8a87faaa9ba1950dd90f94d654cbd66a0547797fc45bb7a505967ca"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-stoutheart-fix-1.0.0.jar"
+hash = "4eb4f2b5098911818722c06ffd7c71eb551a05bbc61d64445ca683cee2ad44ab"
+
+[[files]]
 file = "mods/map-tooltip.pw.toml"
 hash = "e8347f79c7f4532f9b9f0dac4ca5e701007691a6fc086cbde5cb9fd3193f6c96"
 metafile = true

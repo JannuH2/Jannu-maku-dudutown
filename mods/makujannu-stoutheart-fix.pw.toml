@@ -1,0 +1,14 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): bundles a tiny
+# built-in resource pack (via Fabric API's resource loader) that adds
+# assets/brewery/textures/mob_effect/stoutheart.png, fixing Let's Do: Brewery's
+# Stoutheart effect icon not showing (the mod itself registers the effect id
+# as "stoutheart" but ships its texture as "stout_heart.png", so vanilla's
+# automatic icon lookup never finds it). Client-only, purely visual.
+name = "Maku Jannu Stoutheart Icon Fix"
+filename = "makujannu-stoutheart-fix-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-stoutheart-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "4eb4f2b5098911818722c06ffd7c71eb551a05bbc61d64445ca683cee2ad44ab"
