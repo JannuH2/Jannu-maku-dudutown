@@ -1,0 +1,12 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): bundles a client-only
+# resource pack (via Fabric API's resource loader) giving Korean names to Nether
+# structures for the makujannu dungeon-difficulty HUD, since none of the mods
+# adding those structures ship a "structure.<id>" translation key at all.
+name = "Maku Jannu Nether Structure Names"
+filename = "makujannu-nether-structure-names-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-nether-structure-names-1.0.0.jar"
+hash-format = "sha256"
+hash = "2c269d221184891bd5e383fd7621f395b873128489a05b5fc5268a06dfc33fc6"

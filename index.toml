@@ -1056,6 +1056,15 @@ file = "mods/makujannu-hud-1.0.0.jar"
 hash = "bc4e9f1fc00cdc4640fe440373d6533e12867e18a900c00785b0bb866786dbd2"
 
 [[files]]
+file = "mods/makujannu-nether-structure-names.pw.toml"
+hash = "0240e1e68fadbdd1233c506041707eaf16fbc25d9b9913b55497ee4f3de2379f"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-nether-structure-names-1.0.0.jar"
+hash = "2c269d221184891bd5e383fd7621f395b873128489a05b5fc5268a06dfc33fc6"
+
+[[files]]
 file = "mods/makujannu-statoverride.pw.toml"
 hash = "8bb0146ce8d6dc81d5e1dc0615f2ca3cdd420fd26e45765c13f21b144fdb4b26"
 metafile = true
