@@ -1,0 +1,13 @@
+name = "Boss Ultimatum"
+filename = "bossultimatum-fabric-1.0.0-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/8SrFEqh3/versions/OVsvBPyD/bossultimatum-fabric-1.0.0-1.21.1.jar"
+hash-format = "sha1"
+hash = "39640d7cfff277a7db7a556d4844dd263038d0e8"
+
+[update]
+[update.modrinth]
+mod-id = "8SrFEqh3"
+version = "OVsvBPyD"
