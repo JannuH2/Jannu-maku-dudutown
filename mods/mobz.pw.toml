@@ -1,0 +1,9 @@
+# Custom-hosted: not found on Modrinth (CurseForge-only mod, no API key available to fetch metadata).
+name = "MobZ"
+filename = "mobz-4.3.2-fabric.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/mobz-4.3.2-fabric.jar"
+hash-format = "sha256"
+hash = "e84c5a368b4a6796e59f62fa3c28d9384a68d35a98beeb4ca8853659f9255c02"

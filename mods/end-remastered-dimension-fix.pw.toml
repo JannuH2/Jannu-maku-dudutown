@@ -1,0 +1,13 @@
+name = "End Remastered Dimension Compat"
+filename = "end-remastered-dimension-fix-1.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/CB5jXuIV/versions/1AMp80TD/end-remastered-dimension-fix-1.1.jar"
+hash-format = "sha512"
+hash = "8dc0f194c1902bc85eb4058361cce8afdf04339a55936785fcc1375797bb7b7ef1d4d9f8e17a4ba10e4eaa70c83436bca9bc74c754c56c2675dec78032a9373a"
+
+[update]
+[update.modrinth]
+mod-id = "CB5jXuIV"
+version = "1AMp80TD"

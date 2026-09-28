@@ -1,0 +1,9 @@
+# Custom-hosted: not found on Modrinth (CurseForge-only mod, no API key available to fetch metadata).
+name = "Trial Guardians"
+filename = "trial_guardians-fabric-2.0.0+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/trial_guardians-fabric-2.0.0+1.21.1.jar"
+hash-format = "sha256"
+hash = "385a44c36b6506fe359e38ed6ffb9d04dd7ddd82707ec19dece4652617e7a6fd"

@@ -1,0 +1,13 @@
+name = "VoidZ"
+filename = "voidz-1.0.11.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/OMiCHIwt/versions/ByAkqZD1/voidz-1.0.11.jar"
+hash-format = "sha512"
+hash = "251e4495938bc14c3a84b5c12d597d77adb91a3a16edd7e29ca9a3857425374250ee7cfbb9071476fa63f9b608b9ea0b7bdbb097170e209f65c35116320875d6"
+
+[update]
+[update.modrinth]
+mod-id = "OMiCHIwt"
+version = "ByAkqZD1"

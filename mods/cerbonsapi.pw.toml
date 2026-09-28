@@ -1,0 +1,13 @@
+name = "CerbonsAPI"
+filename = "CerbonsAPI-Fabric-1.21-1.3.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/GkIc6rRo/versions/kxmVyCru/CerbonsAPI-Fabric-1.21-1.3.0.jar"
+hash-format = "sha512"
+hash = "6ad17aac314cb2efb3022322770d674bc158b614752ba66b24d7605ee78003cb932ef64f0e76609fa266f2a0b4136032c2fe5422379e868086ab3b691ad389b9"
+
+[update]
+[update.modrinth]
+mod-id = "GkIc6rRo"
+version = "kxmVyCru"

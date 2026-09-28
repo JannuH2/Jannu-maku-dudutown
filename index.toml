@@ -568,7 +568,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "d2d62a3856f9f2020d17591099c663098d4b28ac37d2f8edd580916bf34934a9"
+hash = "f8f57321af88ed9e235b30b8a82412e92cf51fe98dc8cca89e2fcb9e038cc56b"
 metafile = true
 
 [[files]]
@@ -1939,3 +1939,81 @@ hash = "78cbfc8aa6994e943cf5247906d1160caff00d7e41430225a517c4a5ba731e24"
 [[files]]
 file = "resourcepacks/visual_armor_trims_v2.1_1.21.X.zip"
 hash = "9ba319ae672227c940d2c75ddd8763f3c972f4679dc7bcbef1d185cbdfd386b9"
+
+[[files]]
+file = "mods/cerbonsapi.pw.toml"
+hash = "f41a3bbe216c13fbf8da868e4d5904d6240b5447a7adfb197542feef9860beda"
+metafile = true
+
+[[files]]
+file = "mods/fabricshieldlib.pw.toml"
+hash = "6da716a61d35d86fa5268731d255ba7ca5534cdac0844b71a2688529bba16465"
+metafile = true
+
+[[files]]
+file = "mods/mots.pw.toml"
+hash = "733d1f60c095e93856d4a006b4b39b3f9de2e3998c13e6167029947ea37f4411"
+metafile = true
+
+[[files]]
+file = "mods/nullscape.pw.toml"
+hash = "dcfbfa39abeaba554c2c5323f9b9a3ec58dfc386aca2d237f73948abdbdc7125"
+metafile = true
+
+[[files]]
+file = "mods/accdelight.pw.toml"
+hash = "49a761c5505a7aebea8365f5010418e346f8fbc5b2de301f85b3648e90fdbb12"
+metafile = true
+
+[[files]]
+file = "mods/adventurez.pw.toml"
+hash = "e31a8eb626b7b2d5e97d7073021bd82c4bdcd26d006b3e1e7798133bffd11294"
+metafile = true
+
+[[files]]
+file = "mods/alexscaves.pw.toml"
+hash = "1cdf4376600f1b86cd1371c6e4792625ba21163dac3a3db5b0cf87a629dd18cb"
+metafile = true
+
+[[files]]
+file = "mods/azurelib.pw.toml"
+hash = "75b49ea9efb031f128256b76e3e37d570491b589b241a4dca4c924e905b19883"
+metafile = true
+
+[[files]]
+file = "mods/codxlib.pw.toml"
+hash = "16e2b21907374f8c164a0eabf36627748e8977c43b58054a2646cb768e434b5f"
+metafile = true
+
+[[files]]
+file = "mods/end-remastered-dimension-fix.pw.toml"
+hash = "924a945484226281c8afd629c5bbf5d4e17eed6b414d747628c41ad67e028209"
+metafile = true
+
+[[files]]
+file = "mods/endrem.pw.toml"
+hash = "389c30cfae2e35405bc8efe5c5e1eb853ab8b3e031d45e889b597c581632d420"
+metafile = true
+
+[[files]]
+file = "mods/voidz.pw.toml"
+hash = "bded47bc3fe99b3bbec5dd34cf2d432f4d0dfaa048644933dd17347d324b3d5f"
+metafile = true
+
+[[files]]
+file = "mods/mobz.pw.toml"
+hash = "ac1759f190b4b5051271294400d2ce617939d14e29cabb35959506818133d142"
+metafile = true
+
+[[files]]
+file = "mods/mobz-4.3.2-fabric.jar"
+hash = "e84c5a368b4a6796e59f62fa3c28d9384a68d35a98beeb4ca8853659f9255c02"
+
+[[files]]
+file = "mods/trial_guardians.pw.toml"
+hash = "4d1a32d47e6ab567974fed597b542854ded36e7ae870f08a6fe663897253613f"
+metafile = true
+
+[[files]]
+file = "mods/trial_guardians-fabric-2.0.0+1.21.1.jar"
+hash = "385a44c36b6506fe359e38ed6ffb9d04dd7ddd82707ec19dece4652617e7a6fd"
