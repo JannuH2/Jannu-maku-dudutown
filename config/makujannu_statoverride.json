@@ -649,31 +649,71 @@
     "aquamirae:abyssal_tiara": {
       "armor": {
         "mode": "absolute",
-        "value": 4
+        "value": 5
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 2
+      },
+      "knockbackResistance": {
+        "mode": "absolute",
+        "value": 0.5
       }
     },
     "aquamirae:abyssal_heaume": {
       "armor": {
         "mode": "absolute",
-        "value": 4
+        "value": 5
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 2
+      },
+      "knockbackResistance": {
+        "mode": "absolute",
+        "value": 0.5
       }
     },
     "aquamirae:abyssal_boots": {
       "armor": {
         "mode": "absolute",
-        "value": 4
+        "value": 5
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 2
+      },
+      "knockbackResistance": {
+        "mode": "absolute",
+        "value": 0.5
       }
     },
     "aquamirae:abyssal_leggings": {
       "armor": {
         "mode": "absolute",
         "value": 7
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 2
+      },
+      "knockbackResistance": {
+        "mode": "absolute",
+        "value": 0.5
       }
     },
     "aquamirae:abyssal_brigandine": {
       "armor": {
         "mode": "absolute",
         "value": 9
+      },
+      "toughness": {
+        "mode": "absolute",
+        "value": 2
+      },
+      "knockbackResistance": {
+        "mode": "absolute",
+        "value": 0.5
       }
     },
     "betterend:aeternium_axe": {
