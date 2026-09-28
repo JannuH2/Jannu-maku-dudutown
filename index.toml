@@ -1066,12 +1066,12 @@ hash = "2c269d221184891bd5e383fd7621f395b873128489a05b5fc5268a06dfc33fc6"
 
 [[files]]
 file = "mods/makujannu-statoverride.pw.toml"
-hash = "a215237e68c9a70edf1a8e1c8ed74a3d8277b53afc8088ae32125a7d7bd74deb"
+hash = "d5f074a52b2552c42d014da721dcdefcedd513bd5718e9c00cc9c72c2a4c78fe"
 metafile = true
 
 [[files]]
 file = "mods/makujannu-statoverride-1.0.0.jar"
-hash = "f6b42078e83c32138824545134254cfab3c5dc9275114a0bf2805e49796ff475"
+hash = "46432c89d15671333d77d3637b2c4627e075daadaf74c204eca0511bddce9d0b"
 
 [[files]]
 file = "mods/makujannu-stoutheart-fix.pw.toml"
