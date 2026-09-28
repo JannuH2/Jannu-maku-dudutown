@@ -2,7 +2,8 @@
 # damage / armor / armor toughness / max health for specific items across any
 # mod via config/makujannu_statoverride.json, at the vanilla attribute_modifiers
 # component level. Needed on both sides so tooltips render the same values
-# combat actually uses.
+# combat actually uses. Also applies the Warden sword/axe on-hit Blindness+Darkness
+# ("vision reduction") effect via Fabric API's ServerLivingEntityEvents.AFTER_DAMAGE.
 name = "Maku Jannu Stat Override"
 filename = "makujannu-statoverride-1.0.0.jar"
 side = "both"
@@ -10,4 +11,4 @@ side = "both"
 [download]
 url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-statoverride-1.0.0.jar"
 hash-format = "sha256"
-hash = "6a659aaabf5b0c8d511150549a34b6c6cfa161e32afed8ff383dc99acb243f45"
+hash = "dbf5b249a0aefff14ce63a8600dee97c78143ab24899a236af2d241987f38f85"
