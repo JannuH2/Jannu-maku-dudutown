@@ -32,6 +32,14 @@
       "attack": {
         "mode": "absolute",
         "value": 2
+      },
+      "maxHealth": {
+        "mode": "delta",
+        "value": 2
+      },
+      "knockbackResistance": {
+        "mode": "absolute",
+        "value": 1
       }
     },
     "deeperdarker:warden_leggings": {
