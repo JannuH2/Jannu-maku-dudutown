@@ -1542,6 +1542,15 @@ hash = "87bfc8326fe5e0ce8b4eefa4801fa77cfc06bc76ec38725aab78d28ca8d3dd41"
 metafile = true
 
 [[files]]
+file = "mods/smallships.pw.toml"
+hash = "945855c6fb20cbbfc15d4d804b5f5f8efef69d1f034615f31c2fa608910a4adb"
+metafile = true
+
+[[files]]
+file = "mods/smallships-fabric-1.21.1-2.0.0-b2.1.jar"
+hash = "6264f2cda17d8f776229af2cc4a63090d102a6efd6a7bcbe2352ba152b835fbd"
+
+[[files]]
 file = "mods/smarter-farmers-farmers-replant.pw.toml"
 hash = "e4f35f18d459bed8cac2b7880709ba9f4d021e981ba2358173251e41272bf973"
 metafile = true
