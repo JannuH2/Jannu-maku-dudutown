@@ -294,10 +294,6 @@ hash = "33da1770f24993fc9a20159af781c19fb9d929312f952c9b13fb2b5d76539118"
 metafile = true
 
 [[files]]
-file = "mods/citadelfabric-1.21.1-1.2.0.jar"
-hash = "66ea1f8f17b254ea484a4a3ecf469f6062af662854450ca038ea55c43b76dd2e"
-
-[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "446c173c87b7908daee86b0dee89c6b628c77beb7a0bc091ff5252b7c0062080"
 metafile = true
@@ -461,10 +457,6 @@ metafile = true
 file = "mods/dungeon-difficulty.pw.toml"
 hash = "22d047772a461a64cdaf410c86ad59d512908e4a07d83f74d3a0424e5b9e04cd"
 metafile = true
-
-[[files]]
-file = "mods/dungeon_difficulty-fabric-3.8.0+1.21.1.jar"
-hash = "0563de67e5e5916c96620fdaf39b21683854487e686864b439e4e67457b1dfd3"
 
 [[files]]
 file = "mods/durability-tooltip.pw.toml"
@@ -2000,14 +1992,6 @@ hash = "ac1759f190b4b5051271294400d2ce617939d14e29cabb35959506818133d142"
 metafile = true
 
 [[files]]
-file = "mods/mobz-4.3.2-fabric.jar"
-hash = "e84c5a368b4a6796e59f62fa3c28d9384a68d35a98beeb4ca8853659f9255c02"
-
-[[files]]
 file = "mods/trial_guardians.pw.toml"
 hash = "4d1a32d47e6ab567974fed597b542854ded36e7ae870f08a6fe663897253613f"
 metafile = true
-
-[[files]]
-file = "mods/trial_guardians-fabric-2.0.0+1.21.1.jar"
-hash = "385a44c36b6506fe359e38ed6ffb9d04dd7ddd82707ec19dece4652617e7a6fd"
