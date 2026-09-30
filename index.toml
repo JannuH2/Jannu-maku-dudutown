@@ -1083,6 +1083,15 @@ file = "mods/makujannu-stoutheart-fix-1.0.0.jar"
 hash = "4eb4f2b5098911818722c06ffd7c71eb551a05bbc61d64445ca683cee2ad44ab"
 
 [[files]]
+file = "mods/makujannu-warden-variants.pw.toml"
+hash = "329f210cc0afa1d3e62c35192afe0e8b55bdadc2082c9cc3677bf9c662752cbc"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-warden-variants-1.0.0.jar"
+hash = "1c8b0d754f54d194c3ab3af425e2383a7dec0c965df213d18da0afee28d933e7"
+
+[[files]]
 file = "mods/map-tooltip.pw.toml"
 hash = "e8347f79c7f4532f9b9f0dac4ca5e701007691a6fc086cbde5cb9fd3193f6c96"
 metafile = true

@@ -1,0 +1,18 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): registers 8 independent Warden
+# variant EntityTypes (Overgrowth/Overseer/Hollowed/Pursuer/Ethereal/Phantasm/Wardoltus/
+# Skull Gatherer), each with its own model (EMF-driven from the "Assorted Wardens - No
+# Cameos" CEM pack, bundled), attributes, and loot. A server-side hook watches every
+# freshly-loaded vanilla Warden and, with some probability (varies per variant, gated by
+# dimension/biome), swaps it in place for a variant -- approximating "spawns from a sculk
+# shrieker" since there's no dedicated event for that. Also nerfs the base vanilla Warden
+# (500 HP/30 atk -> 300 HP/20 atk) via mixin, and makes the whole Warden family
+# (vanilla + all variants) stop attacking each other. Needed on both sides: client for the
+# custom models/rendering, server for the substitution logic and the vanilla-nerf mixin.
+name = "Maku Jannu Warden Variants"
+filename = "makujannu-warden-variants-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-warden-variants-1.0.0.jar"
+hash-format = "sha256"
+hash = "1c8b0d754f54d194c3ab3af425e2383a7dec0c965df213d18da0afee28d933e7"
