@@ -25,7 +25,7 @@ set /a DL+=1
 if exist "mod-sync.ps1.tmp" del /q "mod-sync.ps1.tmp"
 curl.exe -L -f -s -o "mod-sync.ps1.tmp" "%SYNC_URL%"
 if not errorlevel 1 goto dlok
-powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '%SYNC_URL%' -OutFile 'mod-sync.ps1.tmp' } catch { exit 1 }"
+powershell -NoProfile -Command "try { [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12 } catch {}; try { Invoke-WebRequest -UseBasicParsing '%SYNC_URL%' -OutFile 'mod-sync.ps1.tmp' } catch { exit 1 }"
 if not errorlevel 1 goto dlok
 if %DL% lss 3 goto dlretry
 goto downloadfail

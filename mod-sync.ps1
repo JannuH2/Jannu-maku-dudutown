@@ -13,6 +13,15 @@ $ErrorActionPreference = "Stop"
 # larger files in Windows PowerShell 5.1 and can make big mods time out or
 # fail entirely; this is a well-known fix with no downside.
 $ProgressPreference = "SilentlyContinue"
+# Windows PowerShell 5.1 on an unpatched/default .NET Framework config can
+# negotiate TLS 1.0, which GitHub (pack.toml/raw.githubusercontent.com) has
+# rejected outright for years -- this fails every Invoke-WebRequest call
+# below with an opaque "could not create SSL/TLS secure channel" error before
+# a single file is even fetched, which looks exactly like "the repository
+# itself doesn't work" from the player's side. Force TLS 1.2 explicitly.
+try {
+    [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+} catch { }
 $BaseUrl = $PackUrl.Substring(0, $PackUrl.LastIndexOf("/") + 1)
 
 function Get-UrlText {
