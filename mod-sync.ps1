@@ -225,6 +225,25 @@ function Test-ModHashMatches {
     }
 }
 
+# Content-based fallback match: a local jar can be a manual emergency install
+# (e.g. hand-downloaded and renamed during a server outage) that has exactly
+# the right content under the wrong filename. Hash every local jar in
+# $ModsDir up front so such a file is recognized as already installed instead
+# of being reported as missing and downloaded again under the pack's expected
+# filename, sitting alongside the renamed copy forever.
+$localHashIndex = @{}
+if (Test-Path -LiteralPath $ModsDir) {
+    Get-ChildItem -LiteralPath $ModsDir -Filter "*.jar" -File | ForEach-Object {
+        try {
+            $h = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLower()
+            if (-not $localHashIndex.ContainsKey($h)) { $localHashIndex[$h] = $_.FullName }
+        } catch { }
+    }
+}
+# Paths matched this way are excluded from the "personal mod" scan below, so
+# a renamed-but-correct file doesn't also show up there as a stray/stale leftover.
+$claimedByHash = @{}
+
 foreach ($m in $clientMods) {
     $prevLoc = $null
     if ($cachedFiles.ContainsKey($m.pwPath)) { $prevLoc = $cachedFiles[$m.pwPath].cachedLocation }
@@ -236,8 +255,18 @@ foreach ($m in $clientMods) {
     # forever looking "matched" and nobody ever gets the fix automatically.
     $existsAsExpected = (Test-Path -LiteralPath $expectedPath) -and (Test-ModHashMatches $m $expectedPath)
 
+    $hashMatchPath = $null
+    if (-not $existsAsExpected -and $m.hash -and $m.hashFormat -eq "sha256" -and $localHashIndex.ContainsKey($m.hash.ToLower())) {
+        $hashMatchPath = $localHashIndex[$m.hash.ToLower()]
+    }
+
     if ($existsAsExpected) {
         $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="일치"; localName=$m.filename; state="match" }
+    } elseif ($hashMatchPath) {
+        # Same content already present locally under a different filename - treat
+        # as installed rather than flagging it for (re-)download.
+        $claimedByHash[$hashMatchPath] = $true
+        $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="일치(파일명 다름)"; localName=(Split-Path $hashMatchPath -Leaf); state="match" }
     } elseif (Test-Path -LiteralPath $expectedPath) {
         # Same filename, wrong content: overwrite in place, no separate delete needed.
         $rows += [PSCustomObject]@{ kind="pack"; mod=$m; status="내용 오래됨(자동 교체)"; localName=$m.filename; state="on" }
@@ -258,6 +287,7 @@ if (Test-Path -LiteralPath $ModsDir) {
     $localJars = Get-ChildItem -LiteralPath $ModsDir -Filter "*.jar" -File
     foreach ($j in $localJars) {
         if ($allExpectedNames.ContainsKey($j.Name)) { continue }
+        if ($claimedByHash.ContainsKey($j.FullName)) { continue }
         # Known-stale: either this tool's own manifest previously installed this
         # exact filename (now superseded), or its name-minus-version matches a
         # mod the pack still tracks under a newer filename. Either way it's a
