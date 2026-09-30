@@ -1060,7 +1060,7 @@ metafile = true
 
 [[files]]
 file = "mods/makujannu-warden-variants.pw.toml"
-hash = "2d40f3484084894a9fb7a66f444229d7b22891292ba41fa704e68464ad16f1b2"
+hash = "37b1ce9e96ba548e6864cd898c36222e8c9988ef66b6e846307938b019da5976"
 metafile = true
 
 [[files]]
