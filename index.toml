@@ -1052,17 +1052,9 @@ hash = "b9b3cf9ed4d9d73bdc627995c5e959fb0c2b3ec6951270738716c6d8b6adc536"
 metafile = true
 
 [[files]]
-file = "mods/makujannu-hud-1.0.0.jar"
-hash = "bc4e9f1fc00cdc4640fe440373d6533e12867e18a900c00785b0bb866786dbd2"
-
-[[files]]
 file = "mods/makujannu-nether-structure-names.pw.toml"
 hash = "0240e1e68fadbdd1233c506041707eaf16fbc25d9b9913b55497ee4f3de2379f"
 metafile = true
-
-[[files]]
-file = "mods/makujannu-nether-structure-names-1.0.0.jar"
-hash = "2c269d221184891bd5e383fd7621f395b873128489a05b5fc5268a06dfc33fc6"
 
 [[files]]
 file = "mods/makujannu-statoverride.pw.toml"
@@ -1070,26 +1062,14 @@ hash = "d5f074a52b2552c42d014da721dcdefcedd513bd5718e9c00cc9c72c2a4c78fe"
 metafile = true
 
 [[files]]
-file = "mods/makujannu-statoverride-1.0.0.jar"
-hash = "46432c89d15671333d77d3637b2c4627e075daadaf74c204eca0511bddce9d0b"
-
-[[files]]
 file = "mods/makujannu-stoutheart-fix.pw.toml"
 hash = "3a46a65eb8a87faaa9ba1950dd90f94d654cbd66a0547797fc45bb7a505967ca"
 metafile = true
 
 [[files]]
-file = "mods/makujannu-stoutheart-fix-1.0.0.jar"
-hash = "4eb4f2b5098911818722c06ffd7c71eb551a05bbc61d64445ca683cee2ad44ab"
-
-[[files]]
 file = "mods/makujannu-warden-variants.pw.toml"
 hash = "2d40f3484084894a9fb7a66f444229d7b22891292ba41fa704e68464ad16f1b2"
 metafile = true
-
-[[files]]
-file = "mods/makujannu-warden-variants-1.0.0.jar"
-hash = "012f8f3a3cc3e814d737556957e8a068d60d56fd686790e72e29149955e79bfe"
 
 [[files]]
 file = "mods/map-tooltip.pw.toml"
@@ -1545,10 +1525,6 @@ metafile = true
 file = "mods/smallships.pw.toml"
 hash = "945855c6fb20cbbfc15d4d804b5f5f8efef69d1f034615f31c2fa608910a4adb"
 metafile = true
-
-[[files]]
-file = "mods/smallships-fabric-1.21.1-2.0.0-b2.1.jar"
-hash = "6264f2cda17d8f776229af2cc4a63090d102a6efd6a7bcbe2352ba152b835fbd"
 
 [[files]]
 file = "mods/smarter-farmers-farmers-replant.pw.toml"
