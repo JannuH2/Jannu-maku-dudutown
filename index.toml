@@ -1084,12 +1084,12 @@ hash = "4eb4f2b5098911818722c06ffd7c71eb551a05bbc61d64445ca683cee2ad44ab"
 
 [[files]]
 file = "mods/makujannu-warden-variants.pw.toml"
-hash = "19561ea804dc3777f1ae8f4956aa3e2dc22159d6cef5c884a621fcc73217c40a"
+hash = "032110e007b52310114ca045b069e2902a27195bfd4d97c6e8a62dcc1b995119"
 metafile = true
 
 [[files]]
 file = "mods/makujannu-warden-variants-1.0.0.jar"
-hash = "6aebd1a39c99a7267ef470f95955d0e9ffcde0e2677716ba4389d4435205fee3"
+hash = "654f2e02252f327e30879eae1e219eebe14b918b051f55281f4ae775e8bd865c"
 
 [[files]]
 file = "mods/map-tooltip.pw.toml"
