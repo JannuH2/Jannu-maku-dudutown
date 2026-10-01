@@ -1,0 +1,15 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): pure client-asset
+# mod (no Java code) adding the custom sound event "makujannu:music.overseer_boss"
+# (THE WARDEN BOSS THEME, converted to OGG, volume reduced ~30%, 3s fade-in/out
+# baked into the file). A server-side datapack (makujannu_overseer_bgm, shipped
+# with the world save) triggers playsound/stopsound based on proximity to an
+# alive Overseer. Needed on the client to actually hear the sound; harmless on
+# the server.
+name = "Maku Jannu Overseer Boss BGM"
+filename = "makujannu-overseer-bgm-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-overseer-bgm-1.0.0.jar"
+hash-format = "sha256"
+hash = "1942b4b0f8e0693f88cf686fa3856fd60a5e9456554b928c530c12ada1149664"
