@@ -1049,6 +1049,11 @@ hash = "b75f1bc38c976df7036feb3b08039694fc88615b26a8ffb10af42188f9e6a51e"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-emi-exclusion.pw.toml"
+hash = "cb3782b32d54abffd55343a1dbcff299625fba087ae1ecc42a1ce5ee3c9aeda7"
+metafile = true
+
+[[files]]
 file = "mods/makujannu-hud.pw.toml"
 hash = "b9b3cf9ed4d9d73bdc627995c5e959fb0c2b3ec6951270738716c6d8b6adc536"
 metafile = true

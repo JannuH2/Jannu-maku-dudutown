@@ -1,0 +1,14 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): registers an EMI
+# exclusion area (via EMI's public EmiRegistry.addExclusionArea API) for
+# Sophisticated Backpacks/Storage's shared StorageScreenBase, reading its
+# own getUpgradeSlotsRectangle() so EMI's sidebar/search bar moves out of
+# the way when the upgrade-slot panel is expanded instead of overlapping it.
+# Pure client plugin, no mixin.
+name = "Maku Jannu EMI Exclusion Fix"
+filename = "makujannu-emi-exclusion-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-emi-exclusion-1.0.0.jar"
+hash-format = "sha256"
+hash = "21e0eefe10c2c19c7df6cd4bc5cc48616a2b092ab09ad5c86653e1c1ef9d1566"
