@@ -231,14 +231,30 @@ function Test-ModHashMatches {
 # $ModsDir up front so such a file is recognized as already installed instead
 # of being reported as missing and downloaded again under the pack's expected
 # filename, sitting alongside the renamed copy forever.
+#
+# The pack's own hash-format varies per mod (sha1 for most Modrinth-tracked
+# entries, sha512 for some, sha256 for our own custom-hosted ones) - indexing
+# only sha256 meant this fallback silently never fired for the other ~96% of
+# mods, so a renamed-but-identical file was never recognized no matter what.
+# Index all three algorithms per local jar up front; it's cheap next to the
+# network calls elsewhere in this script.
+$hashAlgos = @("SHA1", "SHA256", "SHA512")
 $localHashIndex = @{}
+foreach ($algo in $hashAlgos) { $localHashIndex[$algo] = @{} }
 if (Test-Path -LiteralPath $ModsDir) {
     Get-ChildItem -LiteralPath $ModsDir -Filter "*.jar" -File | ForEach-Object {
-        try {
-            $h = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLower()
-            if (-not $localHashIndex.ContainsKey($h)) { $localHashIndex[$h] = $_.FullName }
-        } catch { }
+        foreach ($algo in $hashAlgos) {
+            try {
+                $h = (Get-FileHash -LiteralPath $_.FullName -Algorithm $algo).Hash.ToLower()
+                if (-not $localHashIndex[$algo].ContainsKey($h)) { $localHashIndex[$algo][$h] = $_.FullName }
+            } catch { }
+        }
     }
+}
+function Get-HashAlgoName([string]$HashFormat) {
+    if ($HashFormat -eq "sha1") { return "SHA1" }
+    if ($HashFormat -eq "sha512") { return "SHA512" }
+    return "SHA256"
 }
 # Paths matched this way are excluded from the "personal mod" scan below, so
 # a renamed-but-correct file doesn't also show up there as a stray/stale leftover.
@@ -256,8 +272,11 @@ foreach ($m in $clientMods) {
     $existsAsExpected = (Test-Path -LiteralPath $expectedPath) -and (Test-ModHashMatches $m $expectedPath)
 
     $hashMatchPath = $null
-    if (-not $existsAsExpected -and $m.hash -and $m.hashFormat -eq "sha256" -and $localHashIndex.ContainsKey($m.hash.ToLower())) {
-        $hashMatchPath = $localHashIndex[$m.hash.ToLower()]
+    if (-not $existsAsExpected -and $m.hash -and $m.hashFormat) {
+        $algo = Get-HashAlgoName $m.hashFormat
+        if ($localHashIndex[$algo].ContainsKey($m.hash.ToLower())) {
+            $hashMatchPath = $localHashIndex[$algo][$m.hash.ToLower()]
+        }
     }
 
     if ($existsAsExpected) {
