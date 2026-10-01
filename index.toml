@@ -1050,7 +1050,7 @@ metafile = true
 
 [[files]]
 file = "mods/makujannu-emi-exclusion.pw.toml"
-hash = "cb3782b32d54abffd55343a1dbcff299625fba087ae1ecc42a1ce5ee3c9aeda7"
+hash = "f32e9f25065fb02745eb5dec88e1d23c389444ba498d8f601a9e5df1c0002fe3"
 metafile = true
 
 [[files]]
