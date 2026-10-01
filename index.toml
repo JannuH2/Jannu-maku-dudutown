@@ -48,6 +48,11 @@ hash = "43bd11ace219dc9f85f3d4cc3adb059ea609365744121fa74beaa5f79ee39097"
 metafile = true
 
 [[files]]
+file = "mods/alexs-mobs-music-mod.pw.toml"
+hash = "f1164213af0ac52d06293b5c32b27207fb4a1ce52e51428ade2255862ee624df"
+metafile = true
+
+[[files]]
 file = "mods/alexscuisine.pw.toml"
 hash = "b874bd1f608089f76b37b3809bcc9b6a546290d4d3ef8133ceb71ac67cd65c20"
 metafile = true
@@ -226,6 +231,11 @@ metafile = true
 [[files]]
 file = "mods/bookshelf.pw.toml"
 hash = "c029c45f0f8566179de05ce57a72c0feb492523d9b90828bb27b81239031f662"
+metafile = true
+
+[[files]]
+file = "mods/boss-music-mod.pw.toml"
+hash = "dc7aea09ed26d1bc1e4924ad0364ab33588cf9c43aa198feda4a96d453286dca"
 metafile = true
 
 [[files]]

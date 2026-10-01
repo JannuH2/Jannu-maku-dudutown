@@ -1,0 +1,14 @@
+# "Boss Music Mod" by TheExiledFellow (https://modrinth.com/mod/exileds-boss-music-mod).
+# Plays boss music when a Wither or Ender Dragon is active. Originally distributed by
+# the author as two separate files (a small trigger datapack + a required resource
+# pack); this jar is a local repackaging combining both into one Fabric mod (data/ +
+# assets/) for simpler distribution through this pack. Found installed on the server
+# but missing from this repo -- added so all players actually receive the audio.
+name = "Boss Music Mod"
+filename = "Boss Music Mod 1.21.x v1.2.1.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/Boss%20Music%20Mod%201.21.x%20v1.2.1.jar"
+hash-format = "sha256"
+hash = "61703212e0d6460dc220204ff97a30b8b0250a2ae81a662719eba252fe3717b5"
