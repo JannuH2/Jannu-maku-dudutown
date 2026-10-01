@@ -1,0 +1,15 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth), client-only mixin.
+# MobZ's shared humanoid renderer (used by Bowman, Archer, Templar, Knight,
+# Pigman, Iron Steve) never attaches a HeldItemFeatureRenderer in its
+# constructor, so the vanilla logic that raises a biped's arm to the
+# crossbow-aim/held-item pose never runs -- the held item (e.g. a crossbow)
+# still animates its own charge state, but the body never visibly raises
+# an arm to hold/aim it. This adds the missing feature renderer.
+name = "Maku Jannu MobZ Crossbow Pose Fix"
+filename = "makujannu-mobz-crossbow-fix-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-mobz-crossbow-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "7449377f970136e7ffbb688267678aae965992fed117f9e58d30acf22f4b80a5"

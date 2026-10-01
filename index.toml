@@ -1059,6 +1059,11 @@ hash = "b9b3cf9ed4d9d73bdc627995c5e959fb0c2b3ec6951270738716c6d8b6adc536"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-mobz-crossbow-fix.pw.toml"
+hash = "6bbc6fe8914f25f43ca467f44eaccfe2216bdd7686a6c0d44c5801875879b221"
+metafile = true
+
+[[files]]
 file = "mods/makujannu-nether-structure-names.pw.toml"
 hash = "0240e1e68fadbdd1233c506041707eaf16fbc25d9b9913b55497ee4f3de2379f"
 metafile = true
