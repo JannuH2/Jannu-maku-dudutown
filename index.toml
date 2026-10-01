@@ -825,8 +825,8 @@ hash = "7469669795c3620c1a423887922f508bdb7abdc9896de361bc0b5396a36c4378"
 metafile = true
 
 [[files]]
-file = "mods/kawaii-1.0.3.jar"
-hash = "ae973682f1e9a2a821b9d800e70512325e1e4f831e414cbd0cf020bb720a402c"
+file = "mods/kawaii-1.0.4.jar"
+hash = "faec0657dd903fca4290de143033e0c0afcbfcbd9297897d6cc60709a1efa0fb"
 
 [[files]]
 file = "mods/kiwi-fabric.pw.toml"

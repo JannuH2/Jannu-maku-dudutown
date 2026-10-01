@@ -44,7 +44,7 @@ dynamic-data-pack-cache/
 # 아래 3개는 CurseForge/Modrinth에 없어서 파일로 직접 배포
 *.jar
 !mods/IceAndFireCE-2.0-beta.15-1.21.1-fabric.jar
-!mods/kawaii-1.0.3.jar
+!mods/kawaii-1.0.4.jar
 !mods/wizards-fabric-3.1.1+1.21.1.jar
 !mods/citadelfabric-1.21.1-1.2.0.jar
 !mods/makujannu-statoverride-1.0.0.jar
