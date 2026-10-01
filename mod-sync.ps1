@@ -24,6 +24,18 @@ try {
 } catch { }
 $BaseUrl = $PackUrl.Substring(0, $PackUrl.LastIndexOf("/") + 1)
 
+# Mods deliberately pulled from the pack (crash/bug, not just a version bump) -
+# a player who installed one while it was still tracked has no pack row to
+# compare against any more, so without this list it would just sit in the
+# "내pc모드" (personal mod) bucket with "그대로 둠" by default. Keyed by the
+# mod's own fabric.mod.json/quilt.mod.json id (stable across renames/version
+# bumps), not filename. Add an entry here whenever a mod is removed for a
+# reason players should not keep running, not for a plain replacement (that
+# case is already handled by the normal stale-version logic above).
+$removedModIds = @{
+    "amt" = "alex-mobs-tweaks-omni: 벌새 AI 관련 크래시 버그로 제거됨"
+}
+
 function Get-UrlText {
     param([string]$Uri)
     $resp = Invoke-WebRequest -UseBasicParsing -Uri $Uri
@@ -317,9 +329,15 @@ if (Test-Path -LiteralPath $ModsDir) {
         # weaker evidence - short/generic stems can collide between unrelated
         # mods across a few hundred entries - so it's surfaced but left off by
         # default, same as a genuine personal mod, requiring a manual double-click.
+        $jarModId = Get-JarModId $j.FullName
+        $isKnownRemoved = $jarModId -and $removedModIds.ContainsKey($jarModId)
         $isCertainStale = $allCachedNames.ContainsKey($j.Name)
         $stemMatches = $expectedStems.ContainsKey((Get-NameStem $j.Name))
-        if ($isCertainStale) {
+        if ($isKnownRemoved) {
+            $rows += [PSCustomObject]@{
+                kind="personal"; mod=$null; status="제거된 모드 - $($removedModIds[$jarModId])"; localName=$j.Name; state="on"
+            }
+        } elseif ($isCertainStale) {
             $rows += [PSCustomObject]@{
                 kind="personal"; mod=$null; status="구버전(자동 삭제 예정)"; localName=$j.Name; state="on"
             }
