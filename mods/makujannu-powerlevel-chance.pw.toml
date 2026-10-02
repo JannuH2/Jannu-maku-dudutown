@@ -1,0 +1,14 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): dungeon_difficulty's
+# loot_scaling "power" attribute (config/dungeon_difficulty/difficulty_v2.json
+# weapons[].attributes[]) has no native chance field - it always applies
+# whenever a weapon gets scaled at all. Mixin gates it to a 25% chance per
+# item (the "damage" scaling attribute always still applies; only "power"
+# is now a coin-flip) via a @ModifyVariable on ItemScaling.applyModifiersForItemStack.
+name = "Maku Jannu Power Level Chance"
+filename = "makujannu-powerlevel-chance-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.0.jar"
+hash-format = "sha256"
+hash = "4b0a5a81541bea1c1c116c7f8b362b995eab46f68352bc733ed01f643c049d50"

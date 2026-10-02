@@ -1089,6 +1089,11 @@ hash = "7a4e7710574068a3c8e53bcf726570a98c9714033923f8662120437e4cd82cdb"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-powerlevel-chance.pw.toml"
+hash = "5291c1507341d7865e099e95019f3b1e7f3eaa268c261a653fa28d562c97ff7e"
+metafile = true
+
+[[files]]
 file = "mods/makujannu-statoverride.pw.toml"
 hash = "d5f074a52b2552c42d014da721dcdefcedd513bd5718e9c00cc9c72c2a4c78fe"
 metafile = true
