@@ -630,6 +630,11 @@ hash = "3aa66d677f5f23ddc8528f0c3243a9cbded0e27ea4b3db089ec0c8deecfb5704"
 metafile = true
 
 [[files]]
+file = "mods/foodeffecttooltips.pw.toml"
+hash = "1f288dcc1b4a45b1496c471e0fac389afb2a824fa4db5220d5fec162c3f4474e"
+metafile = true
+
+[[files]]
 file = "mods/forge-config-api-port.pw.toml"
 hash = "238b3ceb4214a682480ce00eefae5d34efa299ff6ff667e4b2f2ed503c6e76ee"
 metafile = true
@@ -822,6 +827,11 @@ metafile = true
 [[files]]
 file = "mods/just-enough-backups.pw.toml"
 hash = "7469669795c3620c1a423887922f508bdb7abdc9896de361bc0b5396a36c4378"
+metafile = true
+
+[[files]]
+file = "mods/kaleidoscope-cookery.pw.toml"
+hash = "db22600f38dd0de55afced249086fac3ee1cc8def6c22847e7f2b03fea3e5080"
 metafile = true
 
 [[files]]
@@ -1776,6 +1786,11 @@ metafile = true
 [[files]]
 file = "mods/villagerstradingplus.pw.toml"
 hash = "c0d5f35127d90e63fb184ee9ad6cdca88c01e516cd2215a1f1c51900ace85574"
+metafile = true
+
+[[files]]
+file = "mods/visiting-villagers.pw.toml"
+hash = "be85aaafab04883007bde6e848e1f386cae1d16859a2aa01755d668547541672"
 metafile = true
 
 [[files]]

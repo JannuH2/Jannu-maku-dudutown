@@ -1,0 +1,13 @@
+name = "Kaleidoscope Cookery"
+filename = "kaleidoscopecookery-1.0.1-fabric+mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/v17FatAc/versions/acNSsFFk/kaleidoscopecookery-1.0.1-fabric%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "fd7aae98cc9b5ec511605021269d59c7188d7bad602a0c7301726df7e7a22b60dca4c4dbb4fe4f024d2caa418cdcf6cd846dbb7554728e70c0b7a4d080c45798"
+
+[update]
+[update.modrinth]
+mod-id = "v17FatAc"
+version = "acNSsFFk"

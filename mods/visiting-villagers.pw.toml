@@ -1,0 +1,13 @@
+name = "Visiting Villagers"
+filename = "visitingvillagers-1.0.2-mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/HsBaNslF/versions/7uqw5DYU/visitingvillagers-1.0.2-mc1.21.1.jar"
+hash-format = "sha512"
+hash = "d9c372b9a456a7f10023b33fc7d75b9d22e4685d3e3e2e5df7d42097dc846e293f9cdaae5b174ade591d6913c464a3eb15e5df460ed08f48ad8935205423f3e1"
+
+[update]
+[update.modrinth]
+mod-id = "HsBaNslF"
+version = "7uqw5DYU"
