@@ -1,0 +1,16 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): Let's Do: Furniture's
+# Trash Bag item picks a uniformly random item from the ENTIRE item registry
+# (filtered only by data/furniture/tags/item/trash_bag_blacklist.json), so any
+# high-tier item not yet manually blacklisted can drop. Replaces that pool
+# entirely with a curated tier1-junk list (dirt/sand/gravel/stick/string/
+# rotten_flesh/bone/feather/flint/coal/sugar_cane/iron_nugget, wooden tools,
+# leather armor, with a small chance of golden tools) via a mixin @Redirect
+# on the Stream.toList() call in TrashBagItem's use method.
+name = "Maku Jannu Trash Bag Tier1 Fix"
+filename = "makujannu-trashbag-fix-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-trashbag-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "c147cc9c31c8037ed96254bf90e7d96548dddbc648fa4bc1d9b74631f9fad574"

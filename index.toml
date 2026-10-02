@@ -1099,6 +1099,11 @@ hash = "3a46a65eb8a87faaa9ba1950dd90f94d654cbd66a0547797fc45bb7a505967ca"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-trashbag-fix.pw.toml"
+hash = "2bb0e3d1b9504291148b6b9b1b6b95ae52ba644243716d6bf91eb617acce347d"
+metafile = true
+
+[[files]]
 file = "mods/makujannu-warden-variants.pw.toml"
 hash = "37b1ce9e96ba548e6864cd898c36222e8c9988ef66b6e846307938b019da5976"
 metafile = true
