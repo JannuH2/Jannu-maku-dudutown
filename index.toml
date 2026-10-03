@@ -1059,6 +1059,11 @@ hash = "b75f1bc38c976df7036feb3b08039694fc88615b26a8ffb10af42188f9e6a51e"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-cozyhome-breadbox-fix.pw.toml"
+hash = "3ab1cd5718cb5aec9158892c1c4d1ad51fb45d37bae49b1dd723859310eab2a4"
+metafile = true
+
+[[files]]
 file = "mods/makujannu-emi-exclusion.pw.toml"
 hash = "f32e9f25065fb02745eb5dec88e1d23c389444ba498d8f601a9e5df1c0002fe3"
 metafile = true

@@ -1,0 +1,18 @@
+# Custom, locally-built client-side mod (not on CurseForge/Modrinth): CozyHome's
+# ModRenderLayers.lambda$registerColorProviders$3 assumes its BlockRenderView
+# parameter is never null (guarded only by a Java `assert`, which is a no-op in
+# production), then calls view.getBlockEntity(pos) unconditionally. Let's Do:
+# Bakery's BreadBoxRenderer renders a floating item-preview of the box's stored
+# item via a null world view, which crashes the client with an NPE the instant
+# a block CozyHome assigns a custom color to is stored in a Bread Box. Fixes via
+# a mixin @Redirect on that getBlockEntity call, returning null (CozyHome's own
+# color handler already null-checks the block entity) when view is null instead
+# of crashing.
+name = "Maku Jannu CozyHome Breadbox Crash Fix"
+filename = "makujannu-cozyhome-breadbox-fix-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-cozyhome-breadbox-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "306b3759cb7f1b21191ed54966018a73b7630f478089a2effff16f7a805b8fba"
