@@ -1060,7 +1060,7 @@ metafile = true
 
 [[files]]
 file = "mods/makujannu-cozyhome-breadbox-fix.pw.toml"
-hash = "3ab1cd5718cb5aec9158892c1c4d1ad51fb45d37bae49b1dd723859310eab2a4"
+hash = "c32eb58b73ca6340c4b42b257b849de6edc251cdac477e6912402e670e0fbed6"
 metafile = true
 
 [[files]]
