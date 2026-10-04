@@ -665,6 +665,11 @@ hash = "6b4294d8c577f11bde6088e43a22629914293800ea45504bf78461e8ef350b81"
 metafile = true
 
 [[files]]
+file = "mods/gachamachine.pw.toml"
+hash = "d43824ef042268e08632a2e3ff4c48a7adb4b55f952d1d4964f595e3587cd4d1"
+metafile = true
+
+[[files]]
 file = "mods/galosphere.pw.toml"
 hash = "2135db586dca8f1095683e035e4ba5ebdd6365535ef99ebb5d3f09b06221a851"
 metafile = true
@@ -1646,6 +1651,11 @@ metafile = true
 [[files]]
 file = "mods/spider-overhaul.pw.toml"
 hash = "4647987fdb3acdb33eb494e50ef36b7d426ecf7230ac8c54fd2bee001e37c149"
+metafile = true
+
+[[files]]
+file = "mods/spuds-shops.pw.toml"
+hash = "3b3d292be221d941233540ccd37cc43ea531874bd4b65f48cf9f1998f5b1b45a"
 metafile = true
 
 [[files]]
