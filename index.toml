@@ -665,9 +665,8 @@ hash = "6b4294d8c577f11bde6088e43a22629914293800ea45504bf78461e8ef350b81"
 metafile = true
 
 [[files]]
-file = "mods/gachamachine.pw.toml"
-hash = "d43824ef042268e08632a2e3ff4c48a7adb4b55f952d1d4964f595e3587cd4d1"
-metafile = true
+file = "mods/gachamachine-fabric-1.21.1-2.0.2.jar"
+hash = "9dbac0d2ed8c41596bf4d02172b886699e37ac0c0436dced264983db2dcc6dc1"
 
 [[files]]
 file = "mods/galosphere.pw.toml"
@@ -1963,10 +1962,6 @@ hash = "bf3879bfe3607936248a070037c730082a46556ef2cdfb285e05ac93a88665ea"
 [[files]]
 file = "resourcepacks/IAFCE - XaeroMap Support V1.zip"
 hash = "6ed2ae17f0696388035160eada81a66c6510f28d323c08878dbdee854ab34356"
-
-[[files]]
-file = "resourcepacks/makujannu_gacha_kr.zip"
-hash = "8b4d4d222ad847c96b369620d7bf1fc4265ff80846a0d59a3bfa0657c8745032"
 
 [[files]]
 file = "resourcepacks/Mythic Metals Trimmable Tools Compatible Textures.zip"
