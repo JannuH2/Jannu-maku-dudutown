@@ -2064,3 +2064,24 @@ metafile = true
 file = "mods/trial_guardians.pw.toml"
 hash = "4d1a32d47e6ab567974fed597b542854ded36e7ae870f08a6fe663897253613f"
 metafile = true
+
+[[files]]
+file = "mods/ftb-library-fabric-2101.1.37.jar"
+hash = "399e62acd6c343dab0780ac34aa0e86b4acaa6861eb5d65e826adb03ce9ec6c1"
+
+[[files]]
+file = "mods/ftb-teams-fabric-2101.1.11.jar"
+hash = "39e34b438e0232a614a8cf1269fcff2705b85fde8b930a03d558bc66a03c7cf6"
+
+[[files]]
+file = "mods/better-party-tamed-mobs-fabric-1.21.1-1.0.3.jar"
+hash = "1aac39efd0da79ecc4367a42a74cdecf290b81cde084e29389239764fc13cfa5"
+
+[[files]]
+file = "mods/better-party-x-xaeros-minimap-fabric-1.21.1-1.0.1.jar"
+hash = "f59eaa9d8c847bbbe2a0d3457d51afcdf3d02d44c5a4949875c68827db378669"
+
+[[files]]
+file = "mods/better_party_ftb_teams.pw.toml"
+hash = "f4bc9e6787fc1cf98dfb025c336728230c2e0d7613136eec4f347bbc5bc6e05a"
+metafile = true

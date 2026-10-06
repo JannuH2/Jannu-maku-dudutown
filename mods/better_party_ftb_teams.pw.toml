@@ -1,0 +1,13 @@
+name = "Better Party X FTB Teams"
+filename = "better_party_ftb_teams-fabric-1.21.1-1.0.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/WFWJ2H8D/versions/j1poy1NR/better_party_ftb_teams-fabric-1.21.1-1.0.1.jar"
+hash-format = "sha512"
+hash = "c06b0b22c75e9ed916dc2d23c12c1bcca06553988084b55eeb26bccdcb9b5d74f28786942272639639a008c339bc27528cfb5ae3396286cf441f492cd31e4e67"
+
+[update]
+[update.modrinth]
+mod-id = "WFWJ2H8D"
+version = "j1poy1NR"
