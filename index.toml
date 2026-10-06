@@ -2078,10 +2078,6 @@ file = "mods/better-party-tamed-mobs-fabric-1.21.1-1.0.3.jar"
 hash = "1aac39efd0da79ecc4367a42a74cdecf290b81cde084e29389239764fc13cfa5"
 
 [[files]]
-file = "mods/better-party-x-xaeros-minimap-fabric-1.21.1-1.0.1.jar"
-hash = "f59eaa9d8c847bbbe2a0d3457d51afcdf3d02d44c5a4949875c68827db378669"
-
-[[files]]
 file = "mods/better_party_ftb_teams.pw.toml"
 hash = "f4bc9e6787fc1cf98dfb025c336728230c2e0d7613136eec4f347bbc5bc6e05a"
 metafile = true
