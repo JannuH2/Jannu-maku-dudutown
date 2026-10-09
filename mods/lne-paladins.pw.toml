@@ -1,13 +1,14 @@
+# Locally patched (not auto-updated from CurseForge): the mod's own
+# en_us.json had elder_guardian_shield and ender_dragon_shield display
+# names swapped (each showing the other's name) - fixed in place in the
+# jar. Switched off CurseForge metadata updates so a future pack update
+# can't silently overwrite this fix; re-apply the lang swap manually if
+# this mod is ever bumped to a newer CurseForge build.
 name = "LNE Paladins & Priests Add-On"
 filename = "lne_paladins-fabric-1.2.0+1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "2a5da4559c55e6a11916fba52a43e10e0ad426fe"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 8719376
-project-id = 1179587
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/lne_paladins-fabric-1.2.0+1.21.1.jar"
+hash-format = "sha256"
+hash = "7571d2d70689ba09ba5a2d9f48fc9af789f391bb1aea1faf751bc67bb169e9be"

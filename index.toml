@@ -6,7 +6,7 @@ hash = "776691ee850bee73d0a8889bd3d6ebe17309c932f844337462b2dd5cc4d100c2"
 
 [[files]]
 file = "config/makujannu_statoverride.json"
-hash = "421395d47361a90b47a2f6ea5138c4ad31fe9c883eec37406845288d4046778e"
+hash = "64d385dc0cff02d50da575f7e49658b5f71149d863ca3d2fedd299c7f599267f"
 
 [[files]]
 file = "mods/IceAndFireCE-2.0-beta.15-1.21.1-fabric.jar"
@@ -959,7 +959,7 @@ metafile = true
 
 [[files]]
 file = "mods/lne-paladins.pw.toml"
-hash = "dd6103c2fb55d6cf0e085979cb185b1d594122070955120cff140a799a734f7f"
+hash = "a79de61bc57f8a11b53c34ddb2da65a2372c34db522d3c6661e1d54396494c45"
 metafile = true
 
 [[files]]
@@ -1104,7 +1104,7 @@ metafile = true
 
 [[files]]
 file = "mods/makujannu-statoverride.pw.toml"
-hash = "d5f074a52b2552c42d014da721dcdefcedd513bd5718e9c00cc9c72c2a4c78fe"
+hash = "4c44acec86deadf00b3f71dc4c9606b7e706e48fdb1811714755becf0bc5f64c"
 metafile = true
 
 [[files]]

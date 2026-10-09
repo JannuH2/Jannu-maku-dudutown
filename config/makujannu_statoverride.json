@@ -29,6 +29,10 @@
         "mode": "absolute",
         "value": 10
       },
+      "toughness": {
+        "mode": "absolute",
+        "value": 4
+      },
       "attack": {
         "mode": "absolute",
         "value": 2
@@ -39,41 +43,21 @@
       },
       "knockbackResistance": {
         "mode": "absolute",
-        "value": 1
+        "value": 0.2
       }
     },
     "deeperdarker:warden_leggings": {
-      "maxHealth": {
-        "mode": "absolute",
-        "value": 2
-      },
       "armor": {
         "mode": "absolute",
         "value": 8
-      }
-    },
-    "betterend:aeternium_helmet": {
-      "armor": {
+      },
+      "toughness": {
         "mode": "absolute",
-        "value": 5
-      }
-    },
-    "betterend:aeternium_chestplate": {
-      "armor": {
-        "mode": "absolute",
-        "value": 11
-      }
-    },
-    "betterend:aeternium_leggings": {
-      "armor": {
-        "mode": "absolute",
-        "value": 9
-      }
-    },
-    "betterend:aeternium_boots": {
-      "armor": {
-        "mode": "absolute",
-        "value": 5
+        "value": 4
+      },
+      "maxHealth": {
+        "mode": "delta",
+        "value": 2
       }
     },
     "mebahelcreaturesdraugr:weapon/ebony/ebony_greatsword": {
@@ -561,7 +545,7 @@
     "lne_paladins:elder_guardian_great_hammer": {
       "attack": {
         "mode": "absolute",
-        "value": 16
+        "value": 15
       }
     },
     "lne_paladins:elder_guardian_mace": {
@@ -606,12 +590,6 @@
         "value": 15
       }
     },
-    "lne_paladins:ender_dragon_mace": {
-      "attack": {
-        "mode": "absolute",
-        "value": 13
-      }
-    },
     "lne_rogues:ender_dragon_dagger": {
       "attack": {
         "mode": "absolute",
@@ -652,101 +630,6 @@
       "attack": {
         "mode": "absolute",
         "value": 14
-      }
-    },
-    "aquamirae:abyssal_tiara": {
-      "armor": {
-        "mode": "absolute",
-        "value": 5
-      },
-      "toughness": {
-        "mode": "absolute",
-        "value": 2
-      },
-      "knockbackResistance": {
-        "mode": "absolute",
-        "value": 0.5
-      },
-      "aquamirae:depthsResilience": {
-        "mode": "absolute",
-        "value": 0.2,
-        "operation": "add_multiplied_base"
-      }
-    },
-    "aquamirae:abyssal_heaume": {
-      "armor": {
-        "mode": "absolute",
-        "value": 5
-      },
-      "toughness": {
-        "mode": "absolute",
-        "value": 2
-      },
-      "knockbackResistance": {
-        "mode": "absolute",
-        "value": 0.5
-      },
-      "aquamirae:depthsResilience": {
-        "mode": "absolute",
-        "value": 0.2,
-        "operation": "add_multiplied_base"
-      }
-    },
-    "aquamirae:abyssal_boots": {
-      "armor": {
-        "mode": "absolute",
-        "value": 5
-      },
-      "toughness": {
-        "mode": "absolute",
-        "value": 2
-      },
-      "knockbackResistance": {
-        "mode": "absolute",
-        "value": 0.5
-      },
-      "aquamirae:depthsResilience": {
-        "mode": "absolute",
-        "value": 0.2,
-        "operation": "add_multiplied_base"
-      }
-    },
-    "aquamirae:abyssal_leggings": {
-      "armor": {
-        "mode": "absolute",
-        "value": 7
-      },
-      "toughness": {
-        "mode": "absolute",
-        "value": 2
-      },
-      "knockbackResistance": {
-        "mode": "absolute",
-        "value": 0.5
-      },
-      "aquamirae:depthsResilience": {
-        "mode": "absolute",
-        "value": 0.2,
-        "operation": "add_multiplied_base"
-      }
-    },
-    "aquamirae:abyssal_brigandine": {
-      "armor": {
-        "mode": "absolute",
-        "value": 9
-      },
-      "toughness": {
-        "mode": "absolute",
-        "value": 2
-      },
-      "knockbackResistance": {
-        "mode": "absolute",
-        "value": 0.5
-      },
-      "aquamirae:depthsResilience": {
-        "mode": "absolute",
-        "value": 0.2,
-        "operation": "add_multiplied_base"
       }
     },
     "betterend:aeternium_axe": {
@@ -839,7 +722,7 @@
     "lne_paladins:glacial_great_hammer": {
       "attack": {
         "mode": "absolute",
-        "value": 20
+        "value": 17
       }
     },
     "arsenal:unique_hammer_1": {
@@ -900,6 +783,18 @@
       "maxHealth": {
         "mode": "absolute",
         "value": 10
+      }
+    },
+    "lne_paladins:glacial_mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 12
+      }
+    },
+    "lne_paladins:ender_dragon_mace": {
+      "attack": {
+        "mode": "absolute",
+        "value": 15
       }
     }
   }
