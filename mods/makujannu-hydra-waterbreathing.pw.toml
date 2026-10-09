@@ -1,0 +1,12 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): gives the Hydra
+# dungeon boss (trial_guardians:hydra) the ability to breathe underwater
+# via an @Inject on LivingEntity.canBreatheInWater, scoped to HydraEntity
+# instances only.
+name = "Maku Jannu Hydra Water Breathing"
+filename = "makujannu-hydra-waterbreathing-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-hydra-waterbreathing-1.0.0.jar"
+hash-format = "sha256"
+hash = "c47e6e47bf4093f505043626df887df9a6a99704983abc1533845570ac98ee45"

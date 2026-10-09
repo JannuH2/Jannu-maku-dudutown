@@ -1099,7 +1099,7 @@ metafile = true
 
 [[files]]
 file = "mods/makujannu-powerlevel-chance.pw.toml"
-hash = "5291c1507341d7865e099e95019f3b1e7f3eaa268c261a653fa28d562c97ff7e"
+hash = "83fd76dab088be558244d62fb750c7ed4f3a23bea61eae636d1388a824631ef9"
 metafile = true
 
 [[files]]
@@ -2062,7 +2062,7 @@ metafile = true
 
 [[files]]
 file = "mods/trial_guardians.pw.toml"
-hash = "4d1a32d47e6ab567974fed597b542854ded36e7ae870f08a6fe663897253613f"
+hash = "d966e651d99bbe5e58c3cbf46ebc093f475786feb550aaffca927065db39c679"
 metafile = true
 
 [[files]]
@@ -2080,4 +2080,9 @@ hash = "1aac39efd0da79ecc4367a42a74cdecf290b81cde084e29389239764fc13cfa5"
 [[files]]
 file = "mods/better_party_ftb_teams.pw.toml"
 hash = "f4bc9e6787fc1cf98dfb025c336728230c2e0d7613136eec4f347bbc5bc6e05a"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-hydra-waterbreathing.pw.toml"
+hash = "6cf5dc81101eb9fee9aea4c187f8039aaa6757c0e9f84553a8366cfa17f51569"
 metafile = true
