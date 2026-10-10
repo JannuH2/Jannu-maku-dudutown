@@ -1099,7 +1099,7 @@ metafile = true
 
 [[files]]
 file = "mods/makujannu-powerlevel-chance.pw.toml"
-hash = "83fd76dab088be558244d62fb750c7ed4f3a23bea61eae636d1388a824631ef9"
+hash = "57eb9e2fbe29d321c3c79ec6944e44f7a446f5414371d3e9a5691731a9fb6dce"
 metafile = true
 
 [[files]]
@@ -2085,4 +2085,9 @@ metafile = true
 [[files]]
 file = "mods/makujannu-hydra-waterbreathing.pw.toml"
 hash = "6cf5dc81101eb9fee9aea4c187f8039aaa6757c0e9f84553a8366cfa17f51569"
+metafile = true
+
+[[files]]
+file = "mods/attributefix.pw.toml"
+hash = "1e75c0f7476d18db86ad6a5acf8d03b66082fa8d35ce03132b50b9dd4af3a4f2"
 metafile = true
