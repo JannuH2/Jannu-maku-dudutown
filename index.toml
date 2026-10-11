@@ -1103,6 +1103,11 @@ hash = "05b11fb0a4014332114d92d0db1cd3eafc7179fe5c81aa765d2a5b90904381d9"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-spawner-hardness.pw.toml"
+hash = "71da0ebfe9490cff086f6fb79b197afed1c1a139531049d0f9a04607eb46737a"
+metafile = true
+
+[[files]]
 file = "mods/makujannu-statoverride.pw.toml"
 hash = "4c44acec86deadf00b3f71dc4c9606b7e706e48fdb1811714755becf0bc5f64c"
 metafile = true

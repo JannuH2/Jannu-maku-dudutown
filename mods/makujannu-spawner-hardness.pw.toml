@@ -1,0 +1,13 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): increases
+# minecraft:spawner and minecraft:trial_spawner hardness/blast resistance
+# to 1.5x obsidian (75/1800). No mixin - uses an access widener to directly
+# set the vanilla block/blockstate fields at mod init. Affects client-side
+# mining visuals too, so it must be on both sides.
+name = "Maku Jannu Spawner Hardness"
+filename = "makujannu-spawner-hardness-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-spawner-hardness-1.0.0.jar"
+hash-format = "sha256"
+hash = "beab860bb4780662a4c1bb820abb489eb2dc4371bf21acf0476fa0cf11e17e02"
