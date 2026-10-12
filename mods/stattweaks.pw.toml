@@ -1,0 +1,8 @@
+name = "StatTweaks"
+filename = "stattweaks-fabric-v2.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/stattweaks-fabric-v2.0.0.jar"
+hash-format = "sha256"
+hash = "428ee45e626f6c238b5c99b3ce98a4fb43300f227ba5132eba70cebdf8ad8cae"

@@ -1368,6 +1368,11 @@ hash = "59f3b2e1679e710e694b04e712b2f79be11ec4f1591d831c3adaa86e16d0c1ef"
 metafile = true
 
 [[files]]
+file = "mods/packetfixer.pw.toml"
+hash = "7ac782cd696410e56ef12275d308a3620b7ecbc65c8c3497421d204b9e9cd9ba"
+metafile = true
+
+[[files]]
 file = "mods/paginated-advancements.pw.toml"
 hash = "aa26cb3f5169232fb9d482bc29a9773ac09eb0dda9c6fa9d71d50cd362357813"
 metafile = true
@@ -1665,6 +1670,11 @@ metafile = true
 [[files]]
 file = "mods/starter-kit.pw.toml"
 hash = "9297c934d883acfe21d38ce0634e3dcd29cdc7d5ffb00e6c50d37701b39d0b6b"
+metafile = true
+
+[[files]]
+file = "mods/stattweaks.pw.toml"
+hash = "f0afb098598bfd10afa9222f9a4a94a1e8ebc6aa8149982fe71e69341bed1952"
 metafile = true
 
 [[files]]
