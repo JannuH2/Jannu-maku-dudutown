@@ -1,0 +1,8 @@
+name = "Wither Spawn Animation"
+filename = "wither-spawn-animation-FABRIC-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/wither-spawn-animation-FABRIC-1.21.1-1.0.0.jar"
+hash-format = "sha256"
+hash = "0f61bebab6d408b2691de960e5955835d9d0badf1b36e3df0421217e377d90eb"

@@ -1,0 +1,8 @@
+name = "Wither's Wrath"
+filename = "[1.21-1.21.1]witherswrath-1.16.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/[1.21-1.21.1]witherswrath-1.16.jar"
+hash-format = "sha256"
+hash = "b044db3318facc59fdf783f9ca434eff0ba2c8b1a488aed7e8963aeeb42f3b73"

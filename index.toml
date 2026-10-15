@@ -1853,6 +1853,16 @@ hash = "c628d9899f402ccbe76ccb9eb7ba1f649b922ec5d78e25bfd83f5b7ee58329cb"
 metafile = true
 
 [[files]]
+file = "mods/wither-spawn-animation.pw.toml"
+hash = "c004d6eb3eecdc6508d9ac91dc632933bd11e19a97061124d88ce67da7b03de6"
+metafile = true
+
+[[files]]
+file = "mods/witherswrath.pw.toml"
+hash = "d8362cbc106e2e2038423c5fc937c388b14bf153d4fdf2fc8705142e3ec407f0"
+metafile = true
+
+[[files]]
 file = "mods/wizard-mobs.pw.toml"
 hash = "b6fdf7fddee7e3c1d16010f14f101c2bd15dda36f73b6e687fe3ae050daaa666"
 metafile = true
