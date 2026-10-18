@@ -6,11 +6,23 @@ hash = "64d385dc0cff02d50da575f7e49658b5f71149d863ca3d2fedd299c7f599267f"
 
 [[files]]
 file = "mod-sync.ps1"
-hash = "776691ee850bee73d0a8889bd3d6ebe17309c932f844337462b2dd5cc4d100c2"
+hash = "ce94cfb4443bc665f9c9ec8926bfb540000321be82efda6a3487cd1086fcda1a"
+
+[[files]]
+file = "mods/Alex's Mobs Music Mod 1.20-26.1.2 v1.1.0.jar"
+hash = "60edbc9a238a79f0702bdfd64fa52717192e571b5e826701a544ca609426f19f"
+
+[[files]]
+file = "mods/Boss Music Mod 1.21.x v1.2.1.jar"
+hash = "61703212e0d6460dc220204ff97a30b8b0250a2ae81a662719eba252fe3717b5"
 
 [[files]]
 file = "mods/IceAndFireCE-2.0-beta.15-1.21.1-fabric.jar"
 hash = "00879f14543fe67765fc3628eeef41260d9c8c690a86e745dcdd3392b9cb1814"
+
+[[files]]
+file = "mods/[1.21-1.21.1]witherswrath-1.16.jar"
+hash = "b044db3318facc59fdf783f9ca434eff0ba2c8b1a488aed7e8963aeeb42f3b73"
 
 [[files]]
 file = "mods/accdelight.pw.toml"
@@ -136,6 +148,10 @@ metafile = true
 file = "mods/artifacts.pw.toml"
 hash = "f66a2e5880bc31097e56a4d141ddc8cbbd6855f41c9cf46e3a0c4bf078222630"
 metafile = true
+
+[[files]]
+file = "mods/attributefix-fabric-1.21.1-21.1.3.jar"
+hash = "eb7a22da2eb35370c41545b8bfa3c562cf161647254d2e1527b8305ccf67bf07"
 
 [[files]]
 file = "mods/attributefix.pw.toml"
@@ -342,6 +358,10 @@ hash = "33da1770f24993fc9a20159af781c19fb9d929312f952c9b13fb2b5d76539118"
 metafile = true
 
 [[files]]
+file = "mods/citadelfabric-1.21.1-1.2.0.jar"
+hash = "66ea1f8f17b254ea484a4a3ecf469f6062af662854450ca038ea55c43b76dd2e"
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "446c173c87b7908daee86b0dee89c6b628c77beb7a0bc091ff5252b7c0062080"
 metafile = true
@@ -512,6 +532,10 @@ hash = "22d047772a461a64cdaf410c86ad59d512908e4a07d83f74d3a0424e5b9e04cd"
 metafile = true
 
 [[files]]
+file = "mods/dungeon_difficulty-fabric-3.8.0+1.21.1.jar"
+hash = "0563de67e5e5916c96620fdaf39b21683854487e686864b439e4e67457b1dfd3"
+
+[[files]]
 file = "mods/durability-tooltip.pw.toml"
 hash = "e34418c4bd311cb6ea3b370602091410852a3e5d152610dba7f360ec9e2ab29e"
 metafile = true
@@ -623,7 +647,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "f8f57321af88ed9e235b30b8a82412e92cf51fe98dc8cca89e2fcb9e038cc56b"
+hash = "e7ebe860a0fc882dfd3f4857fbce955a8e2a8b9c25fbfebace860b65788d84c9"
 metafile = true
 
 [[files]]
@@ -693,7 +717,7 @@ metafile = true
 
 [[files]]
 file = "mods/forge-config-api-port.pw.toml"
-hash = "238b3ceb4214a682480ce00eefae5d34efa299ff6ff667e4b2f2ed503c6e76ee"
+hash = "46af3869dbea8746a3f198d0b90f640d28d5ddaca378a28aabecdd0706cf649f"
 metafile = true
 
 [[files]]
@@ -904,8 +928,13 @@ hash = "03d9069b8078c4172a088b9c87471e2e23a4755df3a935e5320b65468bea05a6"
 metafile = true
 
 [[files]]
-file = "mods/kaleidoscope-cookery.pw.toml"
-hash = "db22600f38dd0de55afced249086fac3ee1cc8def6c22847e7f2b03fea3e5080"
+file = "mods/kaleidoscope-cookery-refabricated.pw.toml"
+hash = "c6775d652a7bc2514d5c3eb65366b3dbc607c38e30b30516723cde3bd899776f"
+metafile = true
+
+[[files]]
+file = "mods/kaleidoscope-immersive-eating.pw.toml"
+hash = "4f554b1c88d98634f1364e9805bf4ca88d42004e6f68169b9bbb8e1c8bff4826"
 metafile = true
 
 [[files]]
@@ -1043,6 +1072,10 @@ hash = "9356bd7e26bfddb7b04c31b78cbcfb81b19c6140ea3040cb78f6972d3620fea4"
 metafile = true
 
 [[files]]
+file = "mods/lne_paladins-fabric-1.2.0+1.21.1.jar"
+hash = "7571d2d70689ba09ba5a2d9f48fc9af789f391bb1aea1faf751bc67bb169e9be"
+
+[[files]]
 file = "mods/loot-integrations-ice-and-fire.pw.toml"
 hash = "02cbe39c4a25b6c93f32370c37cb43d3d8e24b2ed3e6b6bdd700dfd800972543"
 metafile = true
@@ -1133,9 +1166,17 @@ hash = "b75f1bc38c976df7036feb3b08039694fc88615b26a8ffb10af42188f9e6a51e"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-cozyhome-breadbox-fix-1.0.0.jar"
+hash = "ef9623ef8ccb87eea038b2ad6ac94a7afb852dca6f6eec1b6bc645a387765857"
+
+[[files]]
 file = "mods/makujannu-cozyhome-breadbox-fix.pw.toml"
 hash = "c32eb58b73ca6340c4b42b257b849de6edc251cdac477e6912402e670e0fbed6"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-emi-exclusion-1.0.0.jar"
+hash = "d99e20033d8a682a3148e99b75a357e37782e67849451a246958501b691face4"
 
 [[files]]
 file = "mods/makujannu-emi-exclusion.pw.toml"
@@ -1143,9 +1184,17 @@ hash = "f32e9f25065fb02745eb5dec88e1d23c389444ba498d8f601a9e5df1c0002fe3"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-hud-1.0.0.jar"
+hash = "bc4e9f1fc00cdc4640fe440373d6533e12867e18a900c00785b0bb866786dbd2"
+
+[[files]]
 file = "mods/makujannu-hud.pw.toml"
 hash = "b9b3cf9ed4d9d73bdc627995c5e959fb0c2b3ec6951270738716c6d8b6adc536"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-hydra-waterbreathing-1.0.0.jar"
+hash = "c47e6e47bf4093f505043626df887df9a6a99704983abc1533845570ac98ee45"
 
 [[files]]
 file = "mods/makujannu-hydra-waterbreathing.pw.toml"
@@ -1153,9 +1202,17 @@ hash = "6cf5dc81101eb9fee9aea4c187f8039aaa6757c0e9f84553a8366cfa17f51569"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-mobz-crossbow-fix-1.0.0.jar"
+hash = "7449377f970136e7ffbb688267678aae965992fed117f9e58d30acf22f4b80a5"
+
+[[files]]
 file = "mods/makujannu-mobz-crossbow-fix.pw.toml"
 hash = "6bbc6fe8914f25f43ca467f44eaccfe2216bdd7686a6c0d44c5801875879b221"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-nether-structure-names-1.0.0.jar"
+hash = "2c269d221184891bd5e383fd7621f395b873128489a05b5fc5268a06dfc33fc6"
 
 [[files]]
 file = "mods/makujannu-nether-structure-names.pw.toml"
@@ -1163,9 +1220,17 @@ hash = "0240e1e68fadbdd1233c506041707eaf16fbc25d9b9913b55497ee4f3de2379f"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-overseer-bgm-1.0.0.jar"
+hash = "1942b4b0f8e0693f88cf686fa3856fd60a5e9456554b928c530c12ada1149664"
+
+[[files]]
 file = "mods/makujannu-overseer-bgm.pw.toml"
 hash = "6f075fa4ca8207ae20129f57c867074b2224921119a83b64a468e15129e4fb99"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-overseerboss-1.0.0.jar"
+hash = "3f64a1c63483c85f03b4f10c4e582a27cf9883d16d557a3a8000342637d83a5a"
 
 [[files]]
 file = "mods/makujannu-overseerboss.pw.toml"
@@ -1173,9 +1238,17 @@ hash = "7a4e7710574068a3c8e53bcf726570a98c9714033923f8662120437e4cd82cdb"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-powerlevel-chance-1.0.0.jar"
+hash = "8bc6ac852a4d63587e726ec819b85199388a0044e87760a93c8c3a1ffb58300b"
+
+[[files]]
 file = "mods/makujannu-powerlevel-chance.pw.toml"
 hash = "05b11fb0a4014332114d92d0db1cd3eafc7179fe5c81aa765d2a5b90904381d9"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-spawner-hardness-1.0.0.jar"
+hash = "beab860bb4780662a4c1bb820abb489eb2dc4371bf21acf0476fa0cf11e17e02"
 
 [[files]]
 file = "mods/makujannu-spawner-hardness.pw.toml"
@@ -1183,9 +1256,17 @@ hash = "71da0ebfe9490cff086f6fb79b197afed1c1a139531049d0f9a04607eb46737a"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-statoverride-1.0.0.jar"
+hash = "51c877f04834a79e6221e57d94be5b438109b1370e1238e9b56d85533f494238"
+
+[[files]]
 file = "mods/makujannu-statoverride.pw.toml"
 hash = "4c44acec86deadf00b3f71dc4c9606b7e706e48fdb1811714755becf0bc5f64c"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-stoutheart-fix-1.0.0.jar"
+hash = "4eb4f2b5098911818722c06ffd7c71eb551a05bbc61d64445ca683cee2ad44ab"
 
 [[files]]
 file = "mods/makujannu-stoutheart-fix.pw.toml"
@@ -1193,9 +1274,17 @@ hash = "3a46a65eb8a87faaa9ba1950dd90f94d654cbd66a0547797fc45bb7a505967ca"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-trashbag-fix-1.0.0.jar"
+hash = "c147cc9c31c8037ed96254bf90e7d96548dddbc648fa4bc1d9b74631f9fad574"
+
+[[files]]
 file = "mods/makujannu-trashbag-fix.pw.toml"
 hash = "2bb0e3d1b9504291148b6b9b1b6b95ae52ba644243716d6bf91eb617acce347d"
 metafile = true
+
+[[files]]
+file = "mods/makujannu-warden-variants-1.0.0.jar"
+hash = "258521dd8e29ad06a1b64fa0d878e5b97899bd2ed9b23ceb4f8bd391d1b84ba3"
 
 [[files]]
 file = "mods/makujannu-warden-variants.pw.toml"
@@ -1266,6 +1355,10 @@ metafile = true
 file = "mods/mns-moogs-nether-structures.pw.toml"
 hash = "556e9c8c0e1dac02e8974b0844d76d010049ec5090099002a7bd3664d8ca647b"
 metafile = true
+
+[[files]]
+file = "mods/mobz-4.3.2-fabric.jar"
+hash = "e84c5a368b4a6796e59f62fa3c28d9384a68d35a98beeb4ca8853659f9255c02"
 
 [[files]]
 file = "mods/mobz.pw.toml"
@@ -1456,6 +1549,10 @@ metafile = true
 file = "mods/owo-lib.pw.toml"
 hash = "59f3b2e1679e710e694b04e712b2f79be11ec4f1591d831c3adaa86e16d0c1ef"
 metafile = true
+
+[[files]]
+file = "mods/packetfixer-3.3.1-1.20.5-1.21.X-merged.jar"
+hash = "2979a8a3f44e5d5df4f9f6315d18c220f3debf736bb8a2c2740acdfb13bd820f"
 
 [[files]]
 file = "mods/packetfixer.pw.toml"
@@ -1673,6 +1770,10 @@ hash = "87bfc8326fe5e0ce8b4eefa4801fa77cfc06bc76ec38725aab78d28ca8d3dd41"
 metafile = true
 
 [[files]]
+file = "mods/smallships-fabric-1.21.1-2.0.0-b2.1.jar"
+hash = "6264f2cda17d8f776229af2cc4a63090d102a6efd6a7bcbe2352ba152b835fbd"
+
+[[files]]
 file = "mods/smallships.pw.toml"
 hash = "945855c6fb20cbbfc15d4d804b5f5f8efef69d1f034615f31c2fa608910a4adb"
 metafile = true
@@ -1753,6 +1854,10 @@ hash = "4647987fdb3acdb33eb494e50ef36b7d426ecf7230ac8c54fd2bee001e37c149"
 metafile = true
 
 [[files]]
+file = "mods/spuds-shops-1.21.1-1.9.0.jar"
+hash = "02af516111fafccea7ff4876e69b8869727ae8443e91becff8155d2bd80fa73f"
+
+[[files]]
 file = "mods/spuds-shops.pw.toml"
 hash = "3b3d292be221d941233540ccd37cc43ea531874bd4b65f48cf9f1998f5b1b45a"
 metafile = true
@@ -1761,6 +1866,10 @@ metafile = true
 file = "mods/starter-kit.pw.toml"
 hash = "9297c934d883acfe21d38ce0634e3dcd29cdc7d5ffb00e6c50d37701b39d0b6b"
 metafile = true
+
+[[files]]
+file = "mods/stattweaks-fabric-v2.0.0.jar"
+hash = "428ee45e626f6c238b5c99b3ce98a4fb43300f227ba5132eba70cebdf8ad8cae"
 
 [[files]]
 file = "mods/stattweaks.pw.toml"
@@ -1846,6 +1955,10 @@ metafile = true
 file = "mods/towns-and-towers.pw.toml"
 hash = "318b2826182182ff4acd58ffe985c58fe2b403941ec36f41303217bed275feea"
 metafile = true
+
+[[files]]
+file = "mods/trial_guardians-fabric-2.0.0+1.21.1.jar"
+hash = "6f0c973d461b94f7c75f6689ee625d4181bdd18b6ce3b964eb86874e076ba52c"
 
 [[files]]
 file = "mods/trial_guardians.pw.toml"
@@ -1951,6 +2064,10 @@ metafile = true
 file = "mods/whenchat.pw.toml"
 hash = "c628d9899f402ccbe76ccb9eb7ba1f649b922ec5d78e25bfd83f5b7ee58329cb"
 metafile = true
+
+[[files]]
+file = "mods/wither-spawn-animation-FABRIC-1.21.1-1.0.0.jar"
+hash = "0f61bebab6d408b2691de960e5955835d9d0badf1b36e3df0421217e377d90eb"
 
 [[files]]
 file = "mods/wither-spawn-animation.pw.toml"
