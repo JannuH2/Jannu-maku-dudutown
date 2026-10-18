@@ -1,0 +1,13 @@
+name = "One Enough Item"
+filename = "oneenoughitem-fabric-1.21.1-1.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/7pCNymxz/versions/bkMWoCI4/oneenoughitem-fabric-1.21.1-1.0.2.jar"
+hash-format = "sha512"
+hash = "4892d7c7f2cab47fc880c459c5a718a2fdec2c6bd0ed45555d81ce5fadd99f0b71bee5a33c70c8724a4a313c16991bb7067cd85820e4c1006a2e548e52ee8cb8"
+
+[update]
+[update.modrinth]
+mod-id = "7pCNymxz"
+version = "bkMWoCI4"

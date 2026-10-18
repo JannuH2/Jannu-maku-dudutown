@@ -1531,6 +1531,11 @@ hash = "a2f266a512bbfb43222095d86d54144438cb24a181e1317f87477bf1e42349bc"
 metafile = true
 
 [[files]]
+file = "mods/one-enough-item.pw.toml"
+hash = "248d4fdd47c8032478ccea87082dc797c93ba7001cde02237a7d29b62c318653"
+metafile = true
+
+[[files]]
 file = "mods/open-parties-and-claims.pw.toml"
 hash = "7273fdb27bffd096608539b8d6356e1203273d96b6996c71c7c5f019ab5cdbc2"
 metafile = true
