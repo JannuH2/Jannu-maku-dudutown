@@ -1197,15 +1197,6 @@ hash = "6cf5dc81101eb9fee9aea4c187f8039aaa6757c0e9f84553a8366cfa17f51569"
 metafile = true
 
 [[files]]
-file = "mods/makujannu-kaleidoscope-oei-namespace-fix-1.0.0.jar"
-hash = "1fab0c376844b4a34de1f803608a88601a3ed83a441431924622e7798abdb5e2"
-
-[[files]]
-file = "mods/makujannu-kaleidoscope-oei-namespace-fix.pw.toml"
-hash = "691d2832bee7f9c6d7dbed7144be65d63fbc8f5b4a9a745bdf34888cf6bbc11d"
-metafile = true
-
-[[files]]
 file = "mods/makujannu-mobz-crossbow-fix-1.0.0.jar"
 hash = "7449377f970136e7ffbb688267678aae965992fed117f9e58d30acf22f4b80a5"
 
@@ -1537,11 +1528,6 @@ metafile = true
 [[files]]
 file = "mods/off-hand-tick-fix.pw.toml"
 hash = "a2f266a512bbfb43222095d86d54144438cb24a181e1317f87477bf1e42349bc"
-metafile = true
-
-[[files]]
-file = "mods/one-enough-item.pw.toml"
-hash = "248d4fdd47c8032478ccea87082dc797c93ba7001cde02237a7d29b62c318653"
 metafile = true
 
 [[files]]
