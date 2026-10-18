@@ -1,0 +1,18 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): Kaleidoscope Compat
+# ships its cross-mod item-unification data (tomato, rice, lettuce, etc.) at
+# data/oei/replacements/kaleidoscope.json, but One Enough Item 1.0.2's
+# ReplacementDataManager only reads replacement files whose resource-pack
+# namespace is literally "oneenoughitem" (it filters findResources("replacements",
+# ...) results by entry.getKey().getNamespace().equals("oneenoughitem")), so
+# Kaleidoscope Compat's file under the "oei" namespace was silently ignored and
+# none of its replacements (rice included) ever took effect. This re-publishes
+# the exact same (CC0) data at data/oneenoughitem/replacements/kaleidoscope.json
+# so OEI actually picks it up.
+name = "Maku Jannu Kaleidoscope Compat OEI Namespace Fix"
+filename = "makujannu-kaleidoscope-oei-namespace-fix-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-kaleidoscope-oei-namespace-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "1fab0c376844b4a34de1f803608a88601a3ed83a441431924622e7798abdb5e2"
