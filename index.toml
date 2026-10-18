@@ -928,13 +928,8 @@ hash = "03d9069b8078c4172a088b9c87471e2e23a4755df3a935e5320b65468bea05a6"
 metafile = true
 
 [[files]]
-file = "mods/kaleidoscope-cookery-refabricated.pw.toml"
-hash = "c6775d652a7bc2514d5c3eb65366b3dbc607c38e30b30516723cde3bd899776f"
-metafile = true
-
-[[files]]
-file = "mods/kaleidoscope-immersive-eating.pw.toml"
-hash = "4f554b1c88d98634f1364e9805bf4ca88d42004e6f68169b9bbb8e1c8bff4826"
+file = "mods/kaleidoscope-cookery.pw.toml"
+hash = "db22600f38dd0de55afced249086fac3ee1cc8def6c22847e7f2b03fea3e5080"
 metafile = true
 
 [[files]]
