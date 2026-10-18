@@ -1,0 +1,13 @@
+name = "Kaleidoscope Compat"
+filename = "kaleidoscope_compat-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Xm1eP54z/versions/wPN56hno/kaleidoscope_compat-1.0.0.jar"
+hash-format = "sha512"
+hash = "a169704aabc8846317859ac1ccc18bf3a3bc401037fdd93fb62b38a3bde14fd64932153d4251139c9e5c657126332086849c7d04205de7f1fc5799d250555041"
+
+[update]
+[update.modrinth]
+mod-id = "Xm1eP54z"
+version = "wPN56hno"
