@@ -18,7 +18,7 @@
 # original loot-drop random behavior untouched.
 name = "Maku Jannu Power Level Chance"
 filename = "makujannu-powerlevel-chance-1.0.1.jar"
-side = "both"
+side = "server"
 
 [download]
 url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.1.jar"
