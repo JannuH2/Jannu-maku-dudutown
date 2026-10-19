@@ -1,0 +1,19 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): Kaleidoscope Cookery's
+# recipes already read common (c:) tags for their ingredients (c:crops/tomato,
+# c:crops/lettuce, c:seeds/rice, c:cooked_rice, c:raw_mutton, c:cooked_eggs), and
+# Kaleidoscope itself already tags its own items into them, but FarmersDelight
+# and Let's Do Farm & Charm use different sub-paths for the same concepts
+# (c:crops/rice vs c:seeds/rice, c:foods/raw_mutton vs c:raw_mutton,
+# c:foods/cooked_egg vs c:cooked_eggs, c:crops/cabbage vs c:crops/lettuce) or no
+# tag at all (cooked_rice), so neither mod's items ever matched Kaleidoscope's
+# recipes. This purely adds FarmersDelight's/Let's Do's matching items into
+# Kaleidoscope's existing tags (replace: false, additive only) so both mods'
+# items work side by side as ingredients - no item replacement, nothing removed.
+name = "Maku Jannu Kaleidoscope/FarmersDelight/Let's Do Tag Bridge"
+filename = "makujannu-kaleidoscope-fd-letsdo-tags-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-kaleidoscope-fd-letsdo-tags-1.0.0.jar"
+hash-format = "sha256"
+hash = "e3e7ab7caa1a6fb3e1cf8a570628f6eca42b4ea4e39e7f2323a6ec5ddf612b84"
