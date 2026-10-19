@@ -4,11 +4,23 @@
 # whenever a weapon gets scaled at all. Mixin gates it to a 25% chance per
 # item (the "damage" scaling attribute always still applies; only "power"
 # is now a coin-flip) via a @ModifyVariable on ItemScaling.applyModifiersForItemStack.
+#
+# 1.0.1: fixed smithing-table upgrades (e.g. diamond->netherite) randomly
+# losing or re-rolling the power level instead of carrying it over exactly.
+# dungeon_difficulty's own SmithingScreenHandlerMixin already computes the
+# deterministic carried-over level and calls ItemScaling.rescale(stack, level),
+# but our AttributeModifierMixin was re-rolling "power" randomly on every
+# scale() call regardless of source, and ItemScalingMixin's 25% gate was also
+# stripping it outright on top of that. New RescaleGuardMixin marks when a
+# rescale() is in progress (via PowerLevelContext) so the other two mixins
+# skip their loot-roll randomness and just apply dungeon_difficulty's own
+# already-correct deterministic level during upgrades, while leaving the
+# original loot-drop random behavior untouched.
 name = "Maku Jannu Power Level Chance"
-filename = "makujannu-powerlevel-chance-1.0.0.jar"
+filename = "makujannu-powerlevel-chance-1.0.1.jar"
 side = "both"
 
 [download]
-url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.0.jar"
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.1.jar"
 hash-format = "sha256"
-hash = "8bc6ac852a4d63587e726ec819b85199388a0044e87760a93c8c3a1ffb58300b"
+hash = "9c441e094ec1705b2f9028bb80a64051302cffe39318b2ffd861a9a5db08f775"
