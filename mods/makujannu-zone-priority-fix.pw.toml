@@ -1,0 +1,24 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): dungeon_difficulty's
+# PatternMatching.getDifficultyResult() scans a dimension's "zones" list top-to-
+# bottom and returns the FIRST zone_matches entry (structure or biome) that
+# matches - it never compares the level of multiple matching zone entries
+# against each other. Because structure-tag entries are listed before biome
+# entries in difficulty_v2.json, a low-level structure (e.g. a level_2-tagged
+# shipwreck/galleon) always won over a higher-level biome it spawned inside
+# (e.g. a level-3 ocean biome), even though the biome's level was higher.
+#
+# 1.0.0: @Overwrite on getDifficultyResult() so it keeps scanning every
+# matching zone entry in the list instead of stopping at the first one, and
+# keeps whichever level is higher (via the mod's own existing
+# chooseHigherDifficulty helper, the same one it already used to pick between
+# a zone match and an entity-type match). Structure vs. biome conflicts now
+# always resolve to the higher level regardless of which one is listed first
+# in difficulty_v2.json.
+name = "Maku Jannu Zone Priority Fix"
+filename = "makujannu-zone-priority-fix-1.0.0.jar"
+side = "server"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-zone-priority-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "e68e804283e304405f442edb6abcb69e9c594fee3af1891552ab3b37fe9634b1"
