@@ -1,0 +1,24 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth). side = "both" - needed by clients too.
+#
+# Fixes endermanoverhaul's ClientboundFlashScreenPacket, which the mod registers as a
+# ServerboundPacketType (upstream copy-paste bug - only one release exists, "probably not
+# really stable" per the author's own release notes). Because of that, the packet only ever
+# gets registered under Fabric's playC2S() payload registry, never playS2C(). The packet is
+# actually used server->client (triggered when an End Enderman does its flash-screen effect),
+# so when the server calls sendToPlayer() there's no S2C codec registered for it, and
+# ServerPlayNetworking.send() throws a ClassCastException on NetworkPacketPayload, disconnecting
+# the client (client log: "Failed to encode packet 'clientbound/minecraft:custom_payload'
+# (endermanoverhaul:main/v1/endermanoverhaul/flash_screen)").
+#
+# Fix: register the exact same packet id + codec under playS2C() ourselves (common entrypoint),
+# and on the client, register a receiver that sets FlashOverlay.shouldFlash = true directly
+# (bypassing the mod's own broken handle() which has a Consumer<Player> signature that was
+# never wired up for the client-receive path either). Doesn't touch endermanoverhaul's jar.
+name = "Maku Jannu EndermanOverhaul Flash Screen Fix"
+filename = "makujannu-endermanoverhaul-flashscreen-fix-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-endermanoverhaul-flashscreen-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "462f000905a3c07aa588d4efd576f5a055f5310ea9bb43c3ea3bc27b434dd53f"
