@@ -16,11 +16,22 @@
 # skip their loot-roll randomness and just apply dungeon_difficulty's own
 # already-correct deterministic level during upgrades, while leaving the
 # original loot-drop random behavior untouched.
+#
+# 1.0.2: fixed armor/weapon-damage bonuses silently ignoring the rolled power
+# level and using the zone's raw area level instead, whenever that attribute
+# was listed before "power" in difficulty_v2.json's attribute list (weapons:
+# [damage, power]; armor: [armor, power, health]) - "power" used to roll its
+# random level lazily, only when its own entry was reached, so entries earlier
+# in the list fell back to the unmodified raw level. The shared power level is
+# now rolled once, up front, in ItemScalingMixin's gate check (only when the
+# 25% gate actually passes), before any attribute in the list is processed -
+# so armor/damage/power/health all read the same rolled value regardless of
+# config order.
 name = "Maku Jannu Power Level Chance"
-filename = "makujannu-powerlevel-chance-1.0.1.jar"
+filename = "makujannu-powerlevel-chance-1.0.2.jar"
 side = "server"
 
 [download]
-url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.1.jar"
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.2.jar"
 hash-format = "sha256"
-hash = "9c441e094ec1705b2f9028bb80a64051302cffe39318b2ffd861a9a5db08f775"
+hash = "1d43aee92fefffce420a964667e5fa872c34ce27b292aac0184f213bbc65ede3"
