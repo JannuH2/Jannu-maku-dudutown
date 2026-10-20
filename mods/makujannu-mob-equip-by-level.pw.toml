@@ -1,0 +1,22 @@
+# Custom, locally-built server-only mod (not on CurseForge/Modrinth).
+# Applies per-mob stat overrides (config/makujannu_entity_override.json) via
+# ServerEntityEvents.ENTITY_LOAD, plus assorted mixins (stray/frosthaunt/frost
+# monarch buffs, water-resistance removal for boss-tier mobs).
+#
+# 1.0.1: fixed field/world bosses' own "max health raised but current health
+# stuck at old max" bug (BossHealthReset, force-heal on ENTITY_LOAD/UNLOAD +
+# SERVER_STARTED safety net) not covering mobz:ender / endermanoverhaul:
+# end_enderman - these two got maxHealth boosted via entity_override.json
+# (300/180) on 2026-10-15 but kept spawning at their native mod's much lower
+# default health, same root cause as the earlier boss health bug. Added a new
+# BossEntityIds.HEALTH_RESET_ONLY set (separate from FULL_WATER_RESIST, so
+# these two don't also get water-resistance) and wired it into the same
+# force-heal check.
+name = "Maku Jannu Mob Equipment By Level"
+filename = "makujannu-mob-equip-by-level-1.0.1.jar"
+side = "server"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-mob-equip-by-level-1.0.1.jar"
+hash-format = "sha256"
+hash = "32c378f9341c4fe34daa6cfb1eecd84de4e7e429ac4cb615864573f54dfe39b5"
