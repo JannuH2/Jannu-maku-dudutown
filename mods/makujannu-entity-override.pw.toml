@@ -1,0 +1,25 @@
+# Custom, locally-built server-only mod (not on CurseForge/Modrinth).
+# Config-driven per-mob attribute/name overrides (config/makujannu_entity_override.json),
+# for entities this pack doesn't own the source of. Fires on ServerEntityEvents.ENTITY_LOAD.
+#
+# 1.0.1: fixed the same "maxHealth raised but current health stuck at old/native max"
+# bug previously found on world bosses (see makujannu-mob-equip-by-level), but general to
+# ALL ~80 entries in makujannu_entity_override.json, not just the hardcoded boss/enderman
+# list. Root cause: the old heal check compared the entity's current health against its
+# old attribute base value at the moment of override, and only healed if they matched
+# ("was at full health"). This races against dungeon_difficulty's own health scaling,
+# which can also run on ENTITY_LOAD and change health/base value first, desyncing the
+# check and silently skipping the heal. Replaced with a one-time persistent command-tag
+# guard (makujannu_entity_override_health_applied): the first time an entity is ever
+# loaded, its health is force-set to the configured max and the tag is added; after that
+# it's never touched again, so this can't be exploited by unloading/reloading a damaged
+# mob to heal it repeatedly. Non-health attributes (attack/armor/toughness/knockback)
+# are unaffected - they were already applied unconditionally on every load before.
+name = "Maku Jannu Entity Stat Override"
+filename = "makujannu-entity-override-1.0.1.jar"
+side = "server"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-entity-override-1.0.1.jar"
+hash-format = "sha256"
+hash = "8bd5d672342bec7923282853c5763c2dd60aceb21293a18a71208ec6765bb025"
