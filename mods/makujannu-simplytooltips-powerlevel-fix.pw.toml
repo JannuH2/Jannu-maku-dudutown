@@ -1,0 +1,16 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth): SimplySwords unique
+# weapons (The Devourer, etc.) use Simply Tooltips' own custom tooltip box,
+# which only forwards vanilla tooltip lines into its "extra lines" section
+# if a vanilla attribute-modifier header is present - unique weapons never
+# print one, so dungeon_difficulty's "Power Level: N" line silently
+# disappeared from their tooltip. This mixin re-attaches that line to the
+# returned tooltip model directly from the raw vanilla lines the provider
+# already received.
+name = "Maku Jannu Simply Tooltips Power Level Compat"
+filename = "makujannu-simplytooltips-powerlevel-fix-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-simplytooltips-powerlevel-fix-1.0.0.jar"
+hash-format = "sha256"
+hash = "8e46d7a21bf309898f8e04f6992f4e0306e6e7849810b680ebb6f95b3cdd43fc"

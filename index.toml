@@ -1179,6 +1179,24 @@ hash = "f32e9f25065fb02745eb5dec88e1d23c389444ba498d8f601a9e5df1c0002fe3"
 metafile = true
 
 [[files]]
+file = "mods/makujannu-endermanoverhaul-flashscreen-fix-1.0.0.jar"
+hash = "462f000905a3c07aa588d4efd576f5a055f5310ea9bb43c3ea3bc27b434dd53f"
+
+[[files]]
+file = "mods/makujannu-endermanoverhaul-flashscreen-fix.pw.toml"
+hash = "52939f1f7d521133115634fc888b2e2a0207c8c9f53ddf24a4658d48a9b11570"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-entity-override-1.0.1.jar"
+hash = "8bd5d672342bec7923282853c5763c2dd60aceb21293a18a71208ec6765bb025"
+
+[[files]]
+file = "mods/makujannu-entity-override.pw.toml"
+hash = "8699d14a91b449f92f4e911f06fe9a2c006f812f285974e6f06f36de93f0f641"
+metafile = true
+
+[[files]]
 file = "mods/makujannu-hud-1.0.0.jar"
 hash = "bc4e9f1fc00cdc4640fe440373d6533e12867e18a900c00785b0bb866786dbd2"
 
@@ -1203,6 +1221,15 @@ hash = "e3e7ab7caa1a6fb3e1cf8a570628f6eca42b4ea4e39e7f2323a6ec5ddf612b84"
 [[files]]
 file = "mods/makujannu-kaleidoscope-fd-letsdo-tags.pw.toml"
 hash = "d807f4b2eb9fe06659e3e3b5260e9dc5680e15041e22a7cedf0328b47c882822"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-mob-equip-by-level-1.0.1.jar"
+hash = "32c378f9341c4fe34daa6cfb1eecd84de4e7e429ac4cb615864573f54dfe39b5"
+
+[[files]]
+file = "mods/makujannu-mob-equip-by-level.pw.toml"
+hash = "6192712d062d102d6d1d1dc67f953db601e065fc589c7bf9106fb61c43ada66e"
 metafile = true
 
 [[files]]
@@ -1242,12 +1269,21 @@ hash = "7a4e7710574068a3c8e53bcf726570a98c9714033923f8662120437e4cd82cdb"
 metafile = true
 
 [[files]]
-file = "mods/makujannu-powerlevel-chance-1.0.0.jar"
-hash = "8bc6ac852a4d63587e726ec819b85199388a0044e87760a93c8c3a1ffb58300b"
+file = "mods/makujannu-powerlevel-chance-1.0.2.jar"
+hash = "1d43aee92fefffce420a964667e5fa872c34ce27b292aac0184f213bbc65ede3"
 
 [[files]]
 file = "mods/makujannu-powerlevel-chance.pw.toml"
-hash = "05b11fb0a4014332114d92d0db1cd3eafc7179fe5c81aa765d2a5b90904381d9"
+hash = "a851075ba883085ae72a40fedbc867f9a6606fe0d672f5dcca0bb9d16cb1166b"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-simplytooltips-powerlevel-fix-1.0.0.jar"
+hash = "8e46d7a21bf309898f8e04f6992f4e0306e6e7849810b680ebb6f95b3cdd43fc"
+
+[[files]]
+file = "mods/makujannu-simplytooltips-powerlevel-fix.pw.toml"
+hash = "1e4e3f8bd76f75438068e2e635943b45ce77ebe753dbeed5749544d2ba9325a4"
 metafile = true
 
 [[files]]
@@ -1293,6 +1329,15 @@ hash = "258521dd8e29ad06a1b64fa0d878e5b97899bd2ed9b23ceb4f8bd391d1b84ba3"
 [[files]]
 file = "mods/makujannu-warden-variants.pw.toml"
 hash = "37b1ce9e96ba548e6864cd898c36222e8c9988ef66b6e846307938b019da5976"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-zone-priority-fix-1.0.0.jar"
+hash = "e68e804283e304405f442edb6abcb69e9c594fee3af1891552ab3b37fe9634b1"
+
+[[files]]
+file = "mods/makujannu-zone-priority-fix.pw.toml"
+hash = "356a6bb410a0499c96c76151546ea6b1cba1c74eb2de3c9a3dd82ab06924af78"
 metafile = true
 
 [[files]]
