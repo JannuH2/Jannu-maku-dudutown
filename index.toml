@@ -1278,12 +1278,12 @@ hash = "a851075ba883085ae72a40fedbc867f9a6606fe0d672f5dcca0bb9d16cb1166b"
 metafile = true
 
 [[files]]
-file = "mods/makujannu-simplytooltips-powerlevel-fix-1.0.0.jar"
-hash = "8e46d7a21bf309898f8e04f6992f4e0306e6e7849810b680ebb6f95b3cdd43fc"
+file = "mods/makujannu-simplytooltips-powerlevel-fix-1.0.1.jar"
+hash = "8735cf84d18b9ce3834d7073b4891a66d3c92040134bd2536fca555b1cc30b42"
 
 [[files]]
 file = "mods/makujannu-simplytooltips-powerlevel-fix.pw.toml"
-hash = "1e4e3f8bd76f75438068e2e635943b45ce77ebe753dbeed5749544d2ba9325a4"
+hash = "00ff2e0da6fad844c926e16c1530fe496fe7814404f1348e16a8c4ed868e46df"
 metafile = true
 
 [[files]]
