@@ -1,0 +1,53 @@
+{
+  "items": {
+    "minecraft:netherite_helmet": "PROTECTIVE",
+    "minecraft:netherite_chestplate": "PROTECTIVE",
+    "minecraft:netherite_leggings": "PROTECTIVE",
+    "minecraft:netherite_boots": "PROTECTIVE",
+
+    "mythicmetals:palladium_helmet": "PROTECTIVE",
+    "mythicmetals:palladium_chestplate": "PROTECTIVE",
+    "mythicmetals:palladium_leggings": "PROTECTIVE",
+    "mythicmetals:palladium_boots": "PROTECTIVE",
+
+    "rogues:netherite_berserker_armor_head": "PROTECTIVE",
+    "rogues:netherite_berserker_armor_chest": "PROTECTIVE",
+    "rogues:netherite_berserker_armor_legs": "PROTECTIVE",
+    "rogues:netherite_berserker_armor_feet": "PROTECTIVE",
+
+    "armory_rpgs:destroyer_armor_head": "VERY_PROTECTIVE",
+    "armory_rpgs:destroyer_armor_chest": "VERY_PROTECTIVE",
+    "armory_rpgs:destroyer_armor_legs": "VERY_PROTECTIVE",
+    "armory_rpgs:destroyer_armor_feet": "VERY_PROTECTIVE",
+
+    "armory_rpgs:onslaught_armor_head": "VERY_PROTECTIVE",
+    "armory_rpgs:onslaught_armor_chest": "VERY_PROTECTIVE",
+    "armory_rpgs:onslaught_armor_legs": "VERY_PROTECTIVE",
+    "armory_rpgs:onslaught_armor_feet": "VERY_PROTECTIVE",
+
+    "deeperdarker:warden_helmet": "VERY_PROTECTIVE",
+    "deeperdarker:warden_chestplate": "VERY_PROTECTIVE",
+    "deeperdarker:warden_leggings": "VERY_PROTECTIVE",
+    "deeperdarker:warden_boots": "VERY_PROTECTIVE",
+
+    "mythicmetals:metallurgium_helmet": "VERY_PROTECTIVE",
+    "mythicmetals:metallurgium_chestplate": "VERY_PROTECTIVE",
+    "mythicmetals:metallurgium_leggings": "VERY_PROTECTIVE",
+    "mythicmetals:metallurgium_boots": "VERY_PROTECTIVE",
+
+    "mythicmetals:celestium_helmet": "VERY_PROTECTIVE",
+    "mythicmetals:celestium_chestplate": "VERY_PROTECTIVE",
+    "mythicmetals:celestium_leggings": "VERY_PROTECTIVE",
+    "mythicmetals:celestium_boots": "VERY_PROTECTIVE",
+
+    "immersive_armors:wither_helmet": "PROTECTIVE",
+    "immersive_armors:wither_chestplate": "PROTECTIVE",
+    "immersive_armors:wither_leggings": "PROTECTIVE",
+    "immersive_armors:wither_boots": "PROTECTIVE",
+
+    "iceandfire:dragonsteel_fire_helmet": "VERY_PROTECTIVE",
+    "iceandfire:dragonsteel_fire_chestplate": "VERY_PROTECTIVE",
+    "iceandfire:dragonsteel_fire_leggings": "VERY_PROTECTIVE",
+    "iceandfire:dragonsteel_fire_boots": "VERY_PROTECTIVE"
+  }
+}

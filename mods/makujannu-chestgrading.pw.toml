@@ -1,0 +1,47 @@
+# Custom, locally-built mod (not on CurseForge/Modrinth), new 2026-10-23.
+#
+# Implements the "1st-stage" chest grading the dungeon loot system was
+# originally designed around but never actually had: when any chest whose
+# loot table routes through our tier1-5 system (makujannu_looting:dungeon_tier)
+# is opened for the first time, this mod finds the structure instance it
+# belongs to, scans every other tier-system chest in that same structure's
+# bounding box, and assigns ALL of them a tier (1-5) in one shot, proportioned
+# to a fixed ratio for the area's current dungeon_difficulty level - instead
+# of each chest independently rolling a weighted tier (which only converges to
+# the configured ratio over many dungeons, not within a single one, so a small
+# dungeon could end up with every chest the same tier purely by chance).
+#
+# Ratios (tier1/2/3/4/5 weights), hardcoded in ChestGradeAssigner:
+#   level1: 100/0/0/0/0
+#   level2: 30/50/20/0/0
+#   level3: 10/40/50/0/0
+#   level4: 5/10/20/64/1
+#   level5: 0/0/0/40/60
+#
+# The assignment is persisted in a world-saved PersistentState keyed by chest
+# block position, so re-opening the same chest (by the same or a different
+# player) always sees the same tier - confirmed compatible with Lootr's
+# per-player independent inventories, since Lootr wraps the same vanilla
+# unpack call this mod hooks rather than bypassing it; only the tier is
+# shared per-position, the specific ITEM within that tier can still vary
+# per player same as before.
+#
+# Stage 2 (which item a tier gives) is untouched - still the existing
+# makujannu_looting:dungeon_tier/tierN.json tables. A new custom loot
+# condition (makujannu_chestgrading:assigned_tier) gates each tier-selector
+# pool's entries down to only the pre-assigned tier, which required
+# consolidating all of makujannu_looting's level1-4_standard_selector.json
+# files plus 8 mes (MoogsEndStructures) tables that previously embedded their
+# own tier weights directly, into level4_standard_selector.json as the single
+# canonical gated dispatch point (the old per-level/per-table weight numbers
+# became meaningless once the condition gates to exactly one eligible entry
+# regardless of weight, so consolidating lost no behavior). See
+# 패치노트.txt 2026-10-23 for the full datapack diff list.
+name = "Maku Jannu Chest Grading"
+filename = "makujannu-chestgrading-1.0.0.jar"
+side = "server"
+
+[download]
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-chestgrading-1.0.0.jar"
+hash-format = "sha256"
+hash = "c6f427a4a89733e30ade5f2faac3a8edbdc9fb6506e9797775e4d3ed365ca47c"

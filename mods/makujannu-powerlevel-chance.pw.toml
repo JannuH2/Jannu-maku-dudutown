@@ -27,11 +27,41 @@
 # 25% gate actually passes), before any attribute in the list is processed -
 # so armor/damage/power/health all read the same rolled value regardless of
 # config order.
+#
+# 1.0.7 (2026-10-23, several intermediate debug builds not individually kept):
+# fixed material-upgrade smithing (diamond/netherite -> metallurgium/celestium/
+# warden/etc.) losing power-level stat corrections outright. Root cause:
+# UniversalSmithingUpgradeMixin was reading the smithing input's TEMPLATE slot
+# (comp_2677) instead of the BASE slot (comp_2678) when checking whether the
+# base item was scaled - always false, so the mixin silently no-op'd on every
+# upgrade regardless of whether its @Redirect fired at all. Fixed the accessor;
+# also added a FrostResistanceOverride pass (new class) that re-applies
+# Frostiful's frost-resistance component by exact item id after any
+# material-changing smithing upgrade, since vanilla's transmuteCopy carries the
+# OLD material's stale explicit component forward otherwise (affects netherite,
+# palladium, netherite-tier berserker/destroyer/onslaught armor, warden,
+# metallurgium/celestium, immersive_armors wither set, iceandfire fire
+# dragonsteel - full curated list in config/makujannu_frostresistance.json,
+# re-checked by StaleScaledGearHealer's existing 5-minute sweep too). Also
+# fixed the same stale-stat-carryover issue for items with NO power level at
+# all (previously only items that already had a dd.rsf tag got reset on
+# upgrade; now ItemScaling.removeScaling() runs unconditionally on any
+# material-changing upgrade so an unscaled item picks up the new material's
+# own defaults instead of the old material's frozen stats).
+#
+# Known open issue, not yet fixed: upgrading an already power-scaled item on a
+# recipe dungeon_difficulty's own SmithingScreenHandlerMixin ALSO recognizes
+# (netherite, warden - anything with "upgrade" in its template item id) can
+# still occasionally lose the frost-resistance correction. Suspected cause is
+# mixin-ordering interaction between this mod's @Redirect and dungeon_difficulty's
+# own @WrapOperation on the same craft() call (unconfirmed without live debug
+# logging, which was deferred per admin request - see 패치노트.txt 2026-10-23
+# entries for the full investigation writeup).
 name = "Maku Jannu Power Level Chance"
-filename = "makujannu-powerlevel-chance-1.0.2.jar"
+filename = "makujannu-powerlevel-chance-1.0.7.jar"
 side = "server"
 
 [download]
-url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.2.jar"
+url = "https://jannuh2.github.io/Jannu-maku-dudutown/mods/makujannu-powerlevel-chance-1.0.7.jar"
 hash-format = "sha256"
-hash = "1d43aee92fefffce420a964667e5fa872c34ce27b292aac0184f213bbc65ede3"
+hash = "390ed0246c6e3f9fe61a77c1a7497d65e63a6d063046bf09e2e173f55bf1be54"

@@ -2,7 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/makujannu_statoverride.json"
-hash = "64d385dc0cff02d50da575f7e49658b5f71149d863ca3d2fedd299c7f599267f"
+hash = "dfcd5614ea05b897d3dc385d0983871be01e334e5e46708adbc98c41ca37cff9"
+
+[[files]]
+file = "config/makujannu_frostresistance.json"
+hash = "1c489bbb07603c73c0dd549dbe0f138bb57ccf676bc51cdcbb179535fa025e47"
 
 [[files]]
 file = "mod-sync.ps1"
@@ -1269,12 +1273,21 @@ hash = "7a4e7710574068a3c8e53bcf726570a98c9714033923f8662120437e4cd82cdb"
 metafile = true
 
 [[files]]
-file = "mods/makujannu-powerlevel-chance-1.0.2.jar"
-hash = "1d43aee92fefffce420a964667e5fa872c34ce27b292aac0184f213bbc65ede3"
+file = "mods/makujannu-powerlevel-chance-1.0.7.jar"
+hash = "390ed0246c6e3f9fe61a77c1a7497d65e63a6d063046bf09e2e173f55bf1be54"
 
 [[files]]
 file = "mods/makujannu-powerlevel-chance.pw.toml"
-hash = "a851075ba883085ae72a40fedbc867f9a6606fe0d672f5dcca0bb9d16cb1166b"
+hash = "57f1f74a8017a4dc83d679565b5d0de0030554e4a88c09be05d75f504a00ab40"
+metafile = true
+
+[[files]]
+file = "mods/makujannu-chestgrading-1.0.0.jar"
+hash = "c6f427a4a89733e30ade5f2faac3a8edbdc9fb6506e9797775e4d3ed365ca47c"
+
+[[files]]
+file = "mods/makujannu-chestgrading.pw.toml"
+hash = "7978e2b38e7fe1ef7b7dd2f51e0ac16f8ead8c483c4f03e735bca74ca9cf3fce"
 metafile = true
 
 [[files]]

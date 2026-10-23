@@ -25,16 +25,8 @@
       }
     },
     "deeperdarker:warden_chestplate": {
-      "armor": {
-        "mode": "absolute",
-        "value": 10
-      },
-      "toughness": {
-        "mode": "absolute",
-        "value": 4
-      },
       "attack": {
-        "mode": "absolute",
+        "mode": "delta",
         "value": 2
       },
       "maxHealth": {
@@ -42,19 +34,11 @@
         "value": 2
       },
       "knockbackResistance": {
-        "mode": "absolute",
-        "value": 0.2
+        "mode": "delta",
+        "value": 0.1
       }
     },
     "deeperdarker:warden_leggings": {
-      "armor": {
-        "mode": "absolute",
-        "value": 8
-      },
-      "toughness": {
-        "mode": "absolute",
-        "value": 4
-      },
       "maxHealth": {
         "mode": "delta",
         "value": 2
