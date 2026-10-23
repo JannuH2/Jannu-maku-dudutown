@@ -977,7 +977,7 @@ metafile = true
 
 [[files]]
 file = "mods/lets-do-bakery-farm-charm-compat.pw.toml"
-hash = "445d13c1124335f41492a525fc9302d3032cec21f10b4d937cacdecf992ffaea"
+hash = "b45e78e319c06c94d5e918f5ae4e11be3b7d5a4c4feda967a8be9a0f3d24b0a5"
 metafile = true
 
 [[files]]
